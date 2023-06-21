@@ -1,0 +1,332 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>
+            <button class="nav-toggle" aria-label="toggle-navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#Automation_Projects" class="nav__link">Automation Projects</a> </li>
+                    <li class="nav__item"><a href="#Project1" class="nav__link">Project 1: ABB Final Robotics Project</a> </li>
+                    <li class="nav__item"><a href="#Project2" class="nav__link">Project 2: Pick And Place ABB Robot</a> </li>
+                    <li class="nav__item"><a href="#Project3" class="nav__link">Project 3: Reprograming a probe on CNC Mills</a> </li>
+                    <li class="nav__item"><a href="#Project4" class="nav__link">Project 4: PLC Prgramming Project Conveyor Sorter</a> </li>
+                    <li class="nav__item"><a href="#Project5" class="nav__link">Project 5: PLC Prgramming Project Automatic Garage Door System </a> </li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                </ul>
+            </nav>
+        </header>
+       
+       
+        <!-- My introduction :)-->
+        <Section class="introProjPageAuto" id="Automation_Projects">
+            <div class = "buttons">
+                <a href="index.html" class="btn">Main Page</a>  <!--add link to Main page-->
+                <a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> <!--add link to Programing projects page-->
+                <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> <!--add link to Design projects page-->
+                               
+            </div>
+            <h1 class="section__title section__title--introAuto">
+                 <strong> Automation Projects</strong> <!--Daniella Donn is bolded-->
+            </h1>
+            <p class ="section__subtitle section__subtitle--intro">Here is a small range of automation projects I have accomplished over the past few years.</p>
+            <!--<img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
+        </Section>
+        
+
+        <!--Project 1-->
+        <section class="Project1" id="Project1">
+            <h2 class="section__title section__title--Project1">ABB Final Robotics Project</h2>
+            
+            <div class="Project1__body">
+                <p> For this project, a robot work cell has been designed where a palletizing task has been simulated using
+                    the ABB Robot Studio software. The task was to collect cans from an input conveyor belt when they arrive.
+                    These cans were to be picked up and place in a box with these dimmensions: 48cm x 36xm x 50 cm depth. The
+                    cans were 25 cm high and had a diameter of 12 cm. A full schematic of the task can be seen in the image below: 
+                </p>
+                <img src="img\final_task.jpg" alt="schematic_of_task" class="Project1__img">
+                <p> The distance between the center feed on the conveyor belt to the box is exactly 2 meters or 2000 millimeters in 
+                    the positive X direction, and 1.5 meters or 1500 millimeters in the positive Y direction. The robot is placed near 
+                    the front of the in-feed conveyer belt and to the side of the box. An E3ZM-T83 proximity sensor is used to detect 
+                    the presence of the part to be palletized on the input conveyor belt. When the sensor detects the can, the conveyer 
+                    will stop and wait for the robot to pick the can up. Once the can has been transported, the conveyor will move the next 
+                    can until it reaches the sensor. This process is repeated 24 times. There is also a limit switch at the back right corner 
+                    of the box, where the last can will be placed. When the limit switch is hit, a green signal light will turn on, which 
+                    means that the box will be filled. For the pick and place operation, an electric magnetic gripper, the MG10, will be used 
+                    as the end effector.
+                </p>
+                <img src="img\can_stacking.jpg" alt="code" class="Project1__img">
+                <p> The programming that was done for this robot is shown in the photo above. There is a nested FOR loop so that the code 
+                    will create 2 layers and palletize the cans correctly. The first FOR loop tells the robot to run through lines 29 
+                    through 61 twice. The second FOR loop tells the robot to move and pickup the can, and then drop it off at the desired 
+                    location on the box. The functions pickup() and dropoff () were created to pick up the can as well as put it down. 
+                    Once the robot places the first can down, it will move the following can next to the original with an 120 millimeter 
+                    space from each cans center points. This will continue until it hits the first IF statement on line 44, where it will 
+                    tell the robot, that once the drop off point is equal to or greater than 360 millimeters in the positive X direction, 
+                    to move up 120 millimeters in the Y direction and create another row. This process is repeated until the next IF statement 
+                    at line 50 comes up, where it will tell the robot, once it reaches 360 millimeters in the y, to go back to the first can
+                    drop off point and then leave the for loop. However, because of the first FOR loop made on line 28, it will repeat the whole
+                    process again, except the new drop off point will be higher because we have changed the Z direction in lines 58 and 59.
+                </p>
+                <P>The functions pickup and dropoff were made by creating a digital output for the end effector. To pick up
+                    the can, digital output Mag was created. Before the D/O Mag was called, a wait function was set before
+                    and after to be able to pick the can up without error. The same thing was done for the dropoff function,
+                    the only difference is that the magnet would be turning off. As a result, instead of using ‘set Mag’, Reset
+                    Mag was used instead, with a wait timer before and after the command as seen in the photo below.
+                </P>
+                <img src="img\Smag.jpg" alt="code" class="Project1__img">
+                <p> A video of the simulation is shown below this as well as a link to the full tech memo, if more information is desired.
+                <!--place report and video here-->
+                <a href="Reports/Tech_Memo.pdf">Tech Memo</a>
+                <video width="800" controls>
+                    <source src="Videos/ABB_Sim.mp4" type="video/mp4">
+                </video>
+                
+                
+            </div>
+            <div class = "buttons">
+                <a href="#Project2" class="btn">Project 2</a>
+                <a href="#Project3" class="btn">Project 3</a>
+                <a href="#Project4" class="btn">Project 4</a>
+                <a href="#Project5" class="btn">Project 5</a>   
+                
+            </div>
+    
+        </Section>
+
+        
+        <!--Project 2-->
+        <section class="Project2" id="Project2">
+            <h2 class="section__title section__title--Project2">Fanuc Welding Robot</h2>
+            <p class="section__subtitle section__subtitle--Project2"></p>
+            
+            
+            <div class="Project2__body">
+                <p> This project was given to the students to help us understand how to work on roboguide and program a fanuc robot 
+                    using TCP and workobjects. The main task of the project goes as follows: On the faces of the two cylinders, run the tip 
+                    of a welding tool in a circular path. Create three concentric paths with 50 mm separation between them. On a flat plate, 
+                    create a pattern of lines 500mm long spaced 50 mm apart. Put 10 lines in the X direction, and 10 lines in the Y direction, 
+                    to form a square pattern. Pick the weld tool tip off of the plate by 50mm between paths. The end result is shown in the video below.     
+                </p>
+                <video width="800" controls>
+                    <source src="Videos/Welding_Fanuc_Robot.mp4" type="video/mp4">
+                </video>
+                <p> For this simulation to work, 7 positions were created. One at the starting position, another above the cylinder, the third 
+                    at the center of the cylinder, the fourth above the second cylinder, the fifth at the center of the second cylinder, the 
+                    sixth on the flat plate, and the seventh at the ending position between the flat plate and the cylinders. Using these 
+                    positions we can create point registers which stores data and can be manuipulated. By using these point registers I am 
+                    able to prgram the robot to complete the task given to us. 
+                </p>
+                <p> There are three user frames set, one for each cylinder, and a third for the flat plate. User frames provides a way to 
+                    specify a different coordinate system from the robot's base coordinate system, allowing myself to simplify programming 
+                    and control robot movements relative to the specific references. For this case, it makes it easier to create the circles
+                    on the cylinder as well as the pattern made on the flat plate. </p>
+                    
+                <img src="img\Fanuc_1_40.jpg" alt="code" class="Project2__img">
+
+                <p>In total, there are 83 lines of code that allows the robot to complete the task stated above. Lines 1 through 5 set up the 
+                    user fram and the user tool and tells the robot to move from position 1 to position 2 and then to position 3 which is at the 
+                    center on the top of the first cylider. Once the tool is at position 3, the next step is for the robot to create 3 circles with 
+                    a 50 mm seperation between each of them. To do this a couple of things need to be setup. First step is create create 4 point 
+                    registers which is done on lines 6-9. This will allow us to manipulate the data to create the circle 3 times with a 50 mm seperation 
+                    between them. The second step is creating registers that hold a value, in this case 50 and 1. Now that everything is set up, we enter 
+                    LBL 1, where we perform the action of creating the circle. Lines 13-16 perform the calculations using the point registers and assign 
+                    the results to different register positions. Lines 17-19 is when the robot creates the circle. Once each circle has been completed, R[3] 
+                    increments by 1 and then compares that value to the number 3. If three circles have not been made, the code jumps back to LBL 1 and starts 
+                    over. The code then tells the robot to move to position 4 and then to position 5 which is the center at the top of the second cyclinder. The 
+                    program changes userframes and creates the three circles on the second cylinder, the same way it was done on the first. 
+                </p>
+                <img src="img\Fanuc_41_62.jpg" alt="code" class="Project2__img">
+                <p> The code above repersents the next steps that the program goes through. Once the robot has drawn the three circles on each cylinder, the robot 
+                    moves back to the starting position (P[1]) and then switches to user frame 3 which is what will be used for the pattern on the flat plate. 
+                    Three registers are set with a specific value given to each of them, being 50, R[1], 500, R[2] ,and 0, R[3]. We set the 500 for the length that each 
+                    line will be, we set the 50 to seperate each 500 mm line, and the 0 repersents the start of the loop. Since we want to create 10 vertical lines we 
+                    set an if condition on line 62 that says if register R[3], that is originally zero, is equal to the number 9, then 10 loops have been performed. If 
+                    the register is less than 9, R[3] increments by 1 and goes through the loop again. Line 47 is when the robotic arm moves to position 6 which is 
+                    on the flat plate and then creates 3 different position registers. By creating these registers we are able to manipulate the current location data that 
+                    the robot currently contains. The main goal is for the robot to weld a 500 mm vertical line, then lift the arm sligtly up to not touch the 
+                    plate, go back to the previous starting point and add 50mm in the horizontal direction to create a new 500 mm line. In order to complete this, we need 
+                    to manipulate the current location data everytime the loop starts. Lines 51 through 53 manipulate the data to allow the robot to complete the task 
+                    mention aboved. We then move on to the start of the loop at line 54 being LBL[3]. Everytime we restart the loop the code will jump back to that line. 
+                    Lines 55 through 60 is when the robot executes motion creating the vertical line. After each line is completed, R[3] increments by one as seen in line 
+                    61 and then goes to the if condition in line 62, either restarting the process or allowing the code to move on to the final stage of this program. 
+                </p>
+                <img src="img\Fanuc_63_83.jpg" alt="code" class="Project2__img">
+                <p> The final stage of this program is to now weld another 10 lines but in the horizontal direction, the code for this can be seen above. To do this the robot goes back to position 6, where 
+                    it started the vertical lines, and follows almost the exact same process as lines 44-62. The only difference in the code can be seen in lines 70-72 
+                    which is when we create the position registers to tell the robot to move to a specific location. But instead on the robot welding in the y axis, the 
+                    robot will now weld in the x axis. The rest of the code from lines 63 to 81 do the exact same thing as lines 44-62. Once the 10 lines has been created 
+                    in the horizontal axis, the robot will switch to user frame 1 and go to position 7 which is its ending position.  
+                </p>
+                
+            </div>
+            <div class = "buttons">
+                <a href="#Project1" class="btn">Project 1</a>
+                <a href="#Project3" class="btn">Project 3</a>
+                <a href="#Project4" class="btn">Project 4</a>
+                <a href="#Project5" class="btn">Project 5</a>       
+            </div>
+
+        </Section>
+
+        <!--Project 3-->
+        <section class="Project3" id="Project3">
+            <h2 class="section__title section__title--Project3">Reprograming the Blum Probe on CNC Mills</h2>
+            <p class="section__subtitle section__subtitle--Project3">Using G-code, written on Ultra Edit, Blum Probe</p>            
+            <div class="Project3__body">
+                <p> While working at Jabil, I helped reprogram two CNC machines as a result from a product complaint. The main Complaint
+                    of this product, was that it contained oversized holes and threads. So the question now became, how was only one piece 
+                    from that lot get oversized holes and threads? How did these threads go undetected downstream at a Quality Assurance point 
+                    of detection? After inspecting the product complaint, the team realized that it has threads that look as if they overlap each other, as 
+                    if it has been machined twice with the center of axis being shifted during the second time machining. This was comfirmed when
+                    a shim was added to an extra billet to test the theory that the probe hit the s burr on the billet and shifted the center when 
+                    machined again. The end of these tests had the same failures as the product complaint which means the problem was most likely 
+                    caused by a burr. The solution to this problem was simple: Implement probe action to detect if the hole is oversized, and if 
+                    the billet is over tolerance. This as a result would trigger an alarm on the machine which prompts the operators to pay extra attention.
+                </p>
+               \
+                <p> Unfortunetly, due to signing an NDA with Jabil I am unable to display the code that was used to fix this problem However I am
+                    able to explain the coding process that took place. The way the probing originally took place was simple, before the machining would happen,
+                    the probe would gain the dimmensions of the billet and make sure it was in tolerance. While going through the original G-code, a few 
+                    lines were found that made probing the product less efficient. For example, the height was taken 3 times sequentially which did not make 
+                    too much sense and the probe went back and force from one side to the other when it could have finished probing one side in total and than Probe
+                    the opposite side. So not only were we adding new code for the probe to detect an oversized hole, but we were also creating a 
+                    more efficient probing operation. This meant that the G-code had to be rearanged to a more efficient order and some lines had to be 
+                    deleted, so the probe wouldnt waste extra time gaining the same dimmension. After this was completed a new section was added to the code
+                    which told the probe to measure the dimmensions of the threaded hole after the machining was completed. This section allowed the program to
+                    jump to a new probing section which took the measurements of the new hole and if it wasnt in tolerance, an alarn would go off.  
+                </p>
+                
+            </div>
+            <div class = "buttons">
+                <a href="#Project1" class="btn">Project 1</a>
+                <a href="#Project2" class="btn">Project 2</a> 
+                <a href="#Project4" class="btn">Project 4</a> 
+                <a href="#Project5" class="btn">Project 5</a>     
+            </div>
+
+        </Section>
+
+         <!--Project 4-->
+         <section class="Project4" id="Project4">
+            <h2 class="section__title section__title--Project4">PLC Programming Project Convayer Sorter</h2>
+            <p class="section__subtitle section__subtitle--Project4">Using Allen Bradley PC and Studio 5000</p>
+            <div class="Project4__body">
+                <p> The main purpose of this project was to create a system to move a product from the feeder (the starting point), 
+                    to lines A or C, depending on its size (the end point). Using multiple buttons and selector switches, the operator 
+                    can fill the feeder, take the product out of the feeder, decide if it should go into line A or C, and choose if 
+                    the product should be packed in a set of 5,7, 9 or 11 (depending on whichever line they were sent down). 
+                    The first step is to fill the feeder which can be fed with up to 20 products. This is simulated with a momentary push
+                    button, which when pushed will increment a counter by one. Then the operator should press a green button 
+                    to take the product out of the feeder, and onto the conveyor belt with the diverter. They then choose whether the product 
+                    belongs in either lines A or C depending on its size and chooses where each product should be packed in a specific set. This 
+                    operation is completed by using 2 different pushbuttons and 2 different selector switches. The buttons the operator push here
+                    will determine if the product should move down line A or C while the selector switches allow the operator to chose a 
+                    specific set the product should be packed in, 5 or 7 for line A and 9 or 11 for line C. The operation will be complete once all 
+                    4 sets have been full, which the machine will indicate using a red pilot light. A reset button must be pushed to reset all the 
+                    counters back to zero and to start the whole operation over again. 
+                </p>
+                <img src="img\Feeder.png" alt="Feeder_Diagram" class="Project4__img">
+                <p>This system prioritizes the safety of the operator as quite a few conditions are set because of it. To start,
+                    there are two Estops on the system, which when pressed will shutdown the system until the user pushes it
+                    back out. The reason there are two Estops are because we are working with a long conveyor system which
+                    separates into 3 separate lines. Since this system is very large, there needs to be multiple estops at different
+                    points in case the operator needs to stop the machine. The ladder logic also uses seal in contacts for the
+                    pushbuttons which start the conveyor motor so that the motor will not start up again in case there is a main
+                    power outage which is then restored. Finally, the operator will not be allowed to put products in the feeder
+                    as long as the motor for the conveyors are running. 
+                </p>
+                <p> For more information about this project, there is a link below which will lead you to the report</p>
+                <a href="Reports/Project_1_Report.pdf">Conveyor Sorter Project</a>
+                <!--place report here-->
+                
+            </div>
+            <div class = "buttons">
+                <a href="#Project1" class="btn">Project 1</a>
+                <a href="#Project2" class="btn">Project 2</a> 
+                <a href="#Project3" class="btn">Project 3</a> 
+                <a href="#Project5" class="btn">Project 5</a>   
+            </div>
+
+        </Section>
+
+        <!--Project 5-->
+        <section class="Project5" id="Project5">
+            <h2 class="section__title section__title--Project5">PLC Programming Project Automatic Garage Door System</h2>
+            <p class="section__subtitle section__subtitle--Project5">Using Allen Bradley PC and Studio 5000</p>
+            
+            <div class="Project5__body">
+                <p> The purpose of this project was to create a system to automatically open and close a garage door safely. 
+                    The user will have the option to use either of the two keypads, or a remote FOB to open or close the garage 
+                    door by pressing the green or red square buttons on the keypad or remote FOB. The green button opens the garage, 
+                    and the red button will close it. If the user needs to stop the garage while it is opening or closing, the remote 
+                    FOB and each keypad has a circular red button which will automatically stop the motor. Each time the garage door 
+                    opens or closes, it counts as one cycle. When 8 cycles have been completed, the system will be disabled, and a red 
+                    light will appear. This means that maintenance is needed to reset the cycles for the system to become operational again.
+                </p>
+                <img src="img\System_Graphic.jpg" alt="system graphic" class="Project5__img">
+                <p> This system prioritizes the safety of the user as there are several conditions set specifically for this operation. To start,
+                    there are multiple estops which can be used to stop the motor opening or closing while operating. The ladder
+                    logic also uses seal in contacts for the pushbuttons which start the motor so that the motor will not start up again
+                    in case there is a main power outage which is then restored. There is also an emergency override switch which
+                    the user can use to open the garage door, while the car is in a charging cycle, in case of a current situation. This
+                    way the user can have a way out of the garage if needed. Finally, there is a photo electric sensor which can
+                    detect if there is an object right underneath the garage door. If there is an object in the way, for example, a car,
+                    the garage door will reverse open automatically, even though it was closing, and will flash a yellow light.
+                </p>
+                <p> For more information about this project, there is a link below which will lead you to the report</p>
+                <!--place report here-->
+                <a href="Reports/Final_Project_Report.pdf">Automatic Garage Door System Final Project</a>
+            </div>
+            <div class = "buttons">
+                <a href="#Project1" class="btn">Project 1</a>
+                <a href="#Project2" class="btn">Project 2</a> 
+                <a href="#Project3" class="btn">Project 3</a> 
+                <a href="#Project4" class="btn">Project 4</a>  
+            </div>
+
+        </Section>
+
+
+         <!--Contact Me-->
+           
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <!-- replace with your own email address -->
+            <a href="mailto:DaniellaDonn@gmail.com" class="footer__link">Danielladonn@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/daniella-donn-b42098258/">
+                        <i class="fa-brands fa-linkedin"></i> 
+                    </a>
+                </li> <!--Linkd-in account: MAKE ONE-->
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li><!--Possiblt make github account?-->
+            </ul>
+        </footer>
+        <script src="js/index.js"></script>
+    
+    </body>
+</html>
+
+</DOCTYPE>
