@@ -440,7 +440,7 @@ header{
 
 .portfolio__img:hover,
 .portfolio__item:focus .portfolio__img{
-    transform: scale(1.2);
+    transform: scale(1.1);
     opacity: .75;
 }
 
@@ -503,7 +503,7 @@ header{
 /*my Autonation Projects introduction*/
 .introProjPageAuto {
     background-color: var(--clr-dark);
-    background-image: url(img/Automation_background.jpg);
+    background-image: url(img/automation_Background.png);
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
@@ -607,7 +607,7 @@ header{
 /*my Design Projects introduction*/
 .introDes {
     background-color: var(--clr-dark);
-    background-image: url(img/Design_background.jpg);
+    background-image: url(img/Design_background.png);
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
@@ -625,7 +625,7 @@ header{
 /*my Programming Projects introduction*/
 .introProg {
     background-color: var(--clr-dark);
-    background-image: url(img/code_background.jpg);
+    background-image: url(img/code_background.png);
     background-size: cover;
     /* background-blend-mode: multiply; */
     color: var(--clr-light);
@@ -680,4 +680,50 @@ header{
 ul { /*to center bullet points*/
     text-align: center;
     list-style-position: inside;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    z-index: 101;
+}
+
+/* Project photo header text */
+#programming-header {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 6px 6px 6px black;
+}
+
+#automation-header {
+    color: #FFD580;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 6px 6px 6px black;
+}
+
+#design-header {
+    color: #CBC3E3;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 6px 6px 6px black;
+}
+
+#programming-underline {
+    text-decoration-color: black;
+}
+
+#automation-underline {
+    text-decoration-color: white;
+}
+
+#design-underline {
+    text-decoration-color: black;
 }
