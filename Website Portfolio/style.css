@@ -92,7 +92,6 @@ strong { font-weight: var(--fw-bold) }
     display: flex;
     justify-content: space-around;
     margin: 0 auto;
-    padding-left: 3em;
     padding-right: 7em;
     padding-bottom: 1em;
 }
@@ -319,11 +318,6 @@ header{
 
 }
 
-.Skills-and-Certification {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
 @media (min-width: 800px) {
     .intro {
         display: grid;
@@ -352,6 +346,28 @@ header{
         left: -1.5em;
         width: calc(100% + 4.5em); /*text does not stay the same when screen gets minimized in colored box*/
     }
+
+    .Skills-and-Certifications {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 auto;
+        max-width: 1400px;
+    }
+    
+    .Skills-and-Certification {
+        padding: 0 30px;
+        width: 20%;
+    }
+    
+    .Skills-and-Certification > h3 {
+        display: inline-block;
+        padding: 0 25%;
+    }
+    
+    ul {
+        text-align: left;
+    }
+    
 }
 
 /*About me Section*/
@@ -364,16 +380,16 @@ header{
     box-shadow: var(--bs);
 }
     
-@media (min-width: 800px) {
+/* @media (min-width: 800px) {
     .Skills-and-Certifications {
         display: flex;
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
     }
-    .Skills-and-Certification + .Skills-and-Certification { /*space between each skill catagory*/
+    .Skills-and-Certification + .Skills-and-Certification { space between each skill catagory
         margin-left: 1.5em;
     }
-}
+} */
 
 /*Work Expirience Section!*/
 .work-experience{
@@ -677,10 +693,6 @@ header{
     text-align: left;
 }
 */
-ul { /*to center bullet points*/
-    text-align: center;
-    list-style-position: inside;
-}
 
 .container {
     position: relative;
