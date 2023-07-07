@@ -41,50 +41,51 @@
                 <a href="Portfolio-item-Automation.html" class="btn">Automation Projects</a> <!--add link to Design projects page-->                
             </div>
             <h1 class="section__title section__title--intro">
-                 <strong> Design Projects</strong> <!--Daniella Donn is bolded-->
+                 <u class="design-underline"><h1 class="design-header">Design Projects</h1></u> <!--Daniella Donn is bolded-->
             </h1>
-            <p class ="section__subtitle section__subtitle--intro">Here is a small range of design projects I have accomplished over the past few years.</p>
+            <p class ="section__subtitle section__subtitle--intro-projects">Here is a small range of design projects I have accomplished over the past few years.</p>
         </Section>
         
 
       
         <!--Project 1-->
+        <div class="colorContainerEven">
         <section class="Project1" id="Project1">
-            <h2 class="section__title section__title--Project2">Automated Disk Launcher</h2>
-            <p class="section__subtitle section__subtitle--Project2">Automatically launches a 5 in disk</p>
+            <h2 class="section__title">Automated Disk Launcher</h2>
+            <p class="section__subtitle section__title--Project1">Automatically launches a 5 in disk</p>
             
             
             <div class="Project1__body">
-                <p> The Automated Disk Launcher was a capstone project I worked on as part of a group of 4 durring the 2022 Spring semester at RIT. The main goal of 
-                    this project was to understand the D.M.A.D.V. process (Define, Measure, Analyze, Design, and Verify) and how to create a product proffesionally 
-                    from start to finish. The main endgoal of this project was to launce a 5 inch diameter frisbee across a field to its designated target. Each person 
-                    in this group had a role to play when creating Automatic Disk Launcher. My role was to calculate the torque and rpm needed for the launch mechanism.
+                <p> The Automated Disk Launcher was a capstone project I worked on as part of a group of 4 during the 2022 spring semester at RIT. The main goal of 
+                    this project was to understand the D.M.A.D.V. process (Define, Measure, Analyze, Design, and Verify) and how to create a product professionally 
+                    from start to finish. The main endgoal of this project was to launch a 5 inch diameter frisbee across a field to its designated target. Each person 
+                    in this group had a role to play when creating the Automatic Disk Launcher. My role was to calculate the torque and rpm needed for the launch mechanism.
                     The launch mechanism's role is to launch the disk once the disk was in position.   
                 </p>
                 
                 <p>The main purpose of the launch mechanism is to have the motor constantly spinning when activated, at a high RPM and a powerful enough torque, 
                     to launch the disc a certain distance. Since we want the disc to launch a specific distance, an RPM and torque must be calculated. The 
-                    calculations can be seen in the image below. Assuming an initial velocity of 14.1 m/s (Morrison, 2005) and a measured radius of 2.5 inches, 
+                    calculations can be seen in Figure 1 below. Assuming an initial velocity of 14.1 m/s (Morrison, 2005) and a measured radius of 2.5 inches, 
                     we were able to easily calculate the RPM by dividing the velocity by the radius and then dividing it a final time by .1047 in order to go from 
                     radians per second to rotations per minute. The final RPM came out to be 2124. 
                 </p> 
                 <img src="img\Motor_calcs.jpg" alt="snapshot of code" class="Project1__img">
-                <p>To find the torque of the motor, the equation used was: Torque = .5*Roller_Diamerer*(Total_Friction + Coefficient_Friction* Weight_of_disk*gravity). 
+                <p>To find the torque of the motor, the equation used was: Torque = 0.5 * Roller_Diameter * (Total_Friction + Coefficient_Friction * Weight_of_disk * gravity). 
                     In order to gain all of the correct values, many assumptions had to be made including: the coefficient of static friction between rubber and acrylic 
-                    being equal to .6, a difference between the disk and the wall to be .1 inches, a spring coefficient of k to be 10 for the rubber belt, and only 2 forces 
+                    being equal to 0.6, a difference between the disk and the wall to be 0.1 inches, a spring coefficient of k to be 10 for the rubber belt, and only 2 forces 
                     acting in the y direction: weight and normal force. To calculate total friction, 3 separate frictions must be calculated first, all of which using static 
-                    coefficients because the disk should not slide away from the launch mechanism. All 3 fiction values were calculated using the same equation: Normal Force * Coefficient of static friction. 
+                    coefficients because the disk should not slide away from the launch mechanism. All 3 friction values were calculated using the same equation: Normal Force * Coefficient of static friction. 
                     However, what made each friction value different was the material being used. For example, there is a friction between the disk and the base of the 
                     launch mechanism (made of acrylic), the disk and the rubber belt, and disk to the wall (made of acrylic). Although the wall and the floor are both 
                     made of acrylic, the friction values are different since there is a spring value from the wall to the disk. This can also be said for the friction 
-                    value between the rubber belt and the disk. Since there is a difference between the disk and the wall (this being .1 inches) and a k value of 10, 
-                    the normal force is able to be calculated using F = x*k.
+                    value between the rubber belt and the disk. Since there is a difference between the disk and the wall (this being 0.1 inches) and a k value of 10, 
+                    the normal force is able to be calculated using F = x * k.
                 </p>
                 <p>Once every normal force was obtained, each friction was able to be calculated with the appropriate coefficient of static friction for that material. 
                     Adding up those values gave us a total friction value of 11.41. Although there were 2 different coefficients of static friction, only one was used, 
                     being the coefficient of static friction for acrylic. This is because both the walls and the base are made with acrylic and since the disk will be 
-                    launched off the base, the coefficient of static friction should be used. The final motor torque that was calculated, using the equation above and 
-                    the total friction force with the givens, came out to be 10.54 lb*in. The solutions to the calculations can be seen below. 
+                    launched off the base, the coefficient of static friction from those should be used. The final motor torque that was calculated, using the equation above and 
+                    the total friction force with the givens, came out to be 10.54 lb*in. The solutions to the calculations can be seen in Figure 2 below. 
                 </p>
                 <img src="img\Motor_sol.jpg" alt="snapshot of code" class="Project1__img">
                 <p>
@@ -96,55 +97,60 @@
                 <video width="800" controls>
                     <source src="Videos/Disk_Launcher.mp4" type="video/mp4">
                 </video>
-                <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a> <!--Make the link look better-->
+                
             </div>
+
+            <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a> <!--Make the link look better-->
+
             <div class = "buttons">
                 <a href="#Project2" class="btn">Project 2</a>    
             </div>
         
         </Section>
+        </div>
           
         <!--Project 2-->
+        <div class="colorContainerOdd">
         <section class="Project2" id="Project2">
-            <h2 class="section__title section__title--Project2">Brackets for Hypo-Max Tanks</h2>
-            <p class="section__subtitle section__subtitle--Project2">Designed using solidworks</p>
+            <h2 class="section__title">Brackets for Hypo-Max Tanks</h2>
+            <p class="section__subtitle section__title--Project2">Designed using solidworks</p>
             
             <div class="Project1__body">
                 <p> This was a small project given to me by my uncle's company to do during my spare time. The goal of this project was to redesign a mounting bracket for the Hypo-Max tank (which can be seen in the photo below) with the following details:
                     <img src="img\tank.jpg" alt="tank" class="Project1__img">
                     <ul>
                         <li>Design a metal plate aboout 3" wide.</li>
-                        <li>There are 2 tanks, a small and a large. On the smallet tank the plate should be 20" long and for the larger tank, the plate should be 24" long. </li> 
+                        <li>There are 2 tanks, a small and a large. On the smallest tank the plate should be 20" long, and for the larger tank the plate should be 24" long. </li> 
                         <li>Each side of the plate will have 2 holes vertically so it can be bolted to the top of the tank. </li> 
                         <li>The holes are dia 0.69".</li>
                         <li>At the center of this plate you will have the two bars welded on them. </li> 
                         <li>Bar size: 4.75" X 2" and 1/2" thick.</li>  
                         <li>There is a hole 3/4" in diameter. </li> 
-                        <li>The top of the hole to the edge of the bar is 3/8" dia. </li> 
+                        <li>The top of the hole to the edge of the bar is 3/8" diameter. </li> 
                         <li>Edge of the bar to center of the hole is 3/4".</li>
                         <li>The two bars that will be welded are 2.17" apart and center in the plate.</li>
                     </ul>
                     Using solidworks, making the model was not very complicated. Since each plate is rectangular, all that had to be done was to sketch a rectangle to the 
                     specified size given to me and then exrude the sketch to the desired thickness. Once that was completed, the top surface of the rectangualar prism was 
-                    selected to draw a new sketch on, this new sketch was the 4 circles created to be holes. When the new sketch was completed, the option, extrude cut, was 
-                    selected which created the holes. The image below is the end result of the plate. 
+                    selected to draw a new sketch on. This new sketch was drawn as the 4 circles created to be holes. When this sketch was completed, the option 'extrude cut' was 
+                    selected which created the holes. Figure 1 below shows the end result of the plate. 
                 </p>
                 <img src="img\Plate.jpg" alt="Plate" class="Project1__img">
                 <p>Now that the plate was complete, the next model that needed to be created was the bar that will be welded onto the plate. Since this bar is also rectangular 
-                    and has a hole, I used the same process to create it as I have done with the 20 inch plate seen above. The first step is to sketch a rectangle with the 
+                    and has a hole, I used the same process to create it as I have done with the 20 inch plate seen in Figure 1 above. The first step is to sketch a rectangle with the 
                     desired measurments and then to extrude it to the given thickness. Once that was done, I selected the extruded surface of the bar to create a new sketch, 
                     this new sketch being the holes. The method I use to place holes in the correct spot is by sketching out a line from the egde of the bar to the exact distance 
-                    I need the center of the hole to be to. Using the endpoint of the line as my reference, I create a circle to the exact dimmensions needed. I then procees to 
-                    delete the lines I have made as a guide and select extrude cut to make the circle sketch into a hole. The end result of the bar is seen in the image below. 
+                    I need the center of the hole to be to. Using the endpoint of the line as my reference, I created a circle to the exact dimmensions needed. I then proceeded to 
+                    delete the lines I made as a guide and selected 'extrude cut' to make the circle sketch into a hole. The end result of the bar is seen in Figure 2 below. 
 
                 </p>
                 <img src="img\bar.jpg" alt="bar" class="Project1__img">
                 <p>The final step that needed to be done now was to create an assembly from the plate and the bar. This process was also very simple as all i needed to do was 
-                    to use specific mates to put everything together. Two coincident mates were done to attach the side of the bars to the top surface of the 20 inch plate and 
-                    one distant mate was used to make sure the two bars were placed correctly apart from each other. The final assembly can be seen in the image below. Engineering 
+                    use specific mates to put everything together. Two coincident mates were done to attach the side of the bars to the top surface of the 20 inch plate, and 
+                    one distant mate was used to make sure the two bars were placed correctly apart from each other. The final assembly can be seen in Figure 3 below. Engineering 
                     drawings were made from these models after, showing the front, top and side view as well as all the dimmensions the manufactuerer needed to make the product. 
-                    Overall this was a very fun project as I got to use my solidworks skills and help out my uncle's company. Hopefully I will work on more projects like this in 
-                    my future. 
+                    Overall this was a very fun project as I got to use my solidworks skills and help out my uncle's company. I plan to work on more projects like this in 
+                    my future as the opportunities present themselves. 
                 </p>
                 <img src="img\assembly.jpg" alt="assembly" class="Project1__img">
             </div>
@@ -154,9 +160,8 @@
             </div>
     
         </Section>
-
+        </div>
         
-
          <!--Contact Me-->
            
         <!-- Footer -->
@@ -165,15 +170,13 @@
             <a href="mailto:DaniellaDonn@gmail.com" class="footer__link">Danielladonn@gmail.com</a>
             <ul class="social-list">
                 <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="Daniella_Donn_Engineering_Resume_2023.pdf">Resume</a>
+                </li>
+                <li class="social-list__item">
                     <a class="social-list__link" href="https://www.linkedin.com/in/daniella-donn-b42098258/">
                         <i class="fa-brands fa-linkedin"></i> 
                     </a>
                 </li> <!--Linkd-in account: MAKE ONE-->
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li><!--Possiblt make github account?-->
             </ul>
         </footer>
         <script src="js/index.js"></script>

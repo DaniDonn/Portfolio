@@ -88,12 +88,12 @@ strong { font-weight: var(--fw-bold) }
 }
 
 .buttons {
-    max-width: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     margin: 0 auto;
-    padding-right: 7em;
+    padding-right: 20px;
     padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 /*Typography*/
@@ -343,8 +343,8 @@ header{
         grid-row: 2;
         text-align: right;
         position: relative;
-        left: -1.5em;
-        width: calc(100% + 4.5em); /*text does not stay the same when screen gets minimized in colored box*/
+        left: -0.5em;
+        width: calc(100% + 1em); /*text does not stay the same when screen gets minimized in colored box*/
     }
 
     .Skills-and-Certifications {
@@ -374,6 +374,7 @@ header{
 .About-Me {
     max-width: 1000px;
     margin: 0 auto;
+    background-color: var(--clr-grey);
 }
 
 .About-Me__img {
@@ -431,7 +432,7 @@ header{
 /*my Projects title*/
 .section__title--My-projects {
     color: var(--clr-light);
-    text-align: center
+    text-align: center;
 }
 
 .projects{
@@ -528,11 +529,21 @@ header{
 .section__subtitle--intro{
     background: var(--clr-accent);
     color: var(--clr-dark); /*for font*/
-    padding: .25em 1em;
+    padding: .25em .75em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+    text-align: right;
+}
+
+.section__subtitle--intro-projects{
+    background: var(--clr-accent);
+    color: var(--clr-dark); /*for font*/
+    padding: .25em .75em;
     font-family: var(--ff-secondary);
     margin-bottom: 1em;
     text-align: center;
 }
+
 .section__title--Project1::after { /*for smol line under the main title*/
     content: '';
     display: block;
@@ -542,12 +553,21 @@ header{
     background: var(--clr-accent);
     opacity: 0.25;
 }
-.Project1{
+
+.colorContainerEven {
+    background-color: #202020;
+}
+
+.colorContainerOdd {
+    background-color: white
+}
+
+.Project1 {
     background: var(--clr-dark);
     background-size: cover;
     color: var(--clr-light);
     text-align: center;
-    max-width: 100%;
+    max-width: 1000px;
     margin: 0 auto; 
 }
 .section__title--Project2::after { /*for smol line under the main title*/
@@ -708,34 +728,42 @@ header{
 }
 
 /* Project photo header text */
-#programming-header {
+.programming-header {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 6px 6px 6px black;
 }
 
-#automation-header {
+.automation-header {
     color: #FFD580;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 6px 6px 6px black;
 }
 
-#design-header {
+.design-header {
     color: #CBC3E3;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 6px 6px 6px black;
 }
 
-#programming-underline {
+.programming-underline {
     text-decoration-color: black;
 }
 
-#automation-underline {
+.automation-underline {
     text-decoration-color: white;
 }
 
-#design-underline {
+.design-underline {
     text-decoration-color: black;
+}
+
+a {
+    color: var(--clr-accent);
+}
+
+a:hover {
+    opacity: 0.7;
 }
