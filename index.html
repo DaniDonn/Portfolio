@@ -1,0 +1,361 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>
+            <button class="nav-toggle" aria-label="toggle-navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a> </li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Who I am</a> </li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills and Certifications</a> </li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Work Experience</a> </li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">My Projects</a> </li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                </ul>
+            </nav>
+        </header>
+       
+       
+        <!-- My introduction :)-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I am <strong> Daniella Donn</strong> <!--Daniella Donn is bolded-->
+            </h1>
+            <p class ="section__subtitle section__subtitle--intro">Mechanical/Manufacturing Engineer</p>
+            <img src="img\portfolio_headshot.PNG" alt="My photo" class="intro__img"> <!-- put photo in folder classed img with /name-of-photo.jpg--> 
+        </section>
+        
+
+        <!--About Me-->
+        <section class="About-Me" id ="about">
+            <h2 class="section__title section__title--About-Me">Who I Am</h2>
+            <p class="section__subtitle section__subtitle--about">Mechanical Engineer with a focus in Automation, studying at RIT</p>
+            
+            <div class="About-me__body">
+                <p> I am a recent graduate from the Mechanical Engineering Technology college at RIT (Rochester Institute of Technology) located in Rochester NY. I work on
+                    all types of projects that involve automation, programming, C.A.D., and designing. The main software I use for C.A.D.
+                    is Solidworks as I know my way around the application very well. I also have expirience using Creo, which I used while
+                    working for Jabil. For Programming, my main language is python which I use in most of my code. I use python to code 
+                    for computervision, nueral networks, raspberry PI's and Arduinos. Along with that, I am very comfortable using MATLAB to code as I 
+                    have used it for some of my projects at RIT. I also have expirience programming FANUC and ABB robots and am a certified
+                    Fanuc Programmer.
+                </p>
+                <p> When I am not working on projects or classwork, I'm either thinking of new automation projects I could code or drawing. 
+                    I love making silly programs and just having fun learning how to code. I specifically like to code computer vision software.
+                    I believe it is very useful and can be in just about anything, from quality to making games. I love being creative, and coming 
+                    up with ideas that people have never heard of and do them straight away. This is why I enjoy drawing. I love making a drawing that
+                    someone has never seen or thought of before. It makes me feel original and allows me to think of more "out of the box" ideas.
+                </p>
+                
+            </div>
+          
+            <img src="img\temp_portfolio_headshot.jpg" alt="temp pic of me and the casey" class="About-Me__img">
+
+            <div class="buttons">
+                <a href="#skills" class="btn">My Skills and Certifications</a>
+                <a href="#work" class="btn">My Work Experience</a>
+                <a href="#projects" class="btn">My Work</a>
+            </div>
+    
+        </section>
+
+         <!--Skills And Certifications-->
+         <section class="skills" id ="skills">
+            <h2 class="section__title section__title--My_Skills">Skills and Certifications</h2>
+            <!--<p class="section__subtitle Section__subtitle--skills"></p>-->
+            <div class="Skills-and-Certifications">
+                <div class = "Skills-and-Certification">
+                    <h3>C.A.D.</h3>
+                    <ul>
+                    <li>Solidworks</li>
+                    <li>Creo</li>
+                    </ul>    
+                </div>
+            
+                <div class = "Skills-and-Certification">
+                    <h3>Programming</h3>
+                    <ul>
+                    <li>Python</li>
+                    <li>RoboGuide</li>
+                    <li>Robostudio</li>
+                    <li>MATLAB</li>
+                    </ul>                   
+                </div>
+                
+                <div class = "Skills-and-Certification">
+                    <h3>Engineering Software</h3>
+                    <ul>
+                    <li>Autodesk Fusion 360</li>
+                    <li>F.E.A. </li>
+                    <li>Automation Studio</li>
+                    <li>E.E.S.</li>
+                    <li>Studio 5000</li>
+                    <li>Quartus Prime</li>
+                    </ul>       
+                </div>
+
+                <div class = "Skills-and-Certification">
+                    <h3>Statistics</h3>
+                    <ul>
+                    <li>Rstudio</li>
+                    <li>JMP</li>
+                    </ul>   
+                </div>
+
+                <div class = "Skills-and-Certification">
+                    <h3>Certifications</h3>
+                    <ul>
+                    <li>FANUC CERT HandlingTool Operations and Programming</li>
+                    <li>SIX SIGMA GREEN BELT</li>
+                    </ul>             
+                </div>
+            </div>
+            <!--<a href="#skills" class="btn">Skills and Certifications</a>-->
+        </section>
+
+        
+         <!--My Work Experience-->
+         <section class="work-experience" id ="work">
+            <h2 class="section__title section__title--My-Work">Work Experience</h2>
+            
+            <div class="Work-and-Experience__body"> <!--The body portion of the work experince section-->
+                <p class="section__subtitle section__subtitle--My-Work">Nuvera Fuel Cells LLc (Nov. 2023 - Jan. 2025)</p>
+                <!--<h3>Nuvera Fuel Cells LLc</h3>-->
+                <p>
+                    At Nuvera I ... Continue Later
+                </p>
+                <p class="section__subtitle section__subtitle--Jabil">Jabil (Jul. 2022 - Jan. 2023)</p>
+                <!--<h3>Jabil</h3>-->
+                <p>
+                    I worked at Jabil in Elmira, NY from July 2022 to January 2023 where we provided orthopedic product instruments and implants for internal and external fixation 
+                    to surgically treat fractures, deformities, and tumor diseases of long bones, shoulder, hand, pelvis, hip, condyles and foot. 
+                    Additionally, Elmira manufactures veterinary plates and patient-specific implants (Jaw plates), which are shipped directly to hospitals. While working there 
+                    I taught myself how to code in python and learned to program computer vision and neural networks which I utilized to train a tab detection software. 
+                    I also self taught myself Excel VBA which I used to create a map which can search and highlight a specific machine and area within the Jabil plant. In addition to 
+                    this, I learned how to use G-code to re-program a probe on two CNC milling machines. I designed trays through creo for operators to easily identify an inspected 
+                    part, created an S.O.S. button on a raspberry pi which when pressed an email will automatically be sent out to the supervisor asking for help and a light will 
+                    turn on at the area sending the signal.  
+                </p>
+                <p class="section__subtitle section__subtitle--My-Work">Acuity Polymers (Feb. - Aug. 2021)</p>
+                <!--<h3>Acuity Polymers</h3>-->
+                <p>
+                    I worked at Acuity Polymers, located in Rochester NY, from February 2021 to August 2021 where we created specialty contact lens materials for the contact
+                    lens industries to mass produce. The formula for each contact lens is made in a lab then put into large rods 
+                    and into an oven. After the rods are taken out and cut into specific shapes and sizes, also known as buttons by using a CNC lathe, 
+                    they are tested and delivered to the contact lens industries. My job as a mechanical engineering co-op was to create contact lenses and buttons 
+                    (contact lens templates) by using a CNC lathe, 
+                    design manufacturing plans for the contact lenses, and help design an automatic system for the cast molding process.     
+                </p>
+        
+            </div>
+            <!--<a href="#work" class="btn">Work Experience</a>-->
+        </section>
+
+        
+         <!--My Projects-->
+         <section class="my-projects" id ="projects">
+            <h2 class="section__title section__title--My-projects">My Projects</h2> <!--Top header line-->
+            <p class="section__subtitle section__subtitle--My-Projects">A selection of my range of work</p>
+            
+            <div class ="projects"> <!--All of these projects will be under the projects class-->
+        <!---------------------------------------------Programming-------------------------------------------------------------------->        
+                <div class="container">
+                    <a href="Portfolio-item-Programming.html" class="portfolio__item" target="_blank">
+                        <img src="img\code_background.png" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="programming-underline"><h1 class="programming-header">Programming/Robotics</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 1 Programming--------------------------------------------------------------------> 
+                <div class="container">
+                    <a href="Portfolio-item-Programming-COGNEX.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="programming_COGNEX-underline"><h1 class="programming_COGNEX-header">Edge Detection with COGNEX</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 2 Programming Done-------------------------------------------------------------------->  
+                <div class="container">
+                    <a href="Portfolio-item-Programming-Disk-Master.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="programming_Disk_Master-underline"><h1 class="programming_Disk_Master-header">Disk Master</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 3 Programming Done-------------------------------------------------------------------->
+                <div class="container">
+                    <a href="Portfolio-item-Programming-Map.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="programming_Map-underline"><h1 class="programming_Map-header">Excel Machine Map</h1></u>
+                </div>
+                </div> 
+         <!---------------------------------------------Project 4 Programming Done---------------------------------------------------------------------->  
+                <div class="container">
+                    <a href="Portfolio-item-Programming-Tab-Detection.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="programming_Tab-underline"><h1 class="programming_Tab-header">Tab Detection</h1></u>
+                </div>
+                </div>  
+        <!---------------------------------------------Project 5 Programming Done---------------------------------------------------------------------->  
+                <div class="container">
+                    <a href="Portfolio-item-Programming-SOS-Button.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="programming_SOS-underline"><h1 class="programming_SOS-header">SOS Button</h1></u>
+                </div>
+                </div>  
+        <!---------------------------------------------Automation---------------------------------------------------------------------------------->         
+                <div class="container">
+                    <a href="Portfolio-item-Automation.html" class="portfolio__item" target="_blank">
+                        <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="automation-underline"><h1 class="automation-header">Automation</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 1 Automation Done--------------------------------------------------------------------> 
+                <div class="container">
+                    <a href="Portfolio-item-Automation-FANUC.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="automation_FANUC-underline"><h1 class="automation_FANUC-header">FANUC Simulation</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 2 Automation Done-------------------------------------------------------------------->  
+                <div class="container">
+                    <a href="Portfolio-item-Automation-UR_Robot.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="automation_UR-underline"><h1 class="automation_UR-header">UR Robot Pick and Place</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 3 Automation Done--------------------------------------------------------------------> 
+                <div class="container">
+                    <a href="Portfolio-item-Automation-PLC_Garage_Door.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="automation_PLC_Garage_Door-underline"><h1 class="automation_PLC_Garage_Door-header">Automated Garage Door System</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 4 Automation Done-------------------------------------------------------------------->   
+                <div class="container">
+                    <a href="Portfolio-item-Automation-Ignition_Dashboard.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="automation_Ignition-underline"><h1 class="automation_Ignition-header">Morning Meeting Dashboarg</h1></u>
+                </div>
+                </div> 
+             <!---------------------------------------------Project 5 Automation Done-------------------------------------------------------------------->   
+             <div class="container">
+                <a href="Portfolio-item-Automation-ABB.html" class="portfolio__item" target="_blank">
+                    <img src="" alt="" class="portfolio__img">
+                </a>
+            <div class="centered">
+                <u class="automation_ABB-underline"><h1 class="automation_ABB-header">ABB Robot</h1></u>
+            </div>
+            </div> 
+             <!---------------------------------------------Project 6 Automation Done-------------------------------------------------------------------->   
+             <div class="container">
+                <a href="Portfolio-item-Automation-SorterPLC.html" class="portfolio__item" target="_blank">
+                    <img src="" alt="" class="portfolio__img">
+                </a>
+            <div class="centered">
+                <u class="automation_Sorter-underline"><h1 class="automation_Sorter-header">Conveyor Sorter</h1></u>
+            </div>
+            </div> 
+            <!---------------------------------------------Design-------------------------------------------------------------------->  
+                <div class="container">
+                    <a href="Portfolio-item-Design.html" class="portfolio__item" target="_blank">
+                        <img src="img\Design_background.png" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="design-underline"><h1 class="design-header">Design</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 1 Design--------------------------------------------------------------------> 
+                <div class="container">
+                    <a href="Portfolio-item-Design-RivetGripper.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="design_Rivet-underline"><h1 class="design_Rivet-header">Rivet Gripper</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 2 Design--------------------------------------------------------------------> 
+                <div class="container">
+                    <a href="Portfolio-item-Design-OS1Gripper.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="design_OS1-underline"><h1 class="design_OS1-header">OS1 Gripper</h1></u>
+                </div>
+                </div>
+         <!---------------------------------------------Project 3 Design-------------------------------------------------------------------->
+                <div class="container">
+                    <a href="Portfolio-item-Design-Tray.html" class="portfolio__item" target="_blank">
+                        <img src="" alt="" class="portfolio__img">
+                    </a>
+                <div class="centered">
+                    <u class="design_Tray-underline"><h1 class="design_Tray-header">Rivet Tray with Fixture</h1></u>
+                </div>
+                </div> 
+         <!---------------------------------------------Project 4 Design---------------------------------------------------------------->   
+            </div>
+            
+            <!--<a href="#projects" class="btn">My Projects</a>-->
+           
+        </section>
+        
+        <!--Contact Me-->
+           
+        <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+        <footer class="footer" id="contact">
+            <!-- replace with your own email address -->
+            <a href="mailto:DaniellaDonn@gmail.com" class="footer__link">danielladonn@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="Daniella_Donn_Engineering_Resume_2023.pdf">Resume</a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="https://www.linkedin.com/in/daniella-donn-b42098258/">
+                        <i class="fa-brands fa-linkedin"></i> 
+                    </a>
+                </li> <!--Linkd-in account: MAKE ONE-->
+            </ul>
+        </footer>
+        <script src="js/index.js"></script>
+    
+    </body>
+</html>
+
+</DOCTYPE>

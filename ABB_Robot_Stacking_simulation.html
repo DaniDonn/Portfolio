@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <script src="index.js"></script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>    
+            
+            <header class="TopBarEveryPage">
+                <h1 class="project-name">ABB Robot Stacking Simulation</h1>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                </nav>
+            </header>
+
+
+         <!-- My introduction :)-->
+        <Section class="Project_Intro_Every_Page">
+            
+            <div class ="Project_Intro_Every_Page"> 
+                <div class = "buttons">
+                    <a href="index.html" class="btn">Home</a>  <!--add link to Main page-->
+                   <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
+                    <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> add link to Design projects page-->
+                                           
+                </div>
+                <button class="nav-toggle" aria-label="toggle-navigation">
+                    <span class="hamburger"></span>
+                </button>
+       <!----        <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#Automation_Projects" class="nav__link">FANUC Simulation</a> </li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                    </ul>
+                </nav> --->
+            <h1 class="section__title section__title--introAutoFANUC">
+                <u class="automation_FANUC-underline"><h2 class="automation_FANUC-header">ABB Robot Stacking Simulation</h2></u> <!--Daniella Donn is bolded-->
+    
+             </h1>
+          <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
+                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
+            </div>
+        </header>
+        </Section>
+        <!--Project -->
+        <div class="InfoContainer">
+        <section class="Project2" id="Project2">
+            <p class="section__subtitle section__subtitle--Project2"></p>
+                
+            <div class="Project2__body">
+                <h3 class="infoToggle">OBJECTIVE:</h3>
+                <ul id="objective" class="content">
+                    <li>Design and simulate a robot work cell for palletizing using ABB RobotStudio.</li>
+                    <li>Develop a program to efficiently stack cylindrical cans into a specified box layout.</li>
+                    <li>Utilize proximity sensors and limit switches for precise operation.</li>                                   
+                </ul>
+            
+                <h3 class="infoToggle">PROCESS:</h3>
+                <ul id="process" class="content">
+                    <li><strong>Cell Layout and Hardware:</strong>
+                        <ul>
+                            <li>Placed the ABB robot near the in-feed conveyor belt and box to minimize travel distance.</li>
+                            <li>Used an E3ZM-T83 proximity sensor to detect incoming cans, pausing the conveyor until each can is picked.</li>
+                            <li>Incorporated a limit switch to detect when the box is full, triggering a green signal light.</li>
+                            <li>Used an MG10 electromagnetic gripper as the end effector for reliable can handling.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Program Logic:</strong>
+                        <ul>
+                            <li>Created nested FOR loops to stack 24 cans in a 2-layer pattern.</li>
+                            <li>Utilized the <code>MoveJ</code> and <code>MoveL</code> commands for efficient point-to-point and linear movements.</li>
+                            <li>Implemented the <code>pickup()</code> and <code>dropoff()</code> functions to control the magnet, including wait timers for precise grip control.</li>
+                            <li>Integrated position tracking using the <code>OverExactPointOnBox</code> and <code>CanDropoff</code> coordinate variables to handle row and layer transitions.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Error Handling and Efficiency:</strong>
+                        <ul>
+                            <li>Included checks for X and Y direction limits to properly transition between rows and layers.</li>
+                            <li>Used structured loops and spacing logic to ensure optimal placement without collisions.</li>
+                        </ul>
+                    </li>                                      
+                </ul>
+            
+                <h3 class="infoToggle">RESULT:</h3>
+                <ul id="result" class="content">
+                    <li>Successfully simulated a palletizing task with precise can placement.</li>
+                    <li>Achieved efficient stacking with accurate position tracking and coordinated movements.</li>
+                    <li>Improved the robot’s cycle time and reduced the risk of placement errors.</li>                    
+                </ul>
+            </div>
+                    
+            </div>
+                
+    
+        </Section>
+        </div>
+        <<script src="js/index.js"></script>
+    </body>
+    </html>

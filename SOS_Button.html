@@ -1,0 +1,115 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <script src="index.js"></script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>    
+            
+            <header class="TopBarEveryPage">
+                <h1 class="project-name">S.O.S. Button</h1>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                </nav>
+            </header>
+
+
+         <!-- My introduction :)-->
+        <Section class="Project_Intro_Every_Page">
+            
+            <div class ="Project_Intro_Every_Page"> 
+                <div class = "buttons">
+                    <a href="index.html" class="btn">Home</a>  <!--add link to Main page-->
+                   <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
+                    <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> add link to Design projects page-->
+                                           
+                </div>
+                <button class="nav-toggle" aria-label="toggle-navigation">
+                    <span class="hamburger"></span>
+                </button>
+       <!----        <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#Automation_Projects" class="nav__link">FANUC Simulation</a> </li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                    </ul>
+                </nav> --->
+            <h1 class="section__title section__title--introAutoFANUC">
+                <u class="automation_FANUC-underline"><h2 class="automation_FANUC-header"> FANUC Welding Simulation</h2></u> <!--Daniella Donn is bolded-->
+    
+             </h1>
+          <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
+                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
+            </div>
+        </header>
+        </Section>
+        <!--Project -->
+        <div class="InfoContainer">
+        <section class="Project2" id="Project2">
+            <p class="section__subtitle section__subtitle--Project2"></p>
+                
+            <div class="Project2__body">
+                <h3 class="infoToggle">OBJECTIVE:</h3>
+                <ul id="objective" class="content">
+                    <li>Automate a system for operators to request supervisor assistance efficiently.</li>
+                    <li>Provide both a <strong>visual alert</strong> (flashing light) and an <strong>automated email notification</strong>.</li>
+                    <li>Build the system using a <strong>Raspberry Pi</strong> with a <strong>pushbutton</strong>, <strong>relay</strong>, and <strong>light</strong>, all coded in <strong>Python</strong>.</li>
+                </ul>
+            
+                <h3 class="infoToggle">PROCESS:</h3>
+                <ul id="process" class="content">
+                    <li><strong>Button & Light Test:</strong> Verified hardware functionality by activating a relay that turns on the light when the button is pressed.</li>
+                    <li><strong>Supervisor Information Setup:</strong> Created a text file storing:
+                        <ul>
+                            <li>Supervisor contact info</li>
+                            <li>Their shift times</li>
+                            <li>Sender email credentials</li>
+                        </ul>
+                    </li>
+                    <li><strong>Data Parsing:</strong> 
+                        <ul>
+                            <li>Wrote a parser to read the text file and store each line’s info in a <code>tuple</code> (to handle mixed data types).</li>
+                            <li>Determined the correct supervisor based on current time vs. shift times.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Email Automation:</strong> 
+                        <ul>
+                            <li>Used <code>Selenium WebDriver</code> to access Gmail.</li>
+                            <li>Composed the email using <code>MIMEMultipart</code> and <code>MIMEText</code>.</li>
+                            <li>Sent the email automatically via the <code>smtplib</code> module.</li>
+                        </ul>
+                    </li>
+                </ul>
+            
+                <h3 class="infoToggle">RESULT:</h3>
+                <ul id="result" class="content">
+                    <li>Successfully built a low-cost alert system that sends real-time emails and activates a flashing light for location visibility.</li>
+                    <li>Improved plant communication and reduced supervisor response time.</li>
+                    <li>Strengthened Python skills and introduced automation using a Raspberry Pi.</li>
+                    <li>Learned to integrate hardware interaction with email and time-based logic.</li>
+                </ul>
+            </div>
+                    
+            </div>
+                
+    
+        </Section>
+        </div>
+        <<script src="js/index.js"></script>
+    </body>
+    </html>

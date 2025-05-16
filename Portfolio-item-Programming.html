@@ -1,0 +1,234 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>
+            <button class="nav-toggle" aria-label="toggle-navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#Programming_Projects" class="nav__link">Programming Projects</a> </li>
+                    <li class="nav__item"><a href="#Project1" class="nav__link">Project 1: Tab Detection</a> </li>
+                    <li class="nav__item"><a href="#Project2" class="nav__link">Project 2: Machine and Cell Search and Find Locator</a> </li>
+                    <li class="nav__item"><a href="#Project3" class="nav__link">Project 3: S.O.S. Button</a> </li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                </ul>
+            </nav>
+        </header>
+       
+       
+        <!-- My introduction :)-->
+        <Section class="introProg" id="Programming_Projects">
+            <div class = "buttons">
+                <a href="index.html" class="btn">Main Page</a>  <!--add link to Main page-->
+                <a href="Portfolio-item-Automation.html" class="btn">Automation Projects</a> <!--add link to Design projects page--> <!--add link to automations projects page-->
+                <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> <!--add link to Design projects page-->
+                  
+            </div>
+            <h1 class="section__title section__title--introprogproj">
+                 <u class="programming-underline"><h1 class="programming-header">Programming Projects</h1></u> <!--Daniella Donn is bolded-->
+            </h1>
+            <p class ="section__subtitle section__subtitle--intro-projects">Here is a small range of Programming Projects I have Accomplished over the Past Year</p>
+        </Section>
+        
+
+        <!--Project 1-->
+        <div class="colorContainerEven">
+        <section class="Project1" id="Project1">
+            <h2 class="section__title">Tab Detection</h2>
+            <p class="section__subtitle section__title--Project1">Using Neural Networks and Computer Vision, Written in Pyhton</p>
+            
+            <div class="Project1__body">
+                <p> 
+                    The main purpose of this project was to detect possible defects of finished machine products using computer vision.
+                    Since Jabil produces large lots, it is possible to accidently send a part with a defect, in this case, a tab. Using 
+                    computer vision was a great solution because we are able to train a model to teach the computer what a defect is and 
+                    have it spot it for us, in case the opporators missed it. The way this detecter was set up was by plugging in
+                    a USB camera to a raspberry Pi to see all incoming products one by one, lined up on a conveyor belt. If a product was 
+                    seen to have a tab, the raspberry Pi would detect it and stop the conveyor belt from moving, which would allow the 
+                    operator to fix the problem.  
+                </p>
+                <p> My mentor worked with me on this project as he was teaching me how to code in Python and how it could be applyed in 
+                    automation and manufacturing. This was my first real coding project which taugh me the library OpenCV and how machine
+                    learning works. The first step we took was getting over 100+ photos of the parts with tabs on them from different
+                    orientations and brightness. Using these photos, we then label the area of the photo that we want the computer to detect.
+                    This tells the computer specifically that every part of the photo labeled "tab" draw a bounding box around it, signaling 
+                    its detection. The reason so many photos are used is because the model will be exposed to different variations 
+                    of the objects and it will be more accurate in identifying them in new images.
+                </p>
+                <p>
+                    These photos are split into testing and training, with about 80% of the photos given being used to train the model. The photos
+                    are fed through darknet, an open source neural network API written in C, that utilizes the YOLO (you only look once) model
+                    used to train the computer to detect objects. This was the next step taken for this project, and once the model was trained,
+                    the program was able to execute. The next major problem was that the camera could not pick up the tab, as it was too small.
+                    The solution to this was to write some code in python which broke the image into four quadrants and have the camera try to
+                    detect the tab in each quadrant. What made this work was that the quadrant was used to zoom in on that section of the image, and 
+                    as a result, the camera was able to detect the tab.  
+                </p>
+                <p>
+                    Unfortunetly, due to my co-op ending I was not able to see this project to the end. However, the next step that I would've taken
+                    to complete this is to design a conveyor belt using the Raspberry Pi to move each part underneath the camera and have it stop for
+                    the camera to commence detecting the part for the tab. If the part did have a tab, it would signal the opperator by having a light 
+                    flash, to fix the error, and then continue detecting each part as they flow down the conveyor belt. 
+                </p>
+
+                
+            </div>
+          
+            <div class = "buttons">
+                <a href="#Project2" class="btn">Project 2</a>
+                <a href="#Project3" class="btn">Project 3</a>
+            </div>
+    
+        </section>
+        </div>
+
+        
+        <!--Project 2-->
+        <div class="colorContainerOdd">
+        <section class="Project2" id="Project2">
+            <h2 class="section__title">Cell Search and Find Locator</h2>
+            <p class="section__subtitle section__title--Project2">Using Excel Visual Basic </p>
+                        
+            <div class="Project2__body">
+                <p> 
+                    This was the biggest project I worked on during my time at Jabil. It took about 2 and a half months to complete as I coded 
+                    everything by myself and had to fill out the entire data table which took a lengthy amount of time. This project's main 
+                    purpose is to search for any machine in the plant and to be able to find it on the plant layout to prevent employees from 
+                    getting lost and to help them locate the machine faster in person. It works similarly to a map in the mall, where the user 
+                    selects which store they want to find, and the map will visibly display where the store is located. The way this map works 
+                    is very simple: the user just needs to type what machine in the plant they want to locate and press the search button, as 
+                    seen in Figure 1 below.
+                </p>
+                <img src="img\cell_finder_image.jpg" alt="Main Page of search" class="Project2__img">
+                <p> 
+                    What happens as a result is the machine will be listed under the machine column as well as the cell (the specific area of the plant)
+                    it is located at. If the user still does not know where the machine is located, a highlighted and rounded rectangle will appear over the 
+                    machine on the plant layout, allowing the user to visibly see where in the plant the machine is located. This can be seen in Figure 2 below.
+
+                </p>
+                <img src="img\searchbox.jpg" alt="snapshot of code" class="Project2__img">
+                <p>
+                    If the user wanted to search for a certain cell on the plant layout, with all of the machines to be listed and to visibly see 
+                    them on the map, all they would have to do is type in the cell name in the search bar. As a result, all the machines will be 
+                    listed under the machine # column with its cell location written underneath the Cell column, and all the machines will have the 
+                    highlighted rounded rectangle on its location on the plant layout. 
+                </p>
+                <p>
+                    If the user is still unable to find the location, there is a “Go To Location” button, where it will allow the 
+                    user to zoom in to the exact location of these highlighted rounded rectangles. Figure 3 below displays the code made for this button.  
+                </p>
+                <img src="img\view_location.jpg" alt="snapshot of code" class="Project2__img">
+                <p>
+                    This project was made by using visual basic code, as seen in Figure 4 below, which provided the functionality of the search, the go to 
+                    location button, and the clear all button on the main page.  
+                </p>
+                <img src="img\code_cell_finder_image.jpg" alt="snapshot of code" class="Project2__img">
+                <p>
+                    The way this code works is by taking in the desired machine or cell and comparing it to a list of all the machines and/or cell 
+                    names in the plant on the data page. On this data page we have the cell name, the machine number in accordance with the cell 
+                    location, the x and y locations on the machines on the plant layout, the date when that machine was last checked on, and a 
+                    completion symbol which shows that row has all the information filled out, as shown in Figure 5 below.
+                </p>
+                <img src="img\data_sheet.jpg" alt="snapshot of code" class="Project2__img">
+                <p>
+                    The x and y locations are specific coordinate points on the excel sheet where the plant layout is. However because of the NDA 
+                    I signed I am unable to show this map. Each machine has a specific x and y coordinate point which were retrieved and placed in 
+                    this data sheet. These coordinate points were retrieved in a special way. I wrote up some code that would print out the coordinate 
+                    points of the highlighted rounded rectangle whenever it appeared, which can be seen in Figure 6 below. I took this shape and dragged it
+                    over a machine number, then I would select a find an x and y location button which would make the coordinate points appear in an 
+                    empty column on the excel sheet. 
+                </p>
+                <img src="img\find-squares.jpg" alt="snapshot of code" class="Project2__img">
+                <p>
+                    Overall, I feel as though this project was very successful. It was able to do exactly what it was programmed to do and was a great experience 
+                    to learn how to code in visual basic, especially since I had never learned/worked with it before.
+                </p>
+            </div>
+            
+            <div class = "buttons">
+                <a href="#Project1" class="btn">Project 1</a>
+                <a href="#Project3" class="btn">Project 3</a>    
+            </div>
+        
+        </Section>
+    </div>
+
+        <!--Project 3-->
+        <div class="colorContainerEven">
+        <section class="Project3" id="Project3">
+            <h2 class="section__title">S.O.S. Button</h2>
+            <p class="section__subtitle section__title--Project3">Using a raspberry Pi, a Light, a Pushbutton and a Relay, coded in Python </p>
+            
+            <div class="Project3__body">
+                <p>This was a short project I worked on at Jabil, but it really allowed me to learn how automating a task can benefit the plant as well 
+                    as build up my programing skills. The main goal of this project goes as follows: If an operater is having an issue and needs 
+                    a supervisor to come over, a button would be pushed and a flashing light will turn on. When the button is pushed, an email
+                    will automatically be sent to that operator's supervisor asking for them to come over. The flashing light allows the supervisor 
+                    to easily locate where the operator is. This whole operation was coded on a raspberry Pi in Python and although I am unable to
+                    display the code, as a result of signing an NDA, I can walk through the process of how the code works. The image below shows 
+                    what the button was assembled.  
+                </p>
+                <img src="img\SOS_button.jpg" alt="snapshot of code" class="Project3__img">
+                <p> The first step that had to be complete was making sure the button and light worked properly. This was tested by having the output
+                    turn on the relay which as a result, turned on the light. The next step was to set up a text file which would hold the information 
+                    of supervisors during specific shift times as well as the sender email. A parser program would be coded as the following step to go 
+                    through each line of the text file and grab the information and to put them into a tuple. The reason we use a tuple instead of a list 
+                    is to put in different data types which was what we needed to do. How did it know which supervisor to grab from the text file? The answer 
+                    to this was dependent on the time. Each supervisor in the text file has a shift time associated with them, so once the parser code has 
+                    put all the information in a tuple, the program jumps over to a method that gets the time of the day and compares the gotten times with 
+                    the shift times listed in the text file. Now that that the program knows which supervisor to send the email to, we need to write code to 
+                    open and login to gmail as well as write the email and send it automatically. To do this we use the Selenium Webdriver to gain access to 
+                    the URL to open it. Then we use MIMEMultipart and MIMEText to write the message. Finally we use the smtplib module to send the email to the 
+                    supervisor. 
+                </p>  
+            </div>
+
+            <div class = "buttons">
+                <a href="#Project1" class="btn">Project 1</a>
+                <a href="#Project2" class="btn">Project 2</a>    
+            </div>
+            
+        </Section>
+        </div>
+        
+         <!--Contact Me-->
+           
+        <!-- Footer -->
+        <footer class="footer" id="contact">
+            <!-- replace with your own email address -->
+            <a href="mailto:DaniellaDonn@gmail.com" class="footer__link">Danielladonn@gmail.com</a>
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" target="_blank" href="Daniella_Donn_Engineering_Resume_2023.pdf">Resume</a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://www.linkedin.com/in/daniella-donn-b42098258/">
+                        <i class="fa-brands fa-linkedin"></i> 
+                    </a>
+                </li> <!--Linkd-in account: MAKE ONE-->
+            </ul>
+        </footer>
+        <script src="js/index.js"></script>
+    
+    </body>
+</html>
+
+</DOCTYPE>

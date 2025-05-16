@@ -1,0 +1,128 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <script src="index.js"></script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>    
+            
+            <header class="TopBarEveryPage">
+                <h1 class="project-name">PLC Conveyor Sorter</h1>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                </nav>
+            </header>
+
+
+         <!-- My introduction :)-->
+        <Section class="Project_Intro_Every_Page">
+            
+            <div class ="Project_Intro_Every_Page"> 
+                <div class = "buttons">
+                    <a href="index.html" class="btn">Home</a>  <!--add link to Main page-->
+                   <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
+                    <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> add link to Design projects page-->
+                                           
+                </div>
+                <button class="nav-toggle" aria-label="toggle-navigation">
+                    <span class="hamburger"></span>
+                </button>
+       <!----        <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#Automation_Projects" class="nav__link">FANUC Simulation</a> </li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                    </ul>
+                </nav> --->
+            <h1 class="section__title section__title--introAutoFANUC">
+                <u class="automation_FANUC-underline"><h2 class="automation_FANUC-header"> FANUC Welding Simulation</h2></u> <!--Daniella Donn is bolded-->
+                <img src="img/Feeder.png" alt="Feeder_Diagram" class="Project4__img">
+             </h1>
+          <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
+                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
+            </div>
+        </header>
+        </Section>
+        <!--Project -->
+        <div class="InfoContainer">
+        <section class="Project2" id="Project2">
+            <p class="section__subtitle section__subtitle--Project2"></p>
+                
+            <div class="Project2__body">
+                <h3 class="infoToggle">OBJECTIVE:</h3>
+                <ul id="objective" class="content">
+                    <li>Create an automated sorting and packing system using Allen Bradley PLC and Studio 5000.</li>
+                    <li>Allow operators to control product flow from a feeder to one of two lines (A or C), based on product size.</li>
+                    <li>Enable packaging into specified set sizes (5, 7, 9, or 11), depending on which line is selected.</li>
+                    <li>Ensure system safety using E-stops and logic conditions.</li>
+                </ul>
+            
+                <h3 class="infoToggle">PROCESS:</h3>
+                <ul id="process" class="content">
+                    <li><strong>Feeding Products:</strong>
+                        <ul>
+                            <li>Operator fills the feeder with up to 20 products using a momentary push button that increments a counter.</li>
+                            <li>A green button moves the product from the feeder to a conveyor belt with a diverter.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sorting Products:</strong>
+                        <ul>
+                            <li>Two push buttons determine whether the product should be sent to line A or C.</li>
+                            <li>Two selector switches choose the set size:
+                                <ul>
+                                    <li>Line A: Sets of 5 or 7</li>
+                                    <li>Line C: Sets of 9 or 11</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>Completion and Reset:</strong>
+                        <ul>
+                            <li>Once all 4 sets are full, a red pilot light signals completion.</li>
+                            <li>Operator must press a reset button to zero the counters and restart the process.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Safety Features:</strong>
+                        <ul>
+                            <li>Two E-stops located at different points of the long conveyor system ensure quick shutdown access.</li>
+                            <li>Seal-in contacts used in ladder logic prevent motor restart after power loss.</li>
+                            <li>Products cannot be added to the feeder while the conveyor motor is running.</li>
+                        </ul>
+                    </li>
+                </ul>
+            
+            
+                <h3 class="infoToggle">RESULT:</h3>
+                <ul id="result" class="content">
+                    <li>Designed and implemented a fully functional, operator-safe sorting and packing system.</li>
+                    <li>Strengthened PLC programming skills using Studio 5000 and ladder logic.</li>
+                    <li>Integrated user input, safety logic, and efficient process control in a real-world system.</li>
+                    <li>Project documentation available for more technical details:
+                    <a href="Reports/Project_1_Report.pdf">Conveyor Sorter Project</a>
+                    </li>
+            </div>
+
+                    
+            </div>
+                
+    
+        </Section>
+        </div>
+        <<script src="js/index.js"></script>
+    </body>
+    </html>

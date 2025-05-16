@@ -1,0 +1,126 @@
+<!DOCTYPE html> <!--comment-->
+<html lang = "en">
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <script src="index.js"></script>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet"
+    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+
+        <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+        
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+    <!--Building of site-->
+    <body>
+        <header>    
+            
+            <header class="TopBarEveryPage">
+                <h1 class="project-name">Disk Launcher</h1>
+                <nav class="nav-menu">
+                    <a href="index.html">Home</a>
+                    <a href="contact.html">Contact Me</a>
+                    <a href="portfolio.html">Portfolio</a>
+                </nav>
+            </header>
+
+
+         <!-- My introduction :)-->
+        <Section class="Project_Intro_Every_Page">
+            
+            <div class ="Project_Intro_Every_Page"> 
+                <div class = "buttons">
+                    <a href="index.html" class="btn">Home</a>  <!--add link to Main page-->
+                   <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
+                    <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> add link to Design projects page-->
+                                           
+                </div>
+                <button class="nav-toggle" aria-label="toggle-navigation">
+                    <span class="hamburger"></span>
+                </button>
+       <!----        <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#Automation_Projects" class="nav__link">FANUC Simulation</a> </li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
+                    </ul>
+                </nav> --->
+            <h1 class="section__title section__title--introAutoFANUC">
+                <video width="800" controls>
+                    <source src="Videos/Disk_Launcher.mp4" type="video/mp4">
+                </video>
+             </h1>
+          <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
+                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
+            </div>
+        </header>
+        </Section>
+        <!--Project -->
+        <div class="InfoContainer">
+        <section class="Project2" id="Project2">
+            <p class="section__subtitle section__subtitle--Project2"></p>
+                
+            <div class="Project2__body">
+                <h3 class="infoToggle">OBJECTIVE:</h3>
+                <ul id="objective" class="content">
+                    <li>Design and build an automated frisbee-launching system as a team of four during the 2022 spring semester at RIT.</li>
+                    <li>Understand and apply the D.M.A.D.V. process (Define, Measure, Analyze, Design, Verify).</li>
+                    <li>Accurately launch a 5-inch diameter disk to a designated target using an electric-powered mechanism.</li>
+                </ul>
+            
+                <h3 class="infoToggle">MY CONTRIBUTION:</h3>
+                <ul id="my_contribution" class="content">
+                    <li>Performed all RPM and torque calculations for the launch mechanism.</li>
+                    <li>Researched and selected realistic values for friction coefficients and spring constants.</li>
+                    <li>Determined the relationships between disk weight, system geometry, and launch requirements.</li>
+                    <li>Developed an analytical model to ensure the disk would not slip and would launch correctly.</li>
+                    <li>Verified final results and documented calculations in a professional engineering format.</li>
+                </ul>
+                
+                <h3 class="infoToggle">PROCESS:</h3>
+                <ul id="process" class="content">
+                    <li>Designed a disk launch mechanism where a motor spins continuously at high RPM to launch the frisbee when triggered.</li>
+                    <li>Calculated required RPM using:
+                    <ul>
+                        <li>Assumed launch velocity of 14.1 m/s</li>
+                        <li>Radius of the disk: 2.5 inches</li>
+                        <li>Converted to RPM using rotational velocity formulas, arriving at 2124 RPM</li>
+                    </ul>
+                </li>
+                <li>Calculated required torque using:
+                    <ul>
+                        <li>Equation: <code>Torque = 0.5 * Roller_Diameter * (Total_Friction + μ * W * g)</code></li>
+                        <li>Estimated coefficient of static friction (acrylic-rubber): 0.6</li>
+                        <li>Calculated three friction values based on material interactions and spring compression force (F = k * x)</li>
+                        <li>Total friction calculated to be 11.41</li>
+                    </ul>
+                </li>
+                <li>Final required torque: 10.54 lb·in</li>
+                </ul>
+
+    <!--<img src="img/Motor_calcs.jpg" alt="RPM Calculation" class="Project1__img">
+    <img src="img/Motor_sol.jpg" alt="Torque Calculation" class="Project1__img">--->
+            
+                <h3 class="infoToggle">RESULT:</h3>
+                <ul id="result" class="content">
+                    <li>Prototype successfully launched disks, but underperformed in distance due to insufficient motor torque.</li>
+                    <li>Motor used had 3500 RPM (more than required) but lacked the needed torque, limiting launch to ~1 foot.</li>
+                    <li>Provided hands-on experience with real-world design trade-offs and the importance of torque in motion systems.</li>
+                    <li>Project documentation available for more technical details:</li>
+                    <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a>
+                </ul>    
+            </div>
+
+                    
+            </div>
+                
+    
+        </Section>
+        </div>
+        <<script src="js/index.js"></script>
+    </body>
+    </html>
