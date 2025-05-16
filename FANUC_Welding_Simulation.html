@@ -20,7 +20,7 @@
         <header>    
             
             <header class="TopBarEveryPage">
-                <h1 class="project-name">Excel Machine Map</h1>
+                <h1 class="project-name">FANUC Welding Simulation</h1>
                 <nav class="nav-menu">
                     <a href="index.html">Home</a>
                     <a href="contact.html">Contact Me</a>
@@ -50,7 +50,9 @@
                 </nav> --->
             <h1 class="section__title section__title--introAutoFANUC">
                 <u class="automation_FANUC-underline"><h2 class="automation_FANUC-header"> FANUC Welding Simulation</h2></u> <!--Daniella Donn is bolded-->
-    
+                <video width="800" controls>
+                    <source src="Videos/Welding_Fanuc_Robot.mp4" type="video/mp4">
+                </video>
              </h1>
           <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
                     <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
@@ -65,71 +67,37 @@
             <div class="Project2__body">
                 <h3 class="infoToggle">OBJECTIVE:</h3>
                 <ul id="objective" class="content">
-                    <li>Develop a user-friendly Excel tool to help employees locate machines within the plant.</li>
-                    <li>Reduce confusion and time spent searching by visually mapping machine locations.</li>
-                    <li>Provide functionality similar to a mall directory map using Excel and Visual Basic.</li>
+                    <li>Understand how to work with RoboGuide and program a FANUC robot using TCP and work objects.</li>
+                    <li>Run the tip of a welding tool in a circular path on the faces of two cylinders.</li>
+                    <li>Create three concentric paths with 50mm separation.</li>
+                    <li>On a flat plate, create a square pattern of lines: 10 lines in X and 10 lines in Y, each 500mm long, spaced 50mm apart.</li>
+                    <li>Pick the weld tool tip off of the plate by 50mm between paths.</li>
+                    <li>The final result is demonstrated in the video below.</li>
                 </ul>
-            
+                
                 <h3 class="infoToggle">PROCESS:</h3>
                 <ul id="process" class="content">
-                    <li><strong>User Interface:</strong> 
-                        <ul>
-                            <li>User types a machine name into a search bar and clicks the search button.</li>
-                            <li>Results display the machine name and corresponding plant cell.</li>
-                            <li>A highlighted rounded rectangle appears on the plant map showing the machine location.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Search by Cell:</strong> 
-                        <ul>
-                            <li>Typing a cell name displays all machines in that cell with their locations highlighted on the map.</li>
-                        </ul>
-                    </li>
-                    <li><strong>“Go To Location” Button:</strong> 
-                        <ul>
-                            <li>Zooms in on the highlighted rectangles for easier visibility.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Backend Data:</strong> 
-                        <ul>
-                            <li>A dedicated data sheet contains:
-                                <ul>
-                                    <li>Cell names</li>
-                                    <li>Machine numbers</li>
-                                    <li>X and Y coordinates on the map</li>
-                                    <li>Date last checked</li>
-                                    <li>A completion status symbol</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Coordinate Mapping:</strong> 
-                        <ul>
-                            <li>Created a Visual Basic tool to drag the highlight shape and click a button to display its exact coordinates.</li>
-                            <li>Used these coordinates to accurately map machines on the layout.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Visual Basic Programming:</strong> 
-                        <ul>
-                            <li>Coded all functionality using Visual Basic for Applications (VBA), including:
-                                <ul>
-                                    <li>Search and match logic</li>
-                                    <li>Shape highlighting and movement</li>
-                                    <li>“Clear All” and “Go To Location” buttons</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
+                    <li>Created 7 positions: start, above first cylinder, center of first cylinder, above second cylinder, center of second cylinder, flat plate, and end position.</li>
+                    <li>Used point registers to store data and manipulate robot movements.</li>
+                    <li>Set up three user frames: one for each cylinder and one for the flat plate, simplifying programming.</li>
+                    <li>Wrote 83 lines of code to execute the task.</li>
+                    <li>Lines 1-5: Set up user frame, tool, and moved to start position.</li>
+                    <li>Lines 6-9: Created four point registers to facilitate circle creation.</li>
+                    <li>Lines 13-19: Calculated and executed circular paths using loops and register values.</li>
+                    <li>Repeated circle creation process on the second cylinder after switching user frames.</li>
+                    <li>Lines 44-62: Used loops and registers to create 10 vertical weld lines on the flat plate.</li>
+                    <li>Lines 63-81: Used a similar approach to create 10 horizontal weld lines.</li>
+                    <li>Final step: Robot moved to position 7, marking the end of the task.</li>
                 </ul>
-            
+                
                 <h3 class="infoToggle">RESULT:</h3>
                 <ul id="result" class="content">
-                    <li>Fully functional plant map search tool built entirely in Excel with VBA.</li>
-                    <li>Successfully helped employees find machine locations quickly and efficiently.</li>
-                    <li>Learned and self-taught Visual Basic for this project, building all logic independently.</li>
-                    <li>Enhanced understanding of coordinate-based UI and dynamic shape manipulation in Excel.</li>
+                    <li>Successfully programmed the FANUC robot to follow precise welding patterns.</li>
+                    <li>Utilized user frames and point registers to simplify complex movements.</li>
+                    <li>Executed smooth transitions between different sections of the task.</li>
+                    <li>Final welding pattern accurately met project specifications.</li>
                 </ul>
-            </div>
-
+                
                     
             </div>
                 

@@ -24,7 +24,7 @@
     <header>
 
         <header class="TopBarEveryPage">
-            <h1 class="project-name">ABB Robot Stacking Simulation</h1>
+            <h1 class="project-name">Rivet Gripper</h1>
             <nav class="nav-menu">
                 <a href="index.html">Home</a>
                 <a href="contact.html">Contact Me</a>
@@ -54,7 +54,7 @@
                 </nav> --->
                 <h1 class="section__title section__title--introAutoFANUC">
                     <u class="automation_FANUC-underline">
-                        <h2 class="automation_FANUC-header">ABB Robot Stacking Simulation</h2>
+                        <h2 class="automation_FANUC-header">Rivet Gripper</h2>
                     </u> <!--Daniella Donn is bolded-->
 
                 </h1>
@@ -71,50 +71,66 @@
             <div class="Project2__body">
                 <h3 class="infoToggle">OBJECTIVE:</h3>
                 <ul id="objective" class="content">
-                    <li>Design and simulate a robot work cell for palletizing using ABB RobotStudio.</li>
-                    <li>Develop a program to efficiently stack cylindrical cans into a specified box layout.</li>
-                    <li>Utilize proximity sensors and limit switches for precise operation.</li>
+                    <li>Design a custom pickhead for a Universal Robot to perform precision pick-and-place tasks
+                        involving rivets as small as 2mm in diameter.</li>
+                    <li>Ensure the pickhead is compact, lightweight, and compatible with the Universal Robot’s
+                        quick-connect system.</li>
+                    <li>Create a cost-effective, manufacturable design that can securely handle rivets without the need
+                        for additional gripping mechanisms.</li>
                 </ul>
 
                 <h3 class="infoToggle">PROCESS:</h3>
                 <ul id="process" class="content">
-                    <li><strong>Cell Layout and Hardware:</strong>
+                    <li><strong>Concept and Design:</strong>
                         <ul>
-                            <li>Placed the ABB robot near the in-feed conveyor belt and box to minimize travel distance.
-                            </li>
-                            <li>Used an E3ZM-T83 proximity sensor to detect incoming cans, pausing the conveyor until
-                                each can is picked.</li>
-                            <li>Incorporated a limit switch to detect when the box is full, triggering a green signal
-                                light.</li>
-                            <li>Used an MG10 electromagnetic gripper as the end effector for reliable can handling.</li>
+                            <li>Modeled the pickhead in <strong>SolidWorks</strong>, focusing on a two-part design to
+                                ensure modularity and ease of assembly.</li>
+                            <li>Designed the <strong>Rivet Tip</strong> as a conical piece with a 2.1mm hole for rivet
+                                suction, threaded on top to connect to a spring-like air tube connector.</li>
+                            <li>Created the <strong>Top Section</strong> with a <strong>hockey puck</strong>-style
+                                connector for the <strong>quick-connect</strong> system, allowing for rapid attachment
+                                and detachment to the robot arm.</li>
+                            <li><em>Quick Connect Description:</em> A quick connect is a mechanical coupling that allows
+                                for rapid attachment and removal of the pickhead from the robot arm, minimizing downtime
+                                and simplifying tool changes.</li>
+                            <li>Incorporated a long, cylindrical section with a rectangular cutout to allow the air tube
+                                to pass through, and a threaded lower section to connect the spring connector.</li>
                         </ul>
                     </li>
-                    <li><strong>Program Logic:</strong>
+                    <li><strong>Prototype Development:</strong>
                         <ul>
-                            <li>Created nested FOR loops to stack 24 cans in a 2-layer pattern.</li>
-                            <li>Utilized the <code>MoveJ</code> and <code>MoveL</code> commands for efficient
-                                point-to-point and linear movements.</li>
-                            <li>Implemented the <code>pickup()</code> and <code>dropoff()</code> functions to control
-                                the magnet, including wait timers for precise grip control.</li>
-                            <li>Integrated position tracking using the <code>OverExactPointOnBox</code> and
-                                <code>CanDropoff</code> coordinate variables to handle row and layer transitions.</li>
+                            <li>Printed the design on a <strong>Markforged 3D printer</strong> using
+                                <strong>Onyx</strong>, a carbon fiber-infused nylon known for its high strength,
+                                durability, and dimensional stability.
+                            </li>
+                            <li>Paused the print mid-way to insert drop-in metal threads for added durability and secure
+                                component attachment.</li>
                         </ul>
                     </li>
-                    <li><strong>Error Handling and Efficiency:</strong>
+                    <li><strong>Testing and Optimization:</strong>
                         <ul>
-                            <li>Included checks for X and Y direction limits to properly transition between rows and
-                                layers.</li>
-                            <li>Used structured loops and spacing logic to ensure optimal placement without collisions.
-                            </li>
+                            <li>Conducted initial functionality tests to validate the pickhead’s gripping and mechanical
+                                performance.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Final Manufacturing:</strong>
+                        <ul>
+                            <li>Drafted detailed engineering drawings and sent the design to an outside manufacturer for
+                                precision machining.</li>
+                            <li>Received the final, machined version and verified its performance on the production
+                                line.</li>
                         </ul>
                     </li>
                 </ul>
 
                 <h3 class="infoToggle">RESULT:</h3>
                 <ul id="result" class="content">
-                    <li>Successfully simulated a palletizing task with precise can placement.</li>
-                    <li>Achieved efficient stacking with accurate position tracking and coordinated movements.</li>
-                    <li>Improved the robot’s cycle time and reduced the risk of placement errors.</li>
+                    <li>Successfully developed a rivet pickhead that met the project’s functional and design
+                        requirements.</li>
+                    <li>The pickhead is currently in active use at <strong>Nuvera</strong>, demonstrating long-term
+                        reliability and performance.</li>
+                    <li>The design effectively handled small rivets without the need for additional gripping mechanisms,
+                        reducing overall tooling complexity.</li>
                 </ul>
             </div>
 

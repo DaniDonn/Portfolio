@@ -1,112 +1,131 @@
 <!DOCTYPE html> <!--comment-->
-<html lang = "en">
+<html lang="en">
+
 <head>
     <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
-    <script src="index.js"></script>  
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--functions well on small devices as well as larger ones-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--functions well on small devices as well as larger ones-->
     <title>Daniella Donn Portfolio Website</title>
-    <link rel="stylesheet"
-    href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" 
-    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  <!--makes website looks the same in all browsers and gets fonts-->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <!--makes website looks the same in all browsers and gets fonts-->
 
-        <!-- Update these with your own fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
-        
+    <!-- Update these with your own fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
-    
-    <!--Building of site-->
-    <body>
-        <header>    
-            
-            <header class="TopBarEveryPage">
-                <h1 class="project-name">Tab Detection</h1>
-                <nav class="nav-menu">
-                    <a href="index.html">Home</a>
-                    <a href="contact.html">Contact Me</a>
-                    <a href="portfolio.html">Portfolio</a>
-                </nav>
-            </header>
+
+<!--Building of site-->
+
+<body>
+    <header>
+
+        <header class="TopBarEveryPage">
+            <h1 class="project-name">Tab Detection</h1>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="contact.html">Contact Me</a>
+                <a href="portfolio.html">Portfolio</a>
+            </nav>
+        </header>
 
 
-         <!-- My introduction :)-->
+        <!-- My introduction :)-->
         <Section class="Project_Intro_Every_Page">
-            
-            <div class ="Project_Intro_Every_Page"> 
-                <div class = "buttons">
-                    <a href="index.html" class="btn">Home</a>  <!--add link to Main page-->
-                   <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
+
+            <div class="Project_Intro_Every_Page">
+                <div class="buttons">
+                    <a href="index.html" class="btn">Home</a> <!--add link to Main page-->
+                    <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
                     <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> add link to Design projects page-->
-                                           
+
                 </div>
                 <button class="nav-toggle" aria-label="toggle-navigation">
                     <span class="hamburger"></span>
                 </button>
-       <!----        <nav class="nav">
+                <!----        <nav class="nav">
                     <ul class="nav__list">
                         <li class="nav__item"><a href="#Automation_Projects" class="nav__link">FANUC Simulation</a> </li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
                     </ul>
                 </nav> --->
-            <h1 class="section__title section__title--introAutoFANUC">
-                <u class="automation_FANUC-underline"><h2 class="automation_FANUC-header">Tab Detection</h2></u> <!--Daniella Donn is bolded-->
-    
-             </h1>
-          <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
-                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg--> 
+                <h1 class="section__title section__title--introAutoFANUC">
+                    <u class="automation_FANUC-underline">
+                        <h2 class="automation_FANUC-header">Tab Detection</h2>
+                    </u> <!--Daniella Donn is bolded-->
+
+                </h1>
+                <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
+                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg-->
             </div>
-        </header>
-        </Section>
-        <!--Project -->
-        <div class="InfoContainer">
+    </header>
+    </Section>
+    <!--Project -->
+    <div class="InfoContainer">
         <section class="Project2" id="Project2">
             <p class="section__subtitle section__subtitle--Project2"></p>
-                
+
             <div class="Project2__body">
                 <h3 class="infoToggle">OBJECTIVE:</h3>
                 <ul id="objective" class="content">
-                    <li>Develop a computer vision system to detect unbuffed tabs on machined parts to improve quality control and reduce defects.</li>
-                    <li>Automate defect detection to reduce manual inspection time and improve overall efficiency in production lines.</li>
+                    <li>Develop a computer vision system to detect unbuffed tabs on machined parts to improve quality
+                        control and reduce defects.</li>
+                    <li>Automate defect detection to reduce manual inspection time and improve overall efficiency in
+                        production lines.</li>
                 </ul>
-            
+
                 <h3 class="infoToggle">PROCESS:</h3>
                 <ul id="process" class="content">
                     <li><strong>Data Collection & Model Training:</strong>
                         <ul>
-                            <li>Captured over 100 labeled images of machined parts, including various lighting conditions and orientations.</li>
-                            <li>Created training and testing datasets, using approximately 80% of images for training and 20% for testing.</li>
-                            <li>Trained the model using Darknet, an open-source neural network framework that implements the YOLO (You Only Look Once) model for real-time object detection.</li>
+                            <li>Captured over 100 labeled images of machined parts, including various lighting
+                                conditions and orientations.</li>
+                            <li>Created training and testing datasets, using approximately 80% of images for training
+                                and 20% for testing.</li>
+                            <li>Trained the model using Darknet, an open-source neural network framework that implements
+                                the YOLO (You Only Look Once) model for real-time object detection.</li>
                         </ul>
                     </li>
                     <li><strong>Detection Optimization:</strong>
                         <ul>
-                            <li>Identified that small tabs were difficult to detect, leading to the development of a Python script to divide the image into four quadrants for closer analysis.</li>
-                            <li>Implemented quadrant-based zoom to enhance the model's ability to detect small tabs, significantly improving detection accuracy.</li>
+                            <li>Identified that small tabs were difficult to detect, leading to the development of a
+                                Python script to divide the image into four quadrants for closer analysis.</li>
+                            <li>Implemented quadrant-based zoom to enhance the model's ability to detect small tabs,
+                                significantly improving detection accuracy.</li>
                         </ul>
                     </li>
                     <li><strong>Planned Conveyor Integration:</strong>
                         <ul>
-                            <li>Designed a plan for integrating the camera system with a Raspberry Pi-controlled conveyor belt for automated inspection.</li>
-                            <li>Planned for error signaling, including flashing lights to alert operators to defects.</li>
+                            <li>Designed a plan for integrating the camera system with a Raspberry Pi-controlled
+                                conveyor belt for automated inspection.</li>
+                            <li>Planned for error signaling, including flashing lights to alert operators to defects.
+                            </li>
                         </ul>
                     </li>
                 </ul>
-                
-            
+
+
                 <h3 class="infoToggle">RESULT:</h3>
                 <ul id="result" class="content">
-                    <li>Successfully trained a convolutional neural network to identify tabs on machined parts with high accuracy.</li>
-                    <li>Improved defect detection capabilities, reducing the risk of defective parts reaching downstream processes.</li>
-                    <li>Gained hands-on experience in machine learning, computer vision, and real-world defect detection.</li>                    
+                    <li>Successfully trained a convolutional neural network to identify tabs on machined parts with high
+                        accuracy.</li>
+                    <li>Improved defect detection capabilities, reducing the risk of defective parts reaching downstream
+                        processes.</li>
+                    <li>Gained hands-on experience in machine learning, computer vision, and real-world defect
+                        detection.</li>
                 </ul>
             </div>
-                    
-            </div>
-                
-    
-        </Section>
-        </div>
-        <<script src="js/index.js"></script>
-    </body>
-    </html>
+
+    </div>
+
+
+    </Section>
+    </div>
+    <<script src="js/index.js">
+        </script>
+</body>
+
+</html>
