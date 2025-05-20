@@ -181,66 +181,6 @@ header{
     padding: 0;
 }
 
-/*hamburger*/
-
-.nav-toggle {
-    padding: .5em;
-    background: transparent;
-    border: 0;
-    cursor: pointer;
-    position: absolute;
-    right: 1em;
-    top: 1em;
-    z-index: 1000;
-}
-
-.nav-open .nav {
-    transform: translateX(0);
-}
-
-
-.nav-open .nav-toggle { /*keeps hamburger in view while in menu*/
-    position: fixed;
-}
-
-.nav-open .hamburger {
-    transform: rotate(.625turn);
-}
-.nav-open .hamburger::before {
-    transform: rotate(90deg) translateX(-6px);
-}
-
-.nav-open .hamburger::after{
-    opacity: 0;
-}
-
-.hamburger {
-    display: block;
-    position: relative;
-}
-.hamburger,
-.hamburger::before,
-.hamburger::after{
-    background: var(--clr-accent);
-    width: 2em;
-    height: 3px;
-    border-radius: 1em;
-    transition: transform 250ms ease-in-out;
-
-}
-
-.hamburger::before,
-.hamburger::after{
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.hamburger::before { top: 6px;}
-.hamburger::after { bottom: 6px;}
-
-
 /* Intro Section */
 .intro {
     position: relative;
@@ -437,7 +377,8 @@ header{
 
 .projects{
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*image setup for projects*/
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));/*image setup for projects*/
+   padding-bottom: 20px;
 
 }
 .portfolio__item{
@@ -580,13 +521,11 @@ header{
     display: flex;
     align-items: center;
     text-align: center;
-    position: fixed;
     top: 0;
     left: 0;
     background-color: #CCD5AE;
     background-size: cover;
     color: black;
-    width: 95vw;
     height: 25vh;
 
 }
@@ -613,7 +552,7 @@ header{
     max-width: 1000px;
     margin: 0 auto; 
 }
-.section__title--Project2::after { /*for smol line under the main title*/
+.section__title--Project::after { /*for smol line under the main title*/
     content: '';
     display: block;
     width: 15em;
@@ -622,7 +561,7 @@ header{
     background: var(--clr-accent);
     opacity: 0.50;
 }
-.Project2{
+.Project{
     background: var(--clr-grey);
     background-size: cover;
     color: var(--clr-dark);

@@ -11,64 +11,31 @@
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!--makes website looks the same in all browsers and gets fonts-->
 
-    <!-- Update these with your own fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <!--Building of site-->
 
 <body>
-    <header>
-
-        <header class="TopBarEveryPage">
-            <h1 class="project-name">ABB Robot Stacking Simulation</h1>
-            <nav class="nav-menu">
-                <a href="index.html">Home</a>
-                <a href="contact.html">Contact Me</a>
-                <a href="portfolio.html">Portfolio</a>
-            </nav>
-        </header>
-
-
-        <!-- My introduction :)-->
-        <Section class="Project_Intro_Every_Page">
-
-            <div class="Project_Intro_Every_Page">
-                <div class="buttons">
-                    <a href="index.html" class="btn">Home</a> <!--add link to Main page-->
-                    <!----<a href="Portfolio-item-Programming.html" class="btn">Programming Projects</a> add link to Programing projects page--
-                    <a href="Portfolio-item-Design.html" class="btn">Design Projects</a> add link to Design projects page-->
-
-                </div>
-                <button class="nav-toggle" aria-label="toggle-navigation">
-                    <span class="hamburger"></span>
-                </button>
-                <!----        <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="#Automation_Projects" class="nav__link">FANUC Simulation</a> </li>
-                        <li class="nav__item"><a href="#contact" class="nav__link">Contact Me</a> </li>
-                    </ul>
-                </nav> --->
-                <h1 class="section__title section__title--introAutoFANUC">
-                    <u class="automation_FANUC-underline">
-                        <h2 class="automation_FANUC-header">ABB Robot Stacking Simulation</h2>
-                    </u> <!--Daniella Donn is bolded-->
-
-                </h1>
-                <!---  <p class ="section__subtitle section__subtitle--intro-projects">FANUC Welding Simulation</p>
-                    <img src="img\Automation_background.jpg" alt="Image of code" class="Code__img"> <-- put photo in folder classed img with /name-of-photo.jpg-->
-            </div>
+    <header class="TopBarEveryPage">
+        <h1 class="project-name">ABB Robot Stacking Simulation</h1>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+        </nav>
     </header>
-    </Section>
+
     <!--Project -->
     <div class="InfoContainer">
-        <section class="Project2" id="Project2">
-            <p class="section__subtitle section__subtitle--Project2"></p>
+        <section class="Project" id="Project">
+            <div class="project__abstract">
+                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
+                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
+                    voluptates illum facere error?
+                </p>
+            </div>
 
-            <div class="Project2__body">
+            <div class="Project__body">
                 <h3 class="infoToggle">OBJECTIVE:</h3>
                 <ul id="objective" class="content">
                     <li>Design and simulate a robot work cell for palletizing using ABB RobotStudio.</li>
@@ -97,7 +64,8 @@
                             <li>Implemented the <code>pickup()</code> and <code>dropoff()</code> functions to control
                                 the magnet, including wait timers for precise grip control.</li>
                             <li>Integrated position tracking using the <code>OverExactPointOnBox</code> and
-                                <code>CanDropoff</code> coordinate variables to handle row and layer transitions.</li>
+                                <code>CanDropoff</code> coordinate variables to handle row and layer transitions.
+                            </li>
                         </ul>
                     </li>
                     <li><strong>Error Handling and Efficiency:</strong>
@@ -118,10 +86,13 @@
                 </ul>
             </div>
 
-    </div>
-
-
-    </Section>
+            <h2 class="automation-header">
+                <u class="automation-underline">ABB Robot Stacking Simulation</u>
+            </h2>
+            <video width="800" controls>
+                <source src="Videos/ABB_Sim.mp4" type="video/mp4">
+            </video>
+        </section>
     </div>
 
     <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
