@@ -3,6 +3,7 @@
 
 <head>
     <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--functions well on small devices as well as larger ones-->
@@ -18,7 +19,7 @@
 
 <body>
     <header class="TopBarEveryPage">
-        <h1 class="project-name">Rivet Gripper</h1>
+        <h1 class="project-name">OS1 Gripper</h1>
         <nav class="nav-menu">
             <a href="index.html">Home</a>
             <a href="contact.html">Contact Me</a>
@@ -40,66 +41,66 @@
             <div class="Project__body">
                 <h3 class="infoToggle">OBJECTIVE:</h3>
                 <ul id="objective" class="content">
-                    <li>Design a custom pickhead for a Universal Robot to perform precision pick-and-place tasks
-                        involving rivets as small as 2mm in diameter.</li>
-                    <li>Ensure the pickhead is compact, lightweight, and compatible with the Universal Robot’s
-                        quick-connect system.</li>
-                    <li>Create a cost-effective, manufacturable design that can securely handle rivets without the need
-                        for additional gripping mechanisms.</li>
+                    <li>Design a custom gripper for a Universal Robot to pick up porous OFFs (open fiber foams)</li>
+                    <li>Ensure a reliable grip despite the material’s high porosity</li>
                 </ul>
 
                 <h3 class="infoToggle">PROCESS:</h3>
                 <ul id="process" class="content">
-                    <li><strong>Concept and Design:</strong>
+                    <li>
+                        <strong>Vacuum Section:</strong>
                         <ul>
-                            <li>Modeled the pickhead in <strong>SolidWorks</strong>, focusing on a two-part design to
-                                ensure modularity and ease of assembly.</li>
-                            <li>Designed the <strong>Rivet Tip</strong> as a conical piece with a 2.1mm hole for rivet
-                                suction, threaded on top to connect to a spring-like air tube connector.</li>
-                            <li>Created the <strong>Top Section</strong> with a <strong>hockey puck</strong>-style
-                                connector for the <strong>quick-connect</strong> system, allowing for rapid attachment
-                                and detachment to the robot arm.</li>
-                            <li><em>Quick Connect Description:</em> A quick connect is a mechanical coupling that allows
-                                for rapid attachment and removal of the pickhead from the robot arm, minimizing downtime
-                                and simplifying tool changes.</li>
-                            <li>Incorporated a long, cylindrical section with a rectangular cutout to allow the air tube
-                                to pass through, and a threaded lower section to connect the spring connector.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Prototype Development:</strong>
-                        <ul>
-                            <li>Printed the design on a <strong>Markforged 3D printer</strong> using
-                                <strong>Onyx</strong>, a carbon fiber-infused nylon known for its high strength,
-                                durability, and dimensional stability.
+                            <li>Combined vacuum system using:
+                                <ul>
+                                    <li>1 box vacuum (black component) for strong lift</li>
+                                    <li>2 Bernoulli vacuums for stabilizing the OFF</li>
+                                </ul>
                             </li>
-                            <li>Paused the print mid-way to insert drop-in metal threads for added durability and secure
-                                component attachment.</li>
+                            <li><strong>Bernoulli vacuums:</strong> use fast-moving air to generate low pressure — ideal
+                                for porous/delicate objects</li>
+                            <li>Bernoulli vacuums positioned slightly higher than the box vacuum to:
+                                <ul>
+                                    <li>Keep the OFF steady during lift</li>
+                                    <li>Prevent sticking due to over-suction from the box vacuum</li>
+                                </ul>
+                            </li>
+                            <li>Foam padding on the bottom of the box vacuum prevents OFF movement during pickup</li>
+                            <li>Slots in the metal plate allow Bernoulli vacuums to be adjusted laterally</li>
+                            <li>Spacers under Bernoulli vacuums ensure level contact for smoother pickup</li>
+                            <li>Right-angle elbow fitting and large tube provide adequate airflow to the box vacuum</li>
+                            <li>Proximity sensor mounted on one corner (with adjustable positions) to detect successful
+                                pickup</li>
                         </ul>
                     </li>
-                    <li><strong>Testing and Optimization:</strong>
+
+                    <li>
+                        <strong>Attachment Section:</strong>
                         <ul>
-                            <li>Conducted initial functionality tests to validate the pickhead’s gripping and mechanical
-                                performance.</li>
+                            <li>Connects the vacuum section to the Universal Robot</li>
+                            <li>Four screw holes on the bottom attach to the robot</li>
+                            <li>Four corner screws attach the top section to the vacuum section</li>
+                            <li>Long screws used to allow space for elbow pipe and tubing</li>
                         </ul>
                     </li>
-                    <li><strong>Final Manufacturing:</strong>
+
+                    <li>
+                        <strong>Design and Fabrication:</strong>
                         <ul>
-                            <li>Drafted detailed engineering drawings and sent the design to an outside manufacturer for
-                                precision machining.</li>
-                            <li>Received the final, machined version and verified its performance on the production
-                                line.</li>
+                            <li>Designed in <strong>SolidWorks</strong></li>
+                            <li>Applied <strong>GD&T</strong> to all technical drawings</li>
+                            <li>Manufactured in-house at <strong>Nuvera Fuel Cells</strong></li>
+                            <li>Assembled and tested after fabrication</li>
                         </ul>
                     </li>
+                </ul>
                 </ul>
 
                 <h3 class="infoToggle">RESULT:</h3>
                 <ul id="result" class="content">
-                    <li>Successfully developed a rivet pickhead that met the project’s functional and design
-                        requirements.</li>
-                    <li>The pickhead is currently in active use at <strong>Nuvera</strong>, demonstrating long-term
-                        reliability and performance.</li>
-                    <li>The design effectively handled small rivets without the need for additional gripping mechanisms,
-                        reducing overall tooling complexity.</li>
+                    <li>Gripper functioned as intended, successfully picking up OFFs using the hybrid vacuum approach
+                    </li>
+                    <li>Design was effective but difficult to assemble due to long screw alignment</li>
+                    <li>Highlighted the importance of leveling during assembly to avoid tilt</li>
                 </ul>
             </div>
         </section>
@@ -123,6 +124,7 @@
     <button id="nextProject">Next Project</button>
 
     <script src="js/index.js"></script>
+
 </body>
 
 </html>
