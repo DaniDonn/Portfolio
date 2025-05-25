@@ -17,102 +17,118 @@
 <!--Building of site-->
 
 <body>
-
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">Excel Machine Map</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">Excel Machine Map</u>
+            </h2>
+        </div>
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Develop a user-friendly Excel tool to help employees locate machines within the plant.</li>
-                    <li>Reduce confusion and time spent searching by visually mapping machine locations.</li>
-                    <li>Provide functionality similar to a mall directory map using Excel and Visual Basic.</li>
-                </ul>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <img src="img/automation_Background.png" alt="temp image">
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>User Interface:</strong>
-                        <ul>
-                            <li>User types a machine name into a search bar and clicks the search button.</li>
-                            <li>Results display the machine name and corresponding plant cell.</li>
-                            <li>A highlighted rounded rectangle appears on the plant map showing the machine location.
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Search by Cell:</strong>
-                        <ul>
-                            <li>Typing a cell name displays all machines in that cell with their locations highlighted
-                                on the map.</li>
-                        </ul>
-                    </li>
-                    <li><strong>“Go To Location” Button:</strong>
-                        <ul>
-                            <li>Zooms in on the highlighted rectangles for easier visibility.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Backend Data:</strong>
-                        <ul>
-                            <li>A dedicated data sheet contains:
-                                <ul>
-                                    <li>Cell names</li>
-                                    <li>Machine numbers</li>
-                                    <li>X and Y coordinates on the map</li>
-                                    <li>Date last checked</li>
-                                    <li>A completion status symbol</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Coordinate Mapping:</strong>
-                        <ul>
-                            <li>Created a Visual Basic tool to drag the highlight shape and click a button to display
-                                its exact coordinates.</li>
-                            <li>Used these coordinates to accurately map machines on the layout.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Visual Basic Programming:</strong>
-                        <ul>
-                            <li>Coded all functionality using Visual Basic for Applications (VBA), including:
-                                <ul>
-                                    <li>Search and match logic</li>
-                                    <li>Shape highlighting and movement</li>
-                                    <li>“Clear All” and “Go To Location” buttons</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
 
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Fully functional plant map search tool built entirely in Excel with VBA.</li>
-                    <li>Successfully helped employees find machine locations quickly and efficiently.</li>
-                    <li>Learned and self-taught Visual Basic for this project, building all logic independently.</li>
-                    <li>Enhanced understanding of coordinate-based UI and dynamic shape manipulation in Excel.</li>
-                </ul>
-            </div>
-        </section>
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Develop a user-friendly Excel tool to help employees locate machines within the plant.</li>
+                <li>Reduce confusion and time spent searching by visually mapping machine locations.</li>
+                <li>Provide functionality similar to a mall directory map using Excel and Visual Basic.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>User Interface:</strong>
+                    <ul>
+                        <li>User types a machine name into a search bar and clicks the search button.</li>
+                        <li>Results display the machine name and corresponding plant cell.</li>
+                        <li>A highlighted rounded rectangle appears on the plant map showing the machine location.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Search by Cell:</strong>
+                    <ul>
+                        <li>Typing a cell name displays all machines in that cell with their locations highlighted
+                            on the map.</li>
+                    </ul>
+                </li>
+                <li><strong>“Go To Location” Button:</strong>
+                    <ul>
+                        <li>Zooms in on the highlighted rectangles for easier visibility.</li>
+                    </ul>
+                </li>
+                <li><strong>Backend Data:</strong>
+                    <ul>
+                        <li>A dedicated data sheet contains:
+                            <ul>
+                                <li>Cell names</li>
+                                <li>Machine numbers</li>
+                                <li>X and Y coordinates on the map</li>
+                                <li>Date last checked</li>
+                                <li>A completion status symbol</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Coordinate Mapping:</strong>
+                    <ul>
+                        <li>Created a Visual Basic tool to drag the highlight shape and click a button to display
+                            its exact coordinates.</li>
+                        <li>Used these coordinates to accurately map machines on the layout.</li>
+                    </ul>
+                </li>
+                <li><strong>Visual Basic Programming:</strong>
+                    <ul>
+                        <li>Coded all functionality using Visual Basic for Applications (VBA), including:
+                            <ul>
+                                <li>Search and match logic</li>
+                                <li>Shape highlighting and movement</li>
+                                <li>“Clear All” and “Go To Location” buttons</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Fully functional plant map search tool built entirely in Excel with VBA.</li>
+                <li>Successfully helped employees find machine locations quickly and efficiently.</li>
+                <li>Learned and self-taught Visual Basic for this project, building all logic independently.</li>
+                <li>Enhanced understanding of coordinate-based UI and dynamic shape manipulation in Excel.</li>
+            </ul>
+        </div>
     </div>
 
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
+
     <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Cognex_Camera_Edge_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
@@ -123,9 +139,6 @@
     <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
-
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
 
     <script src="js/index.js"></script>
 </body>

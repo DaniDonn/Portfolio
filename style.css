@@ -137,11 +137,6 @@ h3 { font-size: var(--fs-h3) }
 
 /*header*/
 
-header{
-    display:flex;
-    justify-content: space-between;
-}
-
 .logo {
     max-width: 100px;
 }
@@ -402,50 +397,6 @@ header{
     opacity: .75;
 }
 
-/*Footer....FEEEEEEET lol*/
-.footer{
-    background:#111; /*black background*/
-    color: var(--clr-accent);
-    text-align: center;
-    padding: 2.5em 0;
-    font-size: var(--fs-h3);
-}
-
-.footer a { 
-    color: inherit;
-    text-decoration: none;
- }
-
- .footer__link{
-    font-weight: var(--fw-bold);
- }
-
-.footer__link:hover,
-.social-list__link:hover{
-    opacity: .7;
-}
-
-.footer__link:hover{
-    text-decoration: underline;
-
-}
-
-.social-list {
-    list-style: none;
-    display:flex;
-    justify-content: center;
-    margin: 2em 0 0;
-    padding:0;
-}
-
-.social-list__item {
-    margin: 0 .5em;
-}
-
-.social-list__link {
-    padding: .5em
-}
-
 @media (max-width: 1200px) {
     .buttons {
         display: flex;
@@ -503,10 +454,6 @@ header{
     background-color: white
 }
 
-.InfoContainer {
-    background-color: #E9EDC9;
-}
-
 .Project_Intro_Every_Page{   /*This will be the header for each project page*/
     background-color: #FAEDCD;
     background-size: cover;
@@ -515,26 +462,6 @@ header{
     left: 0;
     width: 95vw;
     margin: 0 auto;
-}
-
-.TopBarEveryPage{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    top: 0;
-    left: 0;
-    background-color: #CCD5AE;
-    background-size: cover;
-    color: black;
-    height: 25vh;
-
-}
-.nav-menu a {
-    text-decoration: none;
-    color: white;
-    margin: 0 15px;
-    font-size: 1em;
-    font-weight: bold;
 }
 
 /*.introProjPageAuto {
@@ -718,6 +645,7 @@ header{
 
 .automation-header {
     color: #FFD580;
+    padding-bottom: 20px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     text-shadow: 6px 6px 6px black;
@@ -758,4 +686,120 @@ a:hover {
 h3 {
     cursor: pointer;
     color: #D4A373; /* Makes the headers look interactive */
+}
+
+#topBarEveryPage {
+    background-color: #E9EDC9;
+    height: 7.5vh;
+}
+
+#navMenu {
+    max-width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navMenu a {
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#infoContainer {
+    background-color: #E9EDC9;
+}
+
+#projectTitle {
+    display: flex;
+    justify-content: center;
+}
+
+#projectMedia {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#projectAbstract {
+    display: flex;
+    justify-content: center;
+}
+
+#projectBody {
+    margin: auto;
+    max-width: 50%;
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-between;
+}
+
+#projectInformation {
+    margin: auto;
+    max-width: 70%;
+}
+
+.content {
+    margin: auto;
+    max-width: 75%;
+}
+
+.content>li {
+    text-align: left;
+}
+
+.contentChild>li {
+    text-align: left;
+}
+
+#buttonInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#previousProjectText {
+    padding-left: 10px;
+}
+
+#nextProjectText {
+    padding-right: 10px;
+}
+
+#previousProject {
+    padding-left: 10px;
+    color: black;
+}
+
+#previousProject:hover {
+    cursor: pointer;
+    scale: 1.5;
+}
+
+#nextProject {
+    padding-right: 10px;
+    color: black;
+}
+
+#nextProject:hover {
+    cursor: pointer;
+    scale: 1.5;
+}
+
+/*Footer....FEEEEEEET lol*/
+#footer {
+    display: flex;
+    justify-content: center;
+    background-color:#E9EDC9;
+    color: var(--clr-accent);
+    text-align: center;
+    font-size: var(--fs-h3);
+}
+
+#footerLink {
+    font-weight: var(--fw-bold);
 }

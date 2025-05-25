@@ -17,100 +17,107 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">Disk Launcher</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
-
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Design and build an automated frisbee-launching system as a team of four during the 2022 spring
-                        semester at RIT.</li>
-                    <li>Understand and apply the D.M.A.D.V. process (Define, Measure, Analyze, Design, Verify).</li>
-                    <li>Accurately launch a 5-inch diameter disk to a designated target using an electric-powered
-                        mechanism.</li>
-                </ul>
-
-                <h3 class="infoToggle">MY CONTRIBUTION:</h3>
-                <ul id="my_contribution" class="content">
-                    <li>Performed all RPM and torque calculations for the launch mechanism.</li>
-                    <li>Researched and selected realistic values for friction coefficients and spring constants.</li>
-                    <li>Determined the relationships between disk weight, system geometry, and launch requirements.</li>
-                    <li>Developed an analytical model to ensure the disk would not slip and would launch correctly.</li>
-                    <li>Verified final results and documented calculations in a professional engineering format.</li>
-                </ul>
-
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li>Designed a disk launch mechanism where a motor spins continuously at high RPM to launch the
-                        frisbee when triggered.</li>
-                    <li>Calculated required RPM using:
-                        <ul>
-                            <li>Assumed launch velocity of 14.1 m/s</li>
-                            <li>Radius of the disk: 2.5 inches</li>
-                            <li>Converted to RPM using rotational velocity formulas, arriving at 2124 RPM</li>
-                        </ul>
-                    </li>
-                    <li>Calculated required torque using:
-                        <ul>
-                            <li>Equation: <code>Torque = 0.5 * Roller_Diameter * (Total_Friction + μ * W * g)</code>
-                            </li>
-                            <li>Estimated coefficient of static friction (acrylic-rubber): 0.6</li>
-                            <li>Calculated three friction values based on material interactions and spring compression
-                                force (F = k * x)</li>
-                            <li>Total friction calculated to be 11.41</li>
-                        </ul>
-                    </li>
-                    <li>Final required torque: 10.54 lb·in</li>
-                </ul>
-
-                <!--<img src="img/Motor_calcs.jpg" alt="RPM Calculation" class="Project1__img">
-    <img src="img/Motor_sol.jpg" alt="Torque Calculation" class="Project1__img">-->
-
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Prototype successfully launched disks, but underperformed in distance due to insufficient motor
-                        torque.</li>
-                    <li>Motor used had 3500 RPM (more than required) but lacked the needed torque, limiting launch to ~1
-                        foot.</li>
-                    <li>Provided hands-on experience with real-world design trade-offs and the importance of torque in
-                        motion systems.</li>
-                    <li>Project documentation available for more technical details:</li>
-                    <li>
-                        <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a>
-                    </li>
-                </ul>
-            </div>
-
+    <div id="infoContainer">
+        <div id="projectTitle">
             <h2 class="automation-header">
                 <u class="automation-underline">Disk Launcher</u>
             </h2>
+        </div>
 
-            <video width="800" controls>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <video width="900" controls>
                 <source src="Videos/Disk_Launcher.mp4" type="video/mp4">
             </video>
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
 
-        </section>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
+
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">MY CONTRIBUTION:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Design and build an automated frisbee-launching system as a team of four during the 2022 spring
+                    semester at RIT.</li>
+                <li>Understand and apply the D.M.A.D.V. process (Define, Measure, Analyze, Design, Verify).</li>
+                <li>Accurately launch a 5-inch diameter disk to a designated target using an electric-powered
+                    mechanism.</li>
+            </ul>
+
+            <ul id="my_contribution" class="content">
+                <li>Performed all RPM and torque calculations for the launch mechanism.</li>
+                <li>Researched and selected realistic values for friction coefficients and spring constants.</li>
+                <li>Determined the relationships between disk weight, system geometry, and launch requirements.</li>
+                <li>Developed an analytical model to ensure the disk would not slip and would launch correctly.</li>
+                <li>Verified final results and documented calculations in a professional engineering format.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li>Designed a disk launch mechanism where a motor spins continuously at high RPM to launch the
+                    frisbee when triggered.</li>
+                <li>Calculated required RPM using:
+                    <ul>
+                        <li>Assumed launch velocity of 14.1 m/s</li>
+                        <li>Radius of the disk: 2.5 inches</li>
+                        <li>Converted to RPM using rotational velocity formulas, arriving at 2124 RPM</li>
+                    </ul>
+                </li>
+                <li>Calculated required torque using:
+                    <ul>
+                        <li>Equation: <code>Torque = 0.5 * Roller_Diameter * (Total_Friction + μ * W * g)</code>
+                        </li>
+                        <li>Estimated coefficient of static friction (acrylic-rubber): 0.6</li>
+                        <li>Calculated three friction values based on material interactions and spring compression
+                            force (F = k * x)</li>
+                        <li>Total friction calculated to be 11.41</li>
+                    </ul>
+                </li>
+                <li>Final required torque: 10.54 lb·in</li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Prototype successfully launched disks, but underperformed in distance due to insufficient motor
+                    torque.</li>
+                <li>Motor used had 3500 RPM (more than required) but lacked the needed torque, limiting launch to ~1
+                    foot.</li>
+                <li>Provided hands-on experience with real-world design trade-offs and the importance of torque in
+                    motion systems.</li>
+                <li>Project documentation available for more technical details:</li>
+                <li>
+                    <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
+
     <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Cognex_Camera_Edge_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
@@ -121,9 +128,6 @@
     <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
-
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
 
     <script src="js/index.js"></script>
 

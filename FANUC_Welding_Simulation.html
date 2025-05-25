@@ -17,78 +17,85 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">FANUC Welding Simulation</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <p class="section__subtitle section__subtitle--Project"></p>
-
-            <div class="Project__body">
-                <div class="project__abstract">
-                    <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                        ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum
-                        aperiam,
-                        voluptates illum facere error?
-                    </p>
-                </div>
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Understand how to work with RoboGuide and program a FANUC robot using TCP and work objects.</li>
-                    <li>Run the tip of a welding tool in a circular path on the faces of two cylinders.</li>
-                    <li>Create three concentric paths with 50mm separation.</li>
-                    <li>On a flat plate, create a square pattern of lines: 10 lines in X and 10 lines in Y, each 500mm
-                        long, spaced 50mm apart.</li>
-                    <li>Pick the weld tool tip off of the plate by 50mm between paths.</li>
-                    <li>The final result is demonstrated in the video below.</li>
-                </ul>
-
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li>Created 7 positions: start, above first cylinder, center of first cylinder, above second
-                        cylinder, center of second cylinder, flat plate, and end position.</li>
-                    <li>Used point registers to store data and manipulate robot movements.</li>
-                    <li>Set up three user frames: one for each cylinder and one for the flat plate, simplifying
-                        programming.</li>
-                    <li>Wrote 83 lines of code to execute the task.</li>
-                    <li>Lines 1-5: Set up user frame, tool, and moved to start position.</li>
-                    <li>Lines 6-9: Created four point registers to facilitate circle creation.</li>
-                    <li>Lines 13-19: Calculated and executed circular paths using loops and register values.</li>
-                    <li>Repeated circle creation process on the second cylinder after switching user frames.</li>
-                    <li>Lines 44-62: Used loops and registers to create 10 vertical weld lines on the flat plate.</li>
-                    <li>Lines 63-81: Used a similar approach to create 10 horizontal weld lines.</li>
-                    <li>Final step: Robot moved to position 7, marking the end of the task.</li>
-                </ul>
-
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Successfully programmed the FANUC robot to follow precise welding patterns.</li>
-                    <li>Utilized user frames and point registers to simplify complex movements.</li>
-                    <li>Executed smooth transitions between different sections of the task.</li>
-                    <li>Final welding pattern accurately met project specifications.</li>
-                </ul>
-            </div>
-
-            <h2 class="automation_FANUC-header">
-                <u class="automation_FANUC-underline">FANUC Welding Simulation</u>
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">FANUC Welding Simulation</u>
             </h2>
+        </div>
 
-            <video width="800" controls>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <video width="900" controls>
                 <source src="Videos/Welding_Fanuc_Robot.mp4" type="video/mp4">
             </video>
-        </section>
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
+
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
+
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Understand how to work with RoboGuide and program a FANUC robot using TCP and work objects.</li>
+                <li>Run the tip of a welding tool in a circular path on the faces of two cylinders.</li>
+                <li>Create three concentric paths with 50mm separation.</li>
+                <li>On a flat plate, create a square pattern of lines: 10 lines in X and 10 lines in Y, each 500mm
+                    long, spaced 50mm apart.</li>
+                <li>Pick the weld tool tip off of the plate by 50mm between paths.</li>
+                <li>The final result is demonstrated in the video below.</li>
+            </ul>
+            <ul id="process" class="content">
+                <li>Created 7 positions: start, above first cylinder, center of first cylinder, above second
+                    cylinder, center of second cylinder, flat plate, and end position.</li>
+                <li>Used point registers to store data and manipulate robot movements.</li>
+                <li>Set up three user frames: one for each cylinder and one for the flat plate, simplifying
+                    programming.</li>
+                <li>Wrote 83 lines of code to execute the task.</li>
+                <li>Lines 1-5: Set up user frame, tool, and moved to start position.</li>
+                <li>Lines 6-9: Created four point registers to facilitate circle creation.</li>
+                <li>Lines 13-19: Calculated and executed circular paths using loops and register values.</li>
+                <li>Repeated circle creation process on the second cylinder after switching user frames.</li>
+                <li>Lines 44-62: Used loops and registers to create 10 vertical weld lines on the flat plate.</li>
+                <li>Lines 63-81: Used a similar approach to create 10 horizontal weld lines.</li>
+                <li>Final step: Robot moved to position 7, marking the end of the task.</li>
+            </ul>
+            <ul id="result" class="content">
+                <li>Successfully programmed the FANUC robot to follow precise welding patterns.</li>
+                <li>Utilized user frames and point registers to simplify complex movements.</li>
+                <li>Executed smooth transitions between different sections of the task.</li>
+                <li>Final welding pattern accurately met project specifications.</li>
+            </ul>
+        </div>
     </div>
 
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
+
     <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Cognex_Camera_Edge_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
@@ -100,9 +107,6 @@
     <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
-
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
 
     <script src="js/index.js"></script>
 

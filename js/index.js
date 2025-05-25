@@ -1,10 +1,13 @@
 const toggle = document.querySelectorAll(".infoToggle");
+const toggleInfo = document.querySelector("#projectInformation").children;
 
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 
 const nextProjectButton = document.querySelector("#nextProject");
 const previousProjectButton = document.querySelector("#previousProject");
+const nextProjectText = document.querySelector("#nextProjectText");
+const previousProjectText = document.querySelector("#previousProjectText");
 const htmlLinkObjects = document.querySelectorAll('.hiddenLink');
 
 let currentPageString = '';
@@ -53,20 +56,18 @@ function main(){
         ChangePage(currentPageIndex + 1)
     })
 
+    // // Setting the next project title for the next project text object.
+    // let tempText = htmlLinks[currentPageIndex + 1 > htmlLinks.length - 1 ? 0 : currentPageIndex + 1].split(".")[0];
+    // nextProjectText.textContent += ": " + tempText;
+
     // Adding a click event to the previous page button. 
     previousProjectButton.addEventListener('click', () => {
         ChangePage(currentPageIndex - 1)
     })
-    
-    function HandleInfoToggle(toggleObject) {
-        // Loop through each toggle object in the toggle array.
-        toggle.forEach(toggleObj => {
-            // If it's not the one that was clicked, hide it.
-            if (toggleObject != toggleObj) {
-                toggleObj.nextElementSibling.style.display = "none";
-            }
-        })
-    }
+
+    // // Setting the previous project title for the previous project text object.
+    // tempText = htmlLinks[currentPageIndex - 1 < 0 ? htmlLinks.length - 1 : currentPageIndex - 1].split(".")[0];
+    // previousProjectText.textContent += ": " + tempText;
     
     toggle.forEach(toggleObj => {
     
@@ -74,9 +75,12 @@ function main(){
         toggleObj.addEventListener("click", () => {
     
             HandleInfoToggle(toggleObj);
+            toggleObj.style.border = "solid";
+            
+            let currentIndex = Array.from(toggle).indexOf(toggleObj);
             
             // Getting the next element (the UL in this case)
-            const nextElement = toggleObj.nextElementSibling;
+            const nextElement = toggleInfo[currentIndex];
     
             // Check if the content is hidden or not and toggle visibility
             if (nextElement.style.display === "none" || nextElement.style.display === "") {
@@ -99,4 +103,21 @@ function ChangePage(newIndex) {
 
     // Setting the current link address to the new page.
     window.location.href = currentPageString + htmlLinks[newIndex];
+}
+
+function HandleInfoToggle(toggleObject) {
+    // Loop through each toggle object in the toggle array.
+    toggle.forEach(toggleObj => {
+
+        let currentIndex = Array.from(toggle).indexOf(toggleObj);
+            
+        // Getting the next element (the UL in this case)
+        const nextElement = toggleInfo[currentIndex];
+
+        // If it's not the one that was clicked, hide it.
+        if (toggleObject != toggleObj) {
+            nextElement.style.display = "none";
+            toggleObj.style.border = "none";
+        }
+    })
 }

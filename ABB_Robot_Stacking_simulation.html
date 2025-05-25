@@ -17,86 +17,100 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">ABB Robot Stacking Simulation</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
-
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Design and simulate a robot work cell for palletizing using ABB RobotStudio.</li>
-                    <li>Develop a program to efficiently stack cylindrical cans into a specified box layout.</li>
-                    <li>Utilize proximity sensors and limit switches for precise operation.</li>
-                </ul>
-
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>Cell Layout and Hardware:</strong>
-                        <ul>
-                            <li>Placed the ABB robot near the in-feed conveyor belt and box to minimize travel distance.
-                            </li>
-                            <li>Used an E3ZM-T83 proximity sensor to detect incoming cans, pausing the conveyor until
-                                each can is picked.</li>
-                            <li>Incorporated a limit switch to detect when the box is full, triggering a green signal
-                                light.</li>
-                            <li>Used an MG10 electromagnetic gripper as the end effector for reliable can handling.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Program Logic:</strong>
-                        <ul>
-                            <li>Created nested FOR loops to stack 24 cans in a 2-layer pattern.</li>
-                            <li>Utilized the <code>MoveJ</code> and <code>MoveL</code> commands for efficient
-                                point-to-point and linear movements.</li>
-                            <li>Implemented the <code>pickup()</code> and <code>dropoff()</code> functions to control
-                                the magnet, including wait timers for precise grip control.</li>
-                            <li>Integrated position tracking using the <code>OverExactPointOnBox</code> and
-                                <code>CanDropoff</code> coordinate variables to handle row and layer transitions.
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Error Handling and Efficiency:</strong>
-                        <ul>
-                            <li>Included checks for X and Y direction limits to properly transition between rows and
-                                layers.</li>
-                            <li>Used structured loops and spacing logic to ensure optimal placement without collisions.
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Successfully simulated a palletizing task with precise can placement.</li>
-                    <li>Achieved efficient stacking with accurate position tracking and coordinated movements.</li>
-                    <li>Improved the robot’s cycle time and reduced the risk of placement errors.</li>
-                </ul>
-            </div>
-
+    <div id="infoContainer">
+        <div id="projectTitle">
             <h2 class="automation-header">
                 <u class="automation-underline">ABB Robot Stacking Simulation</u>
             </h2>
-            <video width="800" controls>
+        </div>
+
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <video width="900" controls>
                 <source src="Videos/ABB_Sim.mp4" type="video/mp4">
             </video>
-        </section>
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
+
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
+
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Design and simulate a robot work cell for palletizing using ABB RobotStudio.</li>
+                <li>Develop a program to efficiently stack cylindrical cans into a specified box layout.</li>
+                <li>Utilize proximity sensors and limit switches for precise operation.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>Cell Layout and Hardware:</strong>
+                    <ul class="contentChild">
+                        <li>Placed the ABB robot near the in-feed conveyor belt and box to minimize travel distance.
+                        </li>
+                        <li>Used an E3ZM-T83 proximity sensor to detect incoming cans, pausing the conveyor until
+                            each can is picked.</li>
+                        <li>Incorporated a limit switch to detect when the box is full, triggering a green signal
+                            light.</li>
+                        <li>Used an MG10 electromagnetic gripper as the end effector for reliable can handling.</li>
+                    </ul>
+                </li>
+                <li><strong>Program Logic:</strong>
+                    <ul class="contentChild">
+                        <li>Created nested FOR loops to stack 24 cans in a 2-layer pattern.</li>
+                        <li>Utilized the <code>MoveJ</code> and <code>MoveL</code> commands for efficient
+                            point-to-point and linear movements.</li>
+                        <li>Implemented the <code>pickup()</code> and <code>dropoff()</code> functions to control
+                            the magnet, including wait timers for precise grip control.</li>
+                        <li>Integrated position tracking using the <code>OverExactPointOnBox</code> and
+                            <code>CanDropoff</code> coordinate variables to handle row and layer transitions.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Error Handling and Efficiency:</strong>
+                    <ul class="contentChild">
+                        <li>Included checks for X and Y direction limits to properly transition between rows and
+                            layers.</li>
+                        <li>Used structured loops and spacing logic to ensure optimal placement without collisions.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Successfully simulated a palletizing task with precise can placement.</li>
+                <li>Achieved efficient stacking with accurate position tracking and coordinated movements.</li>
+                <li>Improved the robot’s cycle time and reduced the risk of placement errors.</li>
+            </ul>
+        </div>
     </div>
 
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
+
     <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Cognex_Camera_Edge_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
@@ -108,9 +122,6 @@
     <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
     <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
-
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
 
     <script src="js/index.js"></script>
 </body>
