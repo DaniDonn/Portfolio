@@ -21,95 +21,114 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">Morning Meeting Dashboard</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">Morning Meeting Dashboard</u>
+            </h2>
+        </div>
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Develop an interactive SCADA dashboard using Ignition Perspective, Python scripting, and CSS.
-                    </li>
-                    <li>Create a user-friendly interface accessible to all employees, with limited edit access for
-                        select users.</li>
-                    <li>Replace the traditional whiteboard approach to streamline daily manufacturing meetings and
-                        improve data tracking.</li>
-                </ul>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <img src="img/automation_Background.png" alt="temp image">
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>User Access Control:</strong>
-                        <ul>
-                            <li>Set up user authentication to limit edit access while keeping the dashboard visible to
-                                all employees.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Table Setup and Data Entry:</strong>
-                        <ul>
-                            <li>Created multiple tag-linked tables for real-time data entry, including machine status,
-                                engine production, shipping, and cost.</li>
-                            <li>Designed a note pad section for unstructured entries that didn’t fit into predefined
-                                tables.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Calendar Design for Safety Tracking:</strong>
-                        <ul>
-                            <li>Built a dynamic, button-based calendar with 31 buttons to track daily safety incidents.
-                            </li>
-                            <li>Implemented color-coded updates (green for no accidents, red for accidents) for quick
-                                visual reference.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Interface Optimization:</strong>
-                        <ul>
-                            <li>Used CSS for professional styling and responsiveness, ensuring compatibility across
-                                various screen sizes.</li>
-                            <li>Incorporated dropdown menus to streamline data input and reduce screen clutter.</li>
-                            <li>Organized content with embedded views to create a clean and efficient layout.</li>
-                        </ul>
-                    </li>
-                </ul>
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
 
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Developed a comprehensive dashboard that replaced the need for physical whiteboards in morning
-                        meetings.</li>
-                    <li>Enhanced real-time visibility into production metrics, reducing the need for manual data
-                        handling.</li>
-                    <li>Provided a scalable and professional tool for tracking manufacturing floor performance.</li>
-                </ul>
-            </div>
-        </section>
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Develop an interactive SCADA dashboard using Ignition Perspective, Python scripting, and CSS.
+                </li>
+                <li>Create a user-friendly interface accessible to all employees, with limited edit access for
+                    select users.</li>
+                <li>Replace the traditional whiteboard approach to streamline daily manufacturing meetings and
+                    improve data tracking.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>User Access Control:</strong>
+                    <ul>
+                        <li>Set up user authentication to limit edit access while keeping the dashboard visible to
+                            all employees.</li>
+                    </ul>
+                </li>
+                <li><strong>Table Setup and Data Entry:</strong>
+                    <ul>
+                        <li>Created multiple tag-linked tables for real-time data entry, including machine status,
+                            engine production, shipping, and cost.</li>
+                        <li>Designed a note pad section for unstructured entries that didn’t fit into predefined
+                            tables.</li>
+                    </ul>
+                </li>
+                <li><strong>Calendar Design for Safety Tracking:</strong>
+                    <ul>
+                        <li>Built a dynamic, button-based calendar with 31 buttons to track daily safety incidents.
+                        </li>
+                        <li>Implemented color-coded updates (green for no accidents, red for accidents) for quick
+                            visual reference.</li>
+                    </ul>
+                </li>
+                <li><strong>Interface Optimization:</strong>
+                    <ul>
+                        <li>Used CSS for professional styling and responsiveness, ensuring compatibility across
+                            various screen sizes.</li>
+                        <li>Incorporated dropdown menus to streamline data input and reduce screen clutter.</li>
+                        <li>Organized content with embedded views to create a clean and efficient layout.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Developed a comprehensive dashboard that replaced the need for physical whiteboards in morning
+                    meetings.</li>
+                <li>Enhanced real-time visibility into production metrics, reducing the need for manual data
+                    handling.</li>
+                <li>Provided a scalable and professional tool for tracking manufacturing floor performance.</li>
+            </ul>
+        </div>
     </div>
 
-    <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Morning_Meeting_Dashboard.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Conveyor_Sorter.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Garage_Door_System.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Rivet_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
 
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Disk_Launcher.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
+
     <script src="js/index.js"></script>
 </body>
 

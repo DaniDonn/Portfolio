@@ -17,91 +17,107 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">S.O.S. Button</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">SOS Button</u>
+            </h2>
+        </div>
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Automate a system for operators to request supervisor assistance efficiently.</li>
-                    <li>Provide both a <strong>visual alert</strong> (flashing light) and an <strong>automated email
-                            notification</strong>.</li>
-                    <li>Build the system using a <strong>Raspberry Pi</strong> with a <strong>pushbutton</strong>,
-                        <strong>relay</strong>, and <strong>light</strong>, all coded in <strong>Python</strong>.
-                    </li>
-                </ul>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <img src="img/automation_Background.png" alt="temp image">
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>Button & Light Test:</strong> Verified hardware functionality by activating a relay that
-                        turns on the light when the button is pressed.</li>
-                    <li><strong>Supervisor Information Setup:</strong> Created a text file storing:
-                        <ul>
-                            <li>Supervisor contact info</li>
-                            <li>Their shift times</li>
-                            <li>Sender email credentials</li>
-                        </ul>
-                    </li>
-                    <li><strong>Data Parsing:</strong>
-                        <ul>
-                            <li>Wrote a parser to read the text file and store each line’s info in a <code>tuple</code>
-                                (to handle mixed data types).</li>
-                            <li>Determined the correct supervisor based on current time vs. shift times.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Email Automation:</strong>
-                        <ul>
-                            <li>Used <code>Selenium WebDriver</code> to access Gmail.</li>
-                            <li>Composed the email using <code>MIMEMultipart</code> and <code>MIMEText</code>.</li>
-                            <li>Sent the email automatically via the <code>smtplib</code> module.</li>
-                        </ul>
-                    </li>
-                </ul>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
 
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Successfully built a low-cost alert system that sends real-time emails and activates a flashing
-                        light for location visibility.</li>
-                    <li>Improved plant communication and reduced supervisor response time.</li>
-                    <li>Strengthened Python skills and introduced automation using a Raspberry Pi.</li>
-                    <li>Learned to integrate hardware interaction with email and time-based logic.</li>
-                </ul>
-            </div>
-        </section>
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Automate a system for operators to request supervisor assistance efficiently.</li>
+                <li>Provide both a <strong>visual alert</strong> (flashing light) and an <strong>automated email
+                        notification</strong>.</li>
+                <li>Build the system using a <strong>Raspberry Pi</strong> with a <strong>pushbutton</strong>,
+                    <strong>relay</strong>, and <strong>light</strong>, all coded in <strong>Python</strong>.
+                </li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>Button & Light Test:</strong> Verified hardware functionality by activating a relay that
+                    turns on the light when the button is pressed.</li>
+                <li><strong>Supervisor Information Setup:</strong> Created a text file storing:
+                    <ul>
+                        <li>Supervisor contact info</li>
+                        <li>Their shift times</li>
+                        <li>Sender email credentials</li>
+                    </ul>
+                </li>
+                <li><strong>Data Parsing:</strong>
+                    <ul>
+                        <li>Wrote a parser to read the text file and store each line’s info in a <code>tuple</code>
+                            (to handle mixed data types).</li>
+                        <li>Determined the correct supervisor based on current time vs. shift times.</li>
+                    </ul>
+                </li>
+                <li><strong>Email Automation:</strong>
+                    <ul>
+                        <li>Used <code>Selenium WebDriver</code> to access Gmail.</li>
+                        <li>Composed the email using <code>MIMEMultipart</code> and <code>MIMEText</code>.</li>
+                        <li>Sent the email automatically via the <code>smtplib</code> module.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Successfully built a low-cost alert system that sends real-time emails and activates a flashing
+                    light for location visibility.</li>
+                <li>Improved plant communication and reduced supervisor response time.</li>
+                <li>Strengthened Python skills and introduced automation using a Raspberry Pi.</li>
+                <li>Learned to integrate hardware interaction with email and time-based logic.</li>
+            </ul>
+        </div>
     </div>
 
-    <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Morning_Meeting_Dashboard.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="OS1_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Conveyor_Sorter.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Garage_Door_System.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Rivet_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
 
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Disk_Launcher.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
 
     <script src="js/index.js"></script>
 </body>

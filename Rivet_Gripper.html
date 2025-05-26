@@ -17,109 +17,125 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">Rivet Gripper</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">Rivet Gripper</u>
+            </h2>
+        </div>
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Design a custom pickhead for a Universal Robot to perform precision pick-and-place tasks
-                        involving rivets as small as 2mm in diameter.</li>
-                    <li>Ensure the pickhead is compact, lightweight, and compatible with the Universal Robot’s
-                        quick-connect system.</li>
-                    <li>Create a cost-effective, manufacturable design that can securely handle rivets without the need
-                        for additional gripping mechanisms.</li>
-                </ul>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <img src="img/automation_Background.png" alt="temp image">
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>Concept and Design:</strong>
-                        <ul>
-                            <li>Modeled the pickhead in <strong>SolidWorks</strong>, focusing on a two-part design to
-                                ensure modularity and ease of assembly.</li>
-                            <li>Designed the <strong>Rivet Tip</strong> as a conical piece with a 2.1mm hole for rivet
-                                suction, threaded on top to connect to a spring-like air tube connector.</li>
-                            <li>Created the <strong>Top Section</strong> with a <strong>hockey puck</strong>-style
-                                connector for the <strong>quick-connect</strong> system, allowing for rapid attachment
-                                and detachment to the robot arm.</li>
-                            <li><em>Quick Connect Description:</em> A quick connect is a mechanical coupling that allows
-                                for rapid attachment and removal of the pickhead from the robot arm, minimizing downtime
-                                and simplifying tool changes.</li>
-                            <li>Incorporated a long, cylindrical section with a rectangular cutout to allow the air tube
-                                to pass through, and a threaded lower section to connect the spring connector.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Prototype Development:</strong>
-                        <ul>
-                            <li>Printed the design on a <strong>Markforged 3D printer</strong> using
-                                <strong>Onyx</strong>, a carbon fiber-infused nylon known for its high strength,
-                                durability, and dimensional stability.
-                            </li>
-                            <li>Paused the print mid-way to insert drop-in metal threads for added durability and secure
-                                component attachment.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Testing and Optimization:</strong>
-                        <ul>
-                            <li>Conducted initial functionality tests to validate the pickhead’s gripping and mechanical
-                                performance.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Final Manufacturing:</strong>
-                        <ul>
-                            <li>Drafted detailed engineering drawings and sent the design to an outside manufacturer for
-                                precision machining.</li>
-                            <li>Received the final, machined version and verified its performance on the production
-                                line.</li>
-                        </ul>
-                    </li>
-                </ul>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
 
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Successfully developed a rivet pickhead that met the project’s functional and design
-                        requirements.</li>
-                    <li>The pickhead is currently in active use at <strong>Nuvera</strong>, demonstrating long-term
-                        reliability and performance.</li>
-                    <li>The design effectively handled small rivets without the need for additional gripping mechanisms,
-                        reducing overall tooling complexity.</li>
-                </ul>
-            </div>
-        </section>
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Design a custom pickhead for a Universal Robot to perform precision pick-and-place tasks
+                    involving rivets as small as 2mm in diameter.</li>
+                <li>Ensure the pickhead is compact, lightweight, and compatible with the Universal Robot’s
+                    quick-connect system.</li>
+                <li>Create a cost-effective, manufacturable design that can securely handle rivets without the need
+                    for additional gripping mechanisms.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>Concept and Design:</strong>
+                    <ul>
+                        <li>Modeled the pickhead in <strong>SolidWorks</strong>, focusing on a two-part design to
+                            ensure modularity and ease of assembly.</li>
+                        <li>Designed the <strong>Rivet Tip</strong> as a conical piece with a 2.1mm hole for rivet
+                            suction, threaded on top to connect to a spring-like air tube connector.</li>
+                        <li>Created the <strong>Top Section</strong> with a <strong>hockey puck</strong>-style
+                            connector for the <strong>quick-connect</strong> system, allowing for rapid attachment
+                            and detachment to the robot arm.</li>
+                        <li><em>Quick Connect Description:</em> A quick connect is a mechanical coupling that allows
+                            for rapid attachment and removal of the pickhead from the robot arm, minimizing downtime
+                            and simplifying tool changes.</li>
+                        <li>Incorporated a long, cylindrical section with a rectangular cutout to allow the air tube
+                            to pass through, and a threaded lower section to connect the spring connector.</li>
+                    </ul>
+                </li>
+                <li><strong>Prototype Development:</strong>
+                    <ul>
+                        <li>Printed the design on a <strong>Markforged 3D printer</strong> using
+                            <strong>Onyx</strong>, a carbon fiber-infused nylon known for its high strength,
+                            durability, and dimensional stability.
+                        </li>
+                        <li>Paused the print mid-way to insert drop-in metal threads for added durability and secure
+                            component attachment.</li>
+                    </ul>
+                </li>
+                <li><strong>Testing and Optimization:</strong>
+                    <ul>
+                        <li>Conducted initial functionality tests to validate the pickhead’s gripping and mechanical
+                            performance.</li>
+                    </ul>
+                </li>
+                <li><strong>Final Manufacturing:</strong>
+                    <ul>
+                        <li>Drafted detailed engineering drawings and sent the design to an outside manufacturer for
+                            precision machining.</li>
+                        <li>Received the final, machined version and verified its performance on the production
+                            line.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Successfully developed a rivet pickhead that met the project’s functional and design
+                    requirements.</li>
+                <li>The pickhead is currently in active use at <strong>Nuvera</strong>, demonstrating long-term
+                    reliability and performance.</li>
+                <li>The design effectively handled small rivets without the need for additional gripping mechanisms,
+                    reducing overall tooling complexity.</li>
+            </ul>
+        </div>
     </div>
 
-    <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Morning_Meeting_Dashboard.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="OS1_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Conveyor_Sorter.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Garage_Door_System.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Rivet_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
 
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Disk_Launcher.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
 
     <script src="js/index.js"></script>
 </body>

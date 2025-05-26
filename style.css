@@ -40,7 +40,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
     background: var(--clr-light); /*sets background as light*/
     color: var(--clr-dark); /*our color will be dark for certain blocks*/
@@ -58,7 +57,10 @@ img {
     display: block;
     max-width: 100%;
 }
-strong { font-weight: var(--fw-bold) }
+
+strong { 
+    font-weight: var(--fw-bold) 
+}
 
 /*Will highlight the button when hovering over it*/
 :focus {
@@ -79,12 +81,11 @@ strong { font-weight: var(--fw-bold) }
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
     transition: transform 200ms ease-in-out;
-    
 }
 
 /*Hovering over the button will make it bigger*/
 .btn:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .buttons {
@@ -104,11 +105,17 @@ h3 {
     margin: 0;
 }
 
-h1 { font-size: var(--fs-h1) }
-h2 { font-size: var(--fs-h2) }
-h3 { font-size: var(--fs-h3) }
+h1 { 
+    font-size: var(--fs-h1) 
+}
 
+h2 { 
+    font-size: var(--fs-h2) 
+}
 
+h3 { 
+    font-size: var(--fs-h3) 
+}
 
 .section__title {
     margin-bottom: .25em
@@ -139,41 +146,6 @@ h3 { font-size: var(--fs-h3) }
 
 .logo {
     max-width: 100px;
-}
-
-.nav{
-    position: fixed;
-    background: var(--clr-dark);
-    color: var(--clr-light);
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-
-    transform: translateX(100%);
-    transition: transform 250ms cubic-bezier (.5, 0, .5, 1);
-}
-
-.nav__link{
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h2);
-    text-decoration: none;
-}
-.nav__link:hover {
-    color: var(--clr-accent);
-}
-
-.nav__list{
-    list-style: none;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin:0;
-    padding: 0;
 }
 
 /* Intro Section */
@@ -226,8 +198,6 @@ h3 { font-size: var(--fs-h3) }
       z-index: 2;
     }
 }
-
-
 
 /*Skills and certification area*/
 .skills {
@@ -315,17 +285,6 @@ h3 { font-size: var(--fs-h3) }
 .About-Me__img {
     box-shadow: var(--bs);
 }
-    
-/* @media (min-width: 800px) {
-    .Skills-and-Certifications {
-        display: flex;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    .Skills-and-Certification + .Skills-and-Certification { space between each skill catagory
-        margin-left: 1.5em;
-    }
-} */
 
 /*Work Expirience Section!*/
 .work-experience{
@@ -350,13 +309,12 @@ h3 { font-size: var(--fs-h3) }
     margin-bottom: 1em;
 }
 
-
 /*My Projects section!!!!!!!*/
 .my-projects {
     background-color: var(--clr-dark); /*main background color for projects section*/
     color: var(--clr-accent); /*font color*/
-    
 }
+
 .section__subtitle--My-Projects {
     color: var(--clr-accent);
     font-weight: var(--fw-bold);
@@ -370,29 +328,31 @@ h3 { font-size: var(--fs-h3) }
     text-align: center;
 }
 
-.projects{
+.projects {
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));/*image setup for projects*/
    padding-bottom: 20px;
 
 }
-.portfolio__item{
+
+.portfolio__item {
     background: var(--clr-accent);
     overflow: hidden;
 }
 
-.portfolio__img{
+.portfolio__img {
     transition: 
         transform 750ms cubic-bezier(.5,0,.5,1),
         opacity 250ms linear;
 }
-.portfolio__item:focus{
+
+.portfolio__item:focus {
     position: relative;
     z-index: 2;
 }
 
 .portfolio__img:hover,
-.portfolio__item:focus .portfolio__img{
+.portfolio__item:focus .portfolio__img {
     transform: scale(1.1);
     opacity: .75;
 }
@@ -409,15 +369,7 @@ h3 { font-size: var(--fs-h3) }
         text-align: center;
     }
 }
-/*my Autonation Projects introduction
-.introProjPageAuto {
-    background-color: var(--clr-dark);
-    background-image: url(img/automation_Background.png);
-    background-size: cover;
-    /* background-blend-mode: multiply; 
-    color: var(--clr-light);
-    text-align: center;
-}*/
+
 .section__subtitle--intro{
     background: var(--clr-accent);
     color: var(--clr-dark); /*for font*/
@@ -436,16 +388,6 @@ h3 { font-size: var(--fs-h3) }
     text-align: center;
 }
 
-.section__title--Project1::after { /*for smol line under the main title*/
-    content: '';
-    display: block;
-    width: 15em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-accent);
-    opacity: 0.25;
-}
-
 .colorContainerEven {
     background-color: #202020;
 }
@@ -454,110 +396,6 @@ h3 { font-size: var(--fs-h3) }
     background-color: white
 }
 
-.Project_Intro_Every_Page{   /*This will be the header for each project page*/
-    background-color: #FAEDCD;
-    background-size: cover;
-    background-blend-mode: multiply; 
-    text-align: center;
-    left: 0;
-    width: 95vw;
-    margin: 0 auto;
-}
-
-/*.introProjPageAuto {
-    background-color: #FAEDCD;
-    background-size: cover;
-    background-blend-mode: multiply; 
-    text-align: center;
-    margin: 0 auto;*/
-
-.Project1 {
-    background: var(--clr-dark);
-    background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto; 
-}
-.section__title--Project::after { /*for smol line under the main title*/
-    content: '';
-    display: block;
-    width: 15em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-accent);
-    opacity: 0.50;
-}
-.Project{
-    background: var(--clr-grey);
-    background-size: cover;
-    color: var(--clr-dark);
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto; 
-}
-.section__title--Project3::after { /*for smol line under the main title*/
-    content: '';
-    display: block;
-    width: 15em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-accent);
-    opacity: 0.25;
-}
-.Project3{
-    background: var(--clr-dark);
-    background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto; 
-}
-.section__title--Project4::after { /*for smol line under the main title*/
-    content: '';
-    display: block;
-    width: 15em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-accent);
-    opacity: 0..50;
-}
-.Project4{
-    background: var(--clr-grey);
-    background-size: cover;
-    color: var(--clr-dark);
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto; 
-
-}
-.section__title--Project5::after { /*for smol line under the main title*/
-    content: '';
-    display: block;
-    width: 15em;
-    height: 1px;
-    margin: 0.5em auto 1em;
-    background: var(--clr-accent);
-    opacity: 0.25;
-}
-.Project5{
-    background: var(--clr-dark);
-    background-size: cover;
-    color: var(--clr-light);
-    text-align: center;
-    max-width: 1000px;
-    margin: 0 auto; 
-}
-
-/*my Design Projects introduction*/
-.introDes {
-    background-color: var(--clr-dark);
-    background-image: url(img/Design_background.png);
-    background-size: cover;
-    /* background-blend-mode: multiply; */
-    color: var(--clr-light);
-    text-align: center;
-}
 .section__subtitle--intro_auto{
     background: var(--clr-accent);
     color: var(--clr-dark); /*for font*/
@@ -584,44 +422,6 @@ h3 { font-size: var(--fs-h3) }
     margin-bottom: 1em;
     text-align: center;
 }
-/*Centering images*/
-.Project1__img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* width: 50%;*/
-}
-.Project2__img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-     /*width: 50%;*/
-}
-.Project3__img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-.Project4__img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
-.Project5__img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-     width: 50%;
-}
-
-/*p {
-    margin: 0 auto;
-    max-width: 75%;
-    text-align: left;
-}
-*/
 
 .container {
     position: relative;
@@ -636,7 +436,7 @@ h3 { font-size: var(--fs-h3) }
     z-index: 101;
 }
 
-/* Project photo header text */
+/* Styles for each project title type */
 .programming-header {
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -678,16 +478,14 @@ a:hover {
     opacity: 0.7;
 }
 
-.content {
-    display: none; /* Hide content initially */
-    margin-left: 20px;
-}
-
 h3 {
     cursor: pointer;
     color: #D4A373; /* Makes the headers look interactive */
 }
 
+/*-- Project Page Styling Below Here --*/
+
+/*Navigation Bar*/
 #topBarEveryPage {
     background-color: #E9EDC9;
     height: 7.5vh;
@@ -709,15 +507,18 @@ h3 {
     font-weight: bold;
 }
 
+/* Main div styling */
 #infoContainer {
     background-color: #E9EDC9;
 }
 
+/* Title styling */
 #projectTitle {
     display: flex;
     justify-content: center;
 }
 
+/* Video/Img div styling */
 #projectMedia {
     display: flex;
     justify-content: space-between;
@@ -742,6 +543,11 @@ h3 {
 #projectInformation {
     margin: auto;
     max-width: 70%;
+}
+
+.content {
+    display: none; /* Hide content initially */
+    margin-left: 20px;
 }
 
 .content {
@@ -802,4 +608,8 @@ h3 {
 
 #footerLink {
     font-weight: var(--fw-bold);
+}
+
+.hiddenLink {
+    display: none;
 }

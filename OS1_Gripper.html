@@ -18,106 +18,124 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">OS1 Gripper</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">OS1 Gripper</u>
+            </h2>
+        </div>
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Design a custom gripper for a Universal Robot to pick up porous OFFs (open fiber foams)</li>
-                    <li>Ensure a reliable grip despite the material’s high porosity</li>
-                </ul>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <img src="img/automation_Background.png" alt="temp image">
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li>
-                        <strong>Vacuum Section:</strong>
-                        <ul>
-                            <li>Combined vacuum system using:
-                                <ul>
-                                    <li>1 box vacuum (black component) for strong lift</li>
-                                    <li>2 Bernoulli vacuums for stabilizing the OFF</li>
-                                </ul>
-                            </li>
-                            <li><strong>Bernoulli vacuums:</strong> use fast-moving air to generate low pressure — ideal
-                                for porous/delicate objects</li>
-                            <li>Bernoulli vacuums positioned slightly higher than the box vacuum to:
-                                <ul>
-                                    <li>Keep the OFF steady during lift</li>
-                                    <li>Prevent sticking due to over-suction from the box vacuum</li>
-                                </ul>
-                            </li>
-                            <li>Foam padding on the bottom of the box vacuum prevents OFF movement during pickup</li>
-                            <li>Slots in the metal plate allow Bernoulli vacuums to be adjusted laterally</li>
-                            <li>Spacers under Bernoulli vacuums ensure level contact for smoother pickup</li>
-                            <li>Right-angle elbow fitting and large tube provide adequate airflow to the box vacuum</li>
-                            <li>Proximity sensor mounted on one corner (with adjustable positions) to detect successful
-                                pickup</li>
-                        </ul>
-                    </li>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
 
-                    <li>
-                        <strong>Attachment Section:</strong>
-                        <ul>
-                            <li>Connects the vacuum section to the Universal Robot</li>
-                            <li>Four screw holes on the bottom attach to the robot</li>
-                            <li>Four corner screws attach the top section to the vacuum section</li>
-                            <li>Long screws used to allow space for elbow pipe and tubing</li>
-                        </ul>
-                    </li>
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
 
-                    <li>
-                        <strong>Design and Fabrication:</strong>
-                        <ul>
-                            <li>Designed in <strong>SolidWorks</strong></li>
-                            <li>Applied <strong>GD&T</strong> to all technical drawings</li>
-                            <li>Manufactured in-house at <strong>Nuvera Fuel Cells</strong></li>
-                            <li>Assembled and tested after fabrication</li>
-                        </ul>
-                    </li>
-                </ul>
-                </ul>
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Design a custom gripper for a Universal Robot to pick up porous OFFs (open fiber foams)</li>
+                <li>Ensure a reliable grip despite the material’s high porosity</li>
+            </ul>
 
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Gripper functioned as intended, successfully picking up OFFs using the hybrid vacuum approach
-                    </li>
-                    <li>Design was effective but difficult to assemble due to long screw alignment</li>
-                    <li>Highlighted the importance of leveling during assembly to avoid tilt</li>
-                </ul>
-            </div>
-        </section>
+            <ul id="process" class="content">
+                <li>
+                    <strong>Vacuum Section:</strong>
+                    <ul>
+                        <li>Combined vacuum system using:
+                            <ul>
+                                <li>1 box vacuum (black component) for strong lift</li>
+                                <li>2 Bernoulli vacuums for stabilizing the OFF</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bernoulli vacuums:</strong> use fast-moving air to generate low pressure — ideal
+                            for porous/delicate objects</li>
+                        <li>Bernoulli vacuums positioned slightly higher than the box vacuum to:
+                            <ul>
+                                <li>Keep the OFF steady during lift</li>
+                                <li>Prevent sticking due to over-suction from the box vacuum</li>
+                            </ul>
+                        </li>
+                        <li>Foam padding on the bottom of the box vacuum prevents OFF movement during pickup</li>
+                        <li>Slots in the metal plate allow Bernoulli vacuums to be adjusted laterally</li>
+                        <li>Spacers under Bernoulli vacuums ensure level contact for smoother pickup</li>
+                        <li>Right-angle elbow fitting and large tube provide adequate airflow to the box vacuum</li>
+                        <li>Proximity sensor mounted on one corner (with adjustable positions) to detect successful
+                            pickup</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Attachment Section:</strong>
+                    <ul>
+                        <li>Connects the vacuum section to the Universal Robot</li>
+                        <li>Four screw holes on the bottom attach to the robot</li>
+                        <li>Four corner screws attach the top section to the vacuum section</li>
+                        <li>Long screws used to allow space for elbow pipe and tubing</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Design and Fabrication:</strong>
+                    <ul>
+                        <li>Designed in <strong>SolidWorks</strong></li>
+                        <li>Applied <strong>GD&T</strong> to all technical drawings</li>
+                        <li>Manufactured in-house at <strong>Nuvera Fuel Cells</strong></li>
+                        <li>Assembled and tested after fabrication</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Gripper functioned as intended, successfully picking up OFFs using the hybrid vacuum approach
+                </li>
+                <li>Design was effective but difficult to assemble due to long screw alignment</li>
+                <li>Highlighted the importance of leveling during assembly to avoid tilt</li>
+            </ul>
+        </div>
     </div>
 
-    <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Morning_Meeting_Dashboard.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="OS1_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Conveyor_Sorter.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Garage_Door_System.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Rivet_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
+
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Disk_Launcher.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
 
     <button id="previousProject">Previous Project</button>
     <button id="nextProject">Next Project</button>

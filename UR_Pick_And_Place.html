@@ -17,125 +17,129 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">UR Pick And Place</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Develop a semi-automated system using a Universal Robot and Cognex 7802 vision camera to
-                        collaborate with operators in assembling encapsulated fuel cells.</li>
-                    <li>Ensure accurate rivet placement and heat staking using camera-based detection and robotic
-                        coordination.</li>
-                    <li>Design and fabricate custom hardware components to support the automation process.</li>
-                </ul>
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">UR Pick and Place</u>
+            </h2>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>Camera Calibration & Communication:</strong>
-                        <ul>
-                            <li>Calibrated a Cognex 7802 camera using a dot grid to accurately identify the "best
-                                placed" rivet in the tray.</li>
-                            <li>Aligned the camera and robot coordinate systems by creating a new reference plane on the
-                                tray using the robot arm.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Coordinate Conversion & Pick and Place:</strong>
-                        <ul>
-                            <li>Used the <code>pose_trans</code> function to convert coordinates from the rivet tray
-                                plane into the robot’s base coordinate system.</li>
-                            <li>Programmed the robot to:</li>
-                            <ul>
-                                <li>Move to the rivet location</li>
-                                <li>Slowly approach and activate a vacuum to pick it up</li>
-                                <li>Move and place the rivet on a cathode plate fixture</li>
-                                <li>Repeat until all four rivets were placed using a loop</li>
-                            </ul>
-                        </ul>
-                    </li>
-                    <li><strong>Heat Staking & Control Logic:</strong>
-                        <ul>
-                            <li>Programmed a loop where the robot heat staked each rivet using an "until force detected"
-                                condition for precise control.</li>
-                            <li>Integrated a pressure sensor to detect if a rivet was still in the pickhead after
-                                placement, confirming whether it was successfully released.</li>
-                            <li>Built logic based on a switch that allowed operators to select either a left or right
-                                plate, which determined placement patterns.</li>
-                            <li>Added prompts at the end of each cycle to ask the operator whether to repeat the process
-                                or re-home the robot if switching plates.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Mechanical Design:</strong>
-                        <ul>
-                            <li>Modeled the rivet tray, the dual pick and place head, and the heat staker adapter in
-                                SolidWorks using proper GD&T.</li>
-                            <li>Rapid prototyped the components to verify fit and function.</li>
-                            <li>Final components were machined after confirming prototypes were too flimsy for long-term
-                                use.</li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Delivered a fully functional semi-automated system that reliably collaborated with operators to
-                        assemble fuel cells.</li>
-                    <li>Resolved coordinate transformation issues between the camera and robot for accurate motion
-                        control.</li>
-                    <li>Improved system reliability and safety with pressure sensor feedback and operator-driven program
-                        branching.</li>
-                    <li>Successfully designed and implemented custom hardware that supported consistent and repeatable
-                        performance.</li>
-                </ul>
-            </div>
-        </section>
-
-        <div id="buttonHolder">
+        <div id="projectMedia">
             <a id="previousProject">
                 <i class="fas fa-arrow-left fa-2xl"></i>
             </a>
+            <img src="img/automation_Background.png" alt="temp image">
             <a id="nextProject">
                 <i class="fas fa-arrow-right fa-2xl"></i>
             </a>
         </div>
 
-        <div id="buttonInfo">
-            <p id="previousProjectText">Previous Project</p>
-            <p id="nextProjectText">Next Project</p>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
         </div>
 
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Develop a semi-automated system using a Universal Robot and Cognex 7802 vision camera to
+                    collaborate with operators in assembling encapsulated fuel cells.</li>
+                <li>Ensure accurate rivet placement and heat staking using camera-based detection and robotic
+                    coordination.</li>
+                <li>Design and fabricate custom hardware components to support the automation process.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>Camera Calibration & Communication:</strong>
+                    <ul>
+                        <li>Calibrated a Cognex 7802 camera using a dot grid to accurately identify the "best
+                            placed" rivet in the tray.</li>
+                        <li>Aligned the camera and robot coordinate systems by creating a new reference plane on the
+                            tray using the robot arm.</li>
+                    </ul>
+                </li>
+                <li><strong>Coordinate Conversion & Pick and Place:</strong>
+                    <ul>
+                        <li>Used the <code>pose_trans</code> function to convert coordinates from the rivet tray
+                            plane into the robot’s base coordinate system.</li>
+                        <li>Programmed the robot to:</li>
+                        <ul>
+                            <li>Move to the rivet location</li>
+                            <li>Slowly approach and activate a vacuum to pick it up</li>
+                            <li>Move and place the rivet on a cathode plate fixture</li>
+                            <li>Repeat until all four rivets were placed using a loop</li>
+                        </ul>
+                    </ul>
+                </li>
+                <li><strong>Heat Staking & Control Logic:</strong>
+                    <ul>
+                        <li>Programmed a loop where the robot heat staked each rivet using an "until force detected"
+                            condition for precise control.</li>
+                        <li>Integrated a pressure sensor to detect if a rivet was still in the pickhead after
+                            placement, confirming whether it was successfully released.</li>
+                        <li>Built logic based on a switch that allowed operators to select either a left or right
+                            plate, which determined placement patterns.</li>
+                        <li>Added prompts at the end of each cycle to ask the operator whether to repeat the process
+                            or re-home the robot if switching plates.</li>
+                    </ul>
+                </li>
+                <li><strong>Mechanical Design:</strong>
+                    <ul>
+                        <li>Modeled the rivet tray, the dual pick and place head, and the heat staker adapter in
+                            SolidWorks using proper GD&T.</li>
+                        <li>Rapid prototyped the components to verify fit and function.</li>
+                        <li>Final components were machined after confirming prototypes were too flimsy for long-term
+                            use.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Delivered a fully functional semi-automated system that reliably collaborated with operators to
+                    assemble fuel cells.</li>
+                <li>Resolved coordinate transformation issues between the camera and robot for accurate motion
+                    control.</li>
+                <li>Improved system reliability and safety with pressure sensor feedback and operator-driven program
+                    branching.</li>
+                <li>Successfully designed and implemented custom hardware that supported consistent and repeatable
+                    performance.</li>
+            </ul>
+        </div>
     </div>
 
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
 
-    <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Morning_Meeting_Dashboard.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="OS1_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Conveyor_Sorter.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Garage_Door_System.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Rivet_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Disk_Launcher.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
 
     <script src="js/index.js"></script>
 

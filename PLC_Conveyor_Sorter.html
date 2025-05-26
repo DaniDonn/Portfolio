@@ -17,102 +17,119 @@
 <!--Building of site-->
 
 <body>
-    <header class="TopBarEveryPage">
-        <h1 class="project-name">PLC Conveyor Sorter</h1>
-        <nav class="nav-menu">
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
             <a href="index.html">Home</a>
-            <a href="contact.html">Contact Me</a>
-            <a href="portfolio.html">Portfolio</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
+        <hr style="width:75%">
     </header>
 
     <!--Project -->
-    <div class="InfoContainer">
-        <section class="Project" id="Project">
-            
-            <div class="project__abstract">
-                <h2 class="section__subtitle section__subtitle--Project">Project Description:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nulla aperiam itaque
-                    ut corporis hic? Facilis vitae molestiae, recusandae quaerat fuga sit quam tempora earum aperiam,
-                    voluptates illum facere error?
-                </p>
-            </div>
+    <div id="infoContainer">
 
-            <div class="Project__body">
-                <h3 class="infoToggle">OBJECTIVE:</h3>
-                <ul id="objective" class="content">
-                    <li>Create an automated sorting and packing system using Allen Bradley PLC and Studio 5000.</li>
-                    <li>Allow operators to control product flow from a feeder to one of two lines (A or C), based on
-                        product size.</li>
-                    <li>Enable packaging into specified set sizes (5, 7, 9, or 11), depending on which line is selected.
-                    </li>
-                    <li>Ensure system safety using E-stops and logic conditions.</li>
-                </ul>
+        <div id="projectTitle">
+            <h2 class="automation-header">
+                <u class="automation-underline">PLC Conveyor Sorter</u>
+            </h2>
+        </div>
 
-                <h3 class="infoToggle">PROCESS:</h3>
-                <ul id="process" class="content">
-                    <li><strong>Feeding Products:</strong>
-                        <ul>
-                            <li>Operator fills the feeder with up to 20 products using a momentary push button that
-                                increments a counter.</li>
-                            <li>A green button moves the product from the feeder to a conveyor belt with a diverter.
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Sorting Products:</strong>
-                        <ul>
-                            <li>Two push buttons determine whether the product should be sent to line A or C.</li>
-                            <li>Two selector switches choose the set size:
-                                <ul>
-                                    <li>Line A: Sets of 5 or 7</li>
-                                    <li>Line C: Sets of 9 or 11</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><strong>Completion and Reset:</strong>
-                        <ul>
-                            <li>Once all 4 sets are full, a red pilot light signals completion.</li>
-                            <li>Operator must press a reset button to zero the counters and restart the process.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Safety Features:</strong>
-                        <ul>
-                            <li>Two E-stops located at different points of the long conveyor system ensure quick
-                                shutdown access.</li>
-                            <li>Seal-in contacts used in ladder logic prevent motor restart after power loss.</li>
-                            <li>Products cannot be added to the feeder while the conveyor motor is running.</li>
-                        </ul>
-                    </li>
-                </ul>
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <img src="img/automation_Background.png" alt="temp image">
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
 
-                <h3 class="infoToggle">RESULT:</h3>
-                <ul id="result" class="content">
-                    <li>Designed and implemented a fully functional, operator-safe sorting and packing system.</li>
-                    <li>Strengthened PLC programming skills using Studio 5000 and ladder logic.</li>
-                    <li>Integrated user input, safety logic, and efficient process control in a real-world system.</li>
-                    <li>Project documentation available for more technical details:
-                        <a href="Reports/Project_1_Report.pdf">Conveyor Sorter Project</a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        <div id="projectAbstract">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
+
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Create an automated sorting and packing system using Allen Bradley PLC and Studio 5000.</li>
+                <li>Allow operators to control product flow from a feeder to one of two lines (A or C), based on
+                    product size.</li>
+                <li>Enable packaging into specified set sizes (5, 7, 9, or 11), depending on which line is selected.
+                </li>
+                <li>Ensure system safety using E-stops and logic conditions.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li><strong>Feeding Products:</strong>
+                    <ul>
+                        <li>Operator fills the feeder with up to 20 products using a momentary push button that
+                            increments a counter.</li>
+                        <li>A green button moves the product from the feeder to a conveyor belt with a diverter.
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Sorting Products:</strong>
+                    <ul>
+                        <li>Two push buttons determine whether the product should be sent to line A or C.</li>
+                        <li>Two selector switches choose the set size:
+                            <ul>
+                                <li>Line A: Sets of 5 or 7</li>
+                                <li>Line C: Sets of 9 or 11</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Completion and Reset:</strong>
+                    <ul>
+                        <li>Once all 4 sets are full, a red pilot light signals completion.</li>
+                        <li>Operator must press a reset button to zero the counters and restart the process.</li>
+                    </ul>
+                </li>
+                <li><strong>Safety Features:</strong>
+                    <ul>
+                        <li>Two E-stops located at different points of the long conveyor system ensure quick
+                            shutdown access.</li>
+                        <li>Seal-in contacts used in ladder logic prevent motor restart after power loss.</li>
+                        <li>Products cannot be added to the feeder while the conveyor motor is running.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Designed and implemented a fully functional, operator-safe sorting and packing system.</li>
+                <li>Strengthened PLC programming skills using Studio 5000 and ladder logic.</li>
+                <li>Integrated user input, safety logic, and efficient process control in a real-world system.</li>
+                <li>Project documentation available for more technical details:
+                    <a href="Reports/Project_1_Report.pdf">Conveyor Sorter Project</a>
+                </li>
+            </ul>
+        </div>
     </div>
 
-    <a class="hiddenLink" style="display: none" href="ABB_Robot_Stacking_simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Disk_Launcher.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Excel_Machine_Map.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="FANUC_Welding_Simulation.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Morning_Meeting_Dashboard.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Conveyor_Sorter.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="PLC_Garage_Door_System.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Rivet_Gripper.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="SOS_Button.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="Tab_Detection.html">Previous Page</a>
-    <a class="hiddenLink" style="display: none" href="UR_Pick_And_Place.html">Previous Page</a>
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
 
-    <button id="previousProject">Previous Project</button>
-    <button id="nextProject">Next Project</button>
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Disk_Launcher.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
 
     <script src="js/index.js"></script>
 </body>
