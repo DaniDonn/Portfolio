@@ -11,7 +11,8 @@
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!--makes website looks the same in all browsers and gets fonts-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ProjectStyle.css">
+
 </head>
 
 <!--Building of site-->
@@ -23,14 +24,14 @@
             <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
             <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
-        <hr style="width:75%">
+        <hr style="width:90%; margin: 0 auto;">
     </header>
 
     <!--Project -->
     <div id="infoContainer">
         <div id="projectTitle">
             <h2 class="automation-header">
-                <u class="automation-underline">PLC Garage Door System</u>
+                <u class="automation-underline">Automated Garage System PLC (Simulation)</u>
             </h2>
         </div>
 
@@ -38,7 +39,7 @@
             <a id="previousProject">
                 <i class="fas fa-arrow-left fa-2xl"></i>
             </a>
-            <img src="img/automation_Background.png" alt="temp image">
+            <img src="img/System_Graphic.jpg" alt="temp image">
             <a id="nextProject">
                 <i class="fas fa-arrow-right fa-2xl"></i>
             </a>
@@ -56,33 +57,94 @@
 
         <div id="projectInformation">
             <ul id="objective" class="content">
-                <li>Design a system that can safely and automatically open or close a garage door using multiple
-                    input options.</li>
-                <li>Ensure the system accounts for safety, emergency scenarios, and operational limits.</li>
+                <li>Simulate an automated garage door system using a PLC and real components like buttons, motors, and
+                    LEDs.</li>
+                <li>Replicate garage door behavior through visual and mechanical feedback without using a real door.
+                </li>
+                <li>Track usage cycles and simulate a maintenance lockout after repeated use.</li>
+                <li>Include emergency stop, obstruction detection, and manual override functionality for safety logic
+                    testing
             </ul>
 
             <ul id="process" class="content">
-                <li>Users can control the garage door with two keypads or a remote FOB using red and green square
-                    buttons:
+                <li><strong>System Planning and Setup</strong>
                     <ul>
-                        <li>Green button: opens the garage door</li>
-                        <li>Red button: closes the garage door</li>
+                        <li>Designed a simulated garage system using a PLC to mirror real-world garage behavior.</li>
+                        <li>User inputs included two keypads and a remote FOB, represented by push buttons:
+                            <ul>
+                                <li>Green button for "open"</li>
+                                <li>Red button for "close"</li>
+                                <li>Round red button for "stop"</li>
+                            </ul>
+                        </li>
+                        <li>Garage door motion was simulated using DC motors and LEDs to represent opening, closing, and
+                            system status.</li>
+                        <li>System was programmed to lock out after 8 full open/close cycles, simulating a maintenance
+                            condition with a red warning light.</li>
                     </ul>
                 </li>
-                <li>All input devices also include a circular red button to immediately stop the garage door in
-                    motion.</li>
-                <li>Each open/close action counts as one cycle. After 8 cycles, the system is disabled and a red
-                    light appears, signaling required maintenance.</li>
+
+                <li><strong>PLC and Hardware</strong>
+                    <ul>
+                        <li>Used Allen Bradley Compact GuardLogix 5380 PLC (5069-L306ERMS2) with 16-point I/O modules.
+                        </li>
+                        <li>Inputs:
+                            <ul>
+                                <li>Push buttons for open, close, stop</li>
+                                <li>Selector switch</li>
+                                <li>Radar sensor (simulated)</li>
+                                <li>Photoelectric sensor simulated using a push button</li>
+                            </ul>
+                        </li>
+                        <li>Outputs:
+                            <ul>
+                                <li>LEDs to indicate system states (open, close, fault, maintenance)</li>
+                                <li>Stack/tower lights</li>
+                                <li>DC motors to visually simulate door movement</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><strong>Ladder Logic Programming</strong>
+                    <ul>
+                        <li><strong>Programming Environment:</strong> Developed using Studio 5000 with modular ladder
+                            logic blocks. Controlled motor states, safety conditions, and lockout behaviors.</li>
+                        <li><strong>Motor Control Simulation:</strong> Open/close buttons used with seal-in logic to
+                            simulate motor activation. Interlocks prevented the system from executing both commands at
+                            once. Motors remained off after power loss until reset manually.</li>
+                        <li><strong>Cycle Counter Logic:</strong> One full open-close sequence = one cycle. After 8
+                            cycles:
+                            <ul>
+                                <li>Disables simulated motor output</li>
+                                <li>Red light indicates maintenance required</li>
+                                <li>System can only be re-enabled via a manual reset override</li>
+                            </ul>
+                        </li>
+                        <li><strong>Emergency Stop Logic:</strong> Three emergency stop buttons wired in: two on
+                            simulated keypads, one on the remote FOB. Immediately cuts motor output and locks system
+                            until reset.</li>
+                        <li><strong>Obstruction Detection Simulation:</strong> Simulated photoelectric sensor using a
+                            push button. When pressed during “closing,” motor logic reversed to simulate the door
+                            reopening. Yellow light activated to indicate object detection.</li>
+                        <li><strong>Manual Override Switch:</strong> Overrides lockout state to allow emergency opening
+                            even after cycle limit is reached. Adds a fail-safe in case the system needs to be bypassed.
+                        </li>
+                        <li><strong>Failsafe Behavior:</strong> Seal-in logic ensures the system doesn't auto-restart
+                            after power restoration. System state (cycle count, lockout) is preserved until manually
+                            reset.</li>
+                    </ul>
+                </li>
             </ul>
 
             <ul id="result" class="content">
-                <li>Emergency stop (E-stop) buttons to immediately halt motor operation</li>
-                <li>Seal-in contacts in ladder logic to prevent motor restart after power outage</li>
-                <li>Emergency override switch to allow manual opening even during car charging</li>
-                <li>Photoelectric sensor to detect obstacles under the garage door and trigger a reverse/open
-                    command with a flashing yellow light</li>
-                <li>System successfully simulates real-world garage door behavior with cycle limits, safety stops,
-                    and fault-handling logic.</li>
+                <li>Fully functional PLC-based simulation of an automated garage system.</li>
+                <li>Successfully implemented logic for motor control, emergency stops, obstruction detection, and
+                    cycle-based lockout.</li>
+                <li>Real components (buttons, motors, LEDs) provided visual and functional feedback.</li>
+                <li>Simulated photoelectric sensor with a push button worked effectively for obstruction logic.</li>
+                <li>Reinforced understanding of ladder logic, safety design, and real-world PLC systems — even in a
+                    controlled simulation environment.</li>
                 <li>Project documentation available for more technical details:
                     <a href="Reports/Final_Project_Report.pdf">Automatic Garage Door System Final Project</a>
             </ul>

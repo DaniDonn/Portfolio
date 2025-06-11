@@ -444,7 +444,14 @@ h3 {
 }
 
 .automation-header {
-    color: #FFD580;
+    color: #Ffffff;
+    padding-bottom: 20px;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+    text-shadow: 6px 6px 6px black;
+}
+.ProjectTitle-header { /*header design for every project*/
+    color: #FF0000;
     padding-bottom: 20px;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -480,7 +487,7 @@ a:hover {
 
 h3 {
     cursor: pointer;
-    color: #D4A373; /* Makes the headers look interactive */
+    color: #edf2f4; /* Makes the headers look interactive */
 }
 
 /*-- Project Page Styling Below Here --*/
@@ -509,7 +516,7 @@ h3 {
 
 /* Main div styling */
 #infoContainer {
-    background-color: #E9EDC9;
+    background-color: #2b2d42;
 }
 
 /* Title styling */

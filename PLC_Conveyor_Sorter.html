@@ -11,7 +11,7 @@
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!--makes website looks the same in all browsers and gets fonts-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ProjectStyle.css">
 </head>
 
 <!--Building of site-->
@@ -23,15 +23,15 @@
             <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
             <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
-        <hr style="width:75%">
+        <hr style="width:90%; margin: 0 auto;">
     </header>
 
     <!--Project -->
     <div id="infoContainer">
 
         <div id="projectTitle">
-            <h2 class="automation-header">
-                <u class="automation-underline">PLC Conveyor Sorter</u>
+            <h2 class="ProjectTitle-header">
+                <u class="automation-underline">PLC Conveyor Sorter System (simulation)</u>
             </h2>
         </div>
 
@@ -39,7 +39,7 @@
             <a id="previousProject">
                 <i class="fas fa-arrow-left fa-2xl"></i>
             </a>
-            <img src="img/automation_Background.png" alt="temp image">
+            <img src="img/Feeder.png" alt="temp image">
             <a id="nextProject">
                 <i class="fas fa-arrow-right fa-2xl"></i>
             </a>
@@ -57,54 +57,104 @@
 
         <div id="projectInformation">
             <ul id="objective" class="content">
-                <li>Create an automated sorting and packing system using Allen Bradley PLC and Studio 5000.</li>
-                <li>Allow operators to control product flow from a feeder to one of two lines (A or C), based on
-                    product size.</li>
-                <li>Enable packaging into specified set sizes (5, 7, 9, or 11), depending on which line is selected.
-                </li>
-                <li>Ensure system safety using E-stops and logic conditions.</li>
+                <li>Simulate a conveyor-based bottle sorting and packaging system using a PLC. A small motor was used to
+                    represent the conveyor, while real input/output components such as buttons, switches, and indicator
+                    lights were physically implemented.</li>
+                <li>Sort products into Line A or Line C based on size, using selector switches and push buttons.</li>
+                <li>Pack products into sets of 5, 7, 9, or 11, depending on operator input.</li>
+                <li>Indicate process completion with a red pilot light once all four set types are filled.</li>
+                <li>Use a reset button to clear all counters and restart the process.</li>
             </ul>
 
             <ul id="process" class="content">
-                <li><strong>Feeding Products:</strong>
+                <li><strong>System Environment</strong>
                     <ul>
-                        <li>Operator fills the feeder with up to 20 products using a momentary push button that
-                            increments a counter.</li>
-                        <li>A green button moves the product from the feeder to a conveyor belt with a diverter.
-                        </li>
+                        <li>Designed for use in a simulated indoor packaging center to replicate the sorting and packing
+                            of bottles.</li>
+                        <li>Operator manually interacts with buttons and switches to control sorting and packaging
+                            logic.</li>
                     </ul>
                 </li>
-                <li><strong>Sorting Products:</strong>
+
+                <li><strong>System Logic</strong>
                     <ul>
-                        <li>Two push buttons determine whether the product should be sent to line A or C.</li>
-                        <li>Two selector switches choose the set size:
-                            <ul>
-                                <li>Line A: Sets of 5 or 7</li>
-                                <li>Line C: Sets of 9 or 11</li>
-                            </ul>
-                        </li>
+                        <li>Fill the feeder with up to 20 products (simulated).</li>
+                        <li>Press a green button to move the product from feeder to conveyor (motor used to simulate
+                            movement).</li>
+                        <li>Select the product’s destination (Line A or C) using selector switches.</li>
+                        <li>Choose a packaging set size of 5, 7, 9, or 11.</li>
+                        <li>System tracks set completion and lights a red indicator once all are filled.</li>
+                        <li>Reset button clears all counters and restarts the operation.</li>
                     </ul>
                 </li>
-                <li><strong>Completion and Reset:</strong>
+
+                <li><strong>Safety Features</strong>
                     <ul>
-                        <li>Once all 4 sets are full, a red pilot light signals completion.</li>
-                        <li>Operator must press a reset button to zero the counters and restart the process.</li>
+                        <li>Two Estop buttons shut down the system and require manual reset to resume operation.</li>
+                        <li>Seal-in logic prevents the motor from restarting automatically after a power outage.</li>
+                        <li>Operator is blocked from feeding products while the simulated conveyor motor is active.</li>
                     </ul>
                 </li>
-                <li><strong>Safety Features:</strong>
+
+                <li><strong>PLC Hardware</strong>
                     <ul>
-                        <li>Two E-stops located at different points of the long conveyor system ensure quick
-                            shutdown access.</li>
-                        <li>Seal-in contacts used in ladder logic prevent motor restart after power loss.</li>
-                        <li>Products cannot be added to the feeder while the conveyor motor is running.</li>
+                        <li>PLC: Allen Bradley Compact GuardLogix 5380 (5069-L306ERMS2).</li>
+                        <li>Input Module: 5069-IB16F, 16-point.</li>
+                        <li>Output Module: 5069-OB16, 16-point.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Input Devices</strong>
+                    <ul>
+                        <li>White push button</li>
+                        <li>Green push button</li>
+                        <li>Red push button</li>
+                        <li>Blue push button</li>
+                        <li>Yellow push button</li>
+                        <li>Two Estops</li>
+                        <li>Three selector switches (black, blue, green)</li>
+                    </ul>
+                </li>
+
+                <li><strong>Output Devices</strong>
+                    <ul>
+                        <li>DC motor (used to simulate conveyor movement)</li>
+                        <li>Red indicator lights</li>
+                        <li>Yellow indicator lights</li>
+                        <li>Green indicator lights</li>
+                        <li>LED tower light</li>
+                    </ul>
+                </li>
+
+                <li><strong>Startup Configuration</strong>
+                    <ul>
+                        <li>Feeder is assumed empty at startup.</li>
+                        <li>All counters start at zero.</li>
+                        <li>Operator is expected to fill the feeder before beginning the simulation cycle.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Failure and Safety Handling</strong>
+                    <ul>
+                        <li>System does not detect human presence; relies on Estop buttons for safety.</li>
+                        <li>Only two Estops may be insufficient for large conveyor setups.</li>
+                        <li>System is not enclosed, which presents a simulated hazard scenario.</li>
+                        <li>Seal-in logic ensures motors remain off after power is restored unless manually reset.</li>
+                        <li>System requires full reset after emergency stops or power failure.</li>
+                        <li>If the wrong line is selected or feeder is empty, system prevents motor start and halts
+                            operation.</li>
                     </ul>
                 </li>
             </ul>
 
             <ul id="result" class="content">
-                <li>Designed and implemented a fully functional, operator-safe sorting and packing system.</li>
-                <li>Strengthened PLC programming skills using Studio 5000 and ladder logic.</li>
-                <li>Integrated user input, safety logic, and efficient process control in a real-world system.</li>
+                <li>Created a PLC-based simulation that replicates a real-world sorting and packaging process.</li>
+                <li>Used actual buttons, selector switches, motors, and indicator lights to represent operational flow.
+                </li>
+                <li>Implemented functional safety interlocks including Estops and seal-in logic.</li>
+                <li>Practiced modular PLC programming and safety-focused system design.</li>
+                <li>Gained hands-on experience translating logical flowcharts into functional control systems using
+                    simulation.</li>
                 <li>Project documentation available for more technical details:
                     <a href="Reports/Project_1_Report.pdf">Conveyor Sorter Project</a>
                 </li>

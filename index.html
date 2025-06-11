@@ -12,20 +12,20 @@
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!--makes website looks the same in all browsers and gets fonts-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="MainPageStyle.css">
 </head>
 
 <!--Building of site-->
 
 <body>
-    
+
     <!-- My introduction :)-->
     <section class="intro" id="home">
         <h1 class="section__title section__title--intro">
             Hi, I am <strong> Daniella Donn</strong> <!--Daniella Donn is bolded-->
         </h1>
         <p class="section__subtitle section__subtitle--intro">Welcome to my Portfolio</p>
-        <img src="" alt="My photo" class="intro__img">
+        <!--<img src="" alt="My photo" class="intro__img">
         <!-- put photo in folder classed img with /name-of-photo.jpg-->
     </section>
 
@@ -38,13 +38,13 @@
             <p>
                 I am a hands on engineer with a passion for automation, robotics, continuous
                 improvement, and learning.</p>
-                
+
             <p>I’ve worked as a Manufacturing Engineer at Nuvera Fuel Cells and as an Engineering
                 Intern at Jabil, where I focused on process optimization, machine vision, and mechanical design.
                 I enjoy combining engineering and programming to solve real-world problems and am driven by a constant
-                desire to learn and grow in my field.</p> 
-                
-            <p>I earned my Mechanical Engineering Technology degree from RIT 
+                desire to learn and grow in my field.</p>
+
+            <p>I earned my Mechanical Engineering Technology degree from RIT
                 and am currently studying for the FE exam to earn my EIT license. Outside of work, I
                 enjoy building small robotics projects, 3D modeling and printing, and art.
             </p>
@@ -59,112 +59,62 @@
 
     </section>
 
-    <!--Skills And Certifications-->
-    <section class="skills" id="skills">
-        <h2 class="section__title section__title--My_Skills">Skills and Certifications</h2>
-        <!--<p class="section__subtitle Section__subtitle--skills"></p>-->
-        <div class="Skills-and-Certifications">
-            <div class="Skills-and-Certification">
-                <h3>Mechanical Design & Drafting</h3>
-                <ul>
-                    <li>Solidworks</li>
-                    <li>Creo</li>
-                    <li>Fusion 360</li>
-                    <li>Engineering Drawings</li>
-                    <li>GD&T</li>
-                    <li>3D Printing</li>
-                </ul>
-            </div>
-
-            <div class="Skills-and-Certification">
-                <h3>Programming</h3>
-                <ul>
-                    <li>COGNEX Vision Explorer</li>
-                    <li>Excel VBA</li>
-                    <li>Microsoft Power Automate</li>
-                    <li>PLC Programming</li>
-                    <li>Python</li> 
-                </ul>
-            </div>
-
-            <div class="Skills-and-Certification">
-                <h3>Engineering Software</h3>
-                <ul>
-                    <li>Ignition Automation</li>
-                    <li>Automation Studio</li>
-                    <li>Studio 5000</li>
-                    <li>Quartus Prime</li>
-                </ul>
-            </div>
-
-            <div class="Skills-and-Certification">
-                <h3>Robotics</h3>
-                <ul>
-                    <li>RoboGuide</li>
-                    <li>Robostudio</li>
-                    <li>Universal Robot</li> 
-                </ul>
-            </div>
-
-            <div class="Skills-and-Certification">
-                <h3>Certifications</h3>
-                <ul>
-                    <li>FANUC CERT HandlingTool Operations and Programming</li>
-                    <li>SIX SIGMA GREEN BELT</li>
-                </ul>
-            </div>
-        </div>
-        <!--<a href="#skills" class="btn">Skills and Certifications</a>-->
-    </section>
-
 
     <!--My Work Experience-->
     <section class="work-experience" id="work">
         <h2 class="section__title section__title--My-Work">Work Experience</h2>
+        <div class="WorkGrid">
+            <div class="JobTitle">
+                    <h3>Nuvera Fuel Cells LLc</h3>
+                    <p class="JobDate">(Nov. 2023 - Jan. 2025)</p>
+                    <p>
+                        At Nuvera Fuel Cells, I worked as a Manufacturing Engineer, contributing to the production 
+                        of hydrogen fuel cell stacks and hydrogen fuel stack engines. My role spanned several areas, 
+                        including working with the Autostacker—an automated machine that assembled and stacked fuel 
+                        cells—and supporting automation initiatives. I programmed Universal Robots for pick-and-place 
+                        tasks and was responsible for programming Cognex vision cameras to support precise component 
+                        handling. I also created an automated ticketing system using Microsoft Power Automate to 
+                        streamline issue tracking. Beyond automation, I was involved in rapid prototyping, which 
+                        included designing, modeling, 3D printing, and testing custom components. Additionally, I 
+                        developed operator guidelines using VKS (Visual Knowledge Share), providing step-by-step 
+                        instructions to standardize key processes. Each day brought new challenges that helped me grow 
+                        as an engineer.
+                    </p>
+                </div>
+                <div class="JobTitle">
+                    <h3>Jabil</h3>
+                    <p class="JobDate">(Jul. 2022 - Jan. 2023)</p>
+                    <p>
+                        At Jabil, I worked as a Manufacturing Engineering Co-op, contributing to the production of orthopedic 
+                        instruments and implants used to treat fractures, deformities, and tumor-related bone conditions. During 
+                        my time there, I taught myself Python and, with support from my mentor, implemented several automation 
+                        solutions. These included an interactive plant map in Excel to locate machines, a searchable maintenance 
+                        database, and an S.O.S. button system—built with a Raspberry Pi—that allowed operators to quickly alert 
+                        supervisors. I also used computer vision to train a Raspberry Pi to detect whether a product had a tab. 
+                        Outside of automation, I designed inspection trays in Creo to help operators identify inspected parts and 
+                        performed a root cause analysis on a CNC machining issue. To resolve it, I reprogrammed the probe using 
+                        G-code and added alarms to flag out-of-tolerance parts before re-machining. This experience sparked my 
+                        passion for automation and gave me practical skills I still use today.
+                    </p>
+                </div>
+                <div class="JobTitle">
+                    <h3>Acuity Polymers</h3>
+                    <p class="JobDate">(Feb. - Aug. 2021)</p>
 
-        <div class="Work-and-Experience__body"> <!--The body portion of the work experince section-->
-            <p class="section__subtitle section__subtitle--My-Work">Nuvera Fuel Cells LLc (Nov. 2023 - Jan. 2025)</p>
-            <!--<h3>Nuvera Fuel Cells LLc</h3>-->
-            <p>
-                At Nuvera I ... Continue Later
-            </p>
-            <p class="section__subtitle section__subtitle--Jabil">Jabil (Jul. 2022 - Jan. 2023)</p>
-            <!--<h3>Jabil</h3>-->
-            <p>
-                I worked at Jabil in Elmira, NY from July 2022 to January 2023 where we provided orthopedic product
-                instruments and implants for internal and external fixation
-                to surgically treat fractures, deformities, and tumor diseases of long bones, shoulder, hand, pelvis,
-                hip, condyles and foot.
-                Additionally, Elmira manufactures veterinary plates and patient-specific implants (Jaw plates), which
-                are shipped directly to hospitals. While working there
-                I taught myself how to code in python and learned to program computer vision and neural networks which I
-                utilized to train a tab detection software.
-                I also self taught myself Excel VBA which I used to create a map which can search and highlight a
-                specific machine and area within the Jabil plant. In addition to
-                this, I learned how to use G-code to re-program a probe on two CNC milling machines. I designed trays
-                through creo for operators to easily identify an inspected
-                part, created an S.O.S. button on a raspberry pi which when pressed an email will automatically be sent
-                out to the supervisor asking for help and a light will
-                turn on at the area sending the signal.
-            </p>
-            <p class="section__subtitle section__subtitle--My-Work">Acuity Polymers (Feb. - Aug. 2021)</p>
-            <!--<h3>Acuity Polymers</h3>-->
-            <p>
-                I worked at Acuity Polymers, located in Rochester NY, from February 2021 to August 2021 where we created
-                specialty contact lens materials for the contact
-                lens industries to mass produce. The formula for each contact lens is made in a lab then put into large
-                rods
-                and into an oven. After the rods are taken out and cut into specific shapes and sizes, also known as
-                buttons by using a CNC lathe,
-                they are tested and delivered to the contact lens industries. My job as a mechanical engineering co-op
-                was to create contact lenses and buttons
-                (contact lens templates) by using a CNC lathe,
-                design manufacturing plans for the contact lenses, and help design an automatic system for the cast
-                molding process.
-            </p>
+                    <p>
+                        At Acuity Polymers, I worked as a Mechanical Engineering Co-op, supporting the production of specialty 
+                        contact lens materials used for mass manufacturing. Each lens formula was developed in a lab, poured into 
+                        cylindrical rods, cured, and cut into precise shapes—called "buttons"—using a CNC lathe. My main responsibility 
+                        was operating the lathe and adjusting machine settings based on the required button type. I performed quality 
+                        checks by measuring initial samples for tolerance and then inspecting every tenth button using calipers. I also 
+                        created engineering drawings for all contact lens and button designs, and helped design a semi-automated cast 
+                        molding system to improve production towards the end of my time ther. This role gave me my first real-world 
+                        engineering experience and hands-on insight into how products are made from start to finish.
+                        
+                    </p>
+                </div>
 
-        </div>
-        <!--<a href="#work" class="btn">Work Experience</a>-->
+            <!--<a href="#work" class="btn">Work Experience</a>-->
     </section>
 
 
@@ -174,126 +124,124 @@
         <p class="section__subtitle section__subtitle--My-Projects">A selection of my range of work</p>
 
         <div class="projects"> <!--Each type of project will be under a div with the project class-->
-            
+
             <!---------------------------------------------Project 2 Programming Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="Disk_Launcher.html" class="portfolio__item" target="_blank">
-                    <img src="img/code_background.png" alt="" class="portfolio__img">
+                    <img src="img/Disk_Launcher.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="programming-header"><u class="programming-underline">Disk Master</u></h2>
+                    <h2 class="header"><u class="underline">Disk Master</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 3 Programming Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="Excel_Machine_Map.html" class="portfolio__item" target="_blank">
-                    <img src="img/code_background.png" alt="" class="portfolio__img">
+                    <img src="img/searchbox.jpg" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="programming-header"><u class="programming-underline">Excel Machine Map</u></h2>
+                    <h2 class="header"><u class="underline">Excel Machine Map</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 4 Programming Done---------------------------------------------------------------------->
             <div class="container">
                 <a href="Tab_Detection.html" class="portfolio__item" target="_blank">
-                    <img src="img/code_background.png" alt="" class="portfolio__img">
+                    <img src="img/ComputerVision.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="programming-header"><u class="programming-underline">Tab Detection</u></h2>
+                    <h2 class="header"><u class="underline">Tab Detection</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 5 Programming Done---------------------------------------------------------------------->
             <div class="container">
                 <a href="SOS_Button.html" class="portfolio__item" target="_blank">
-                    <img src="img/code_background.png" alt="" class="portfolio__img">
+                    <img src="img/SOS_button.jpg" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="programming-header"><u class="programming-underline">SOS Button</u></h2>
+                    <h2 class="header"><u class="underline">SOS Button</u></h2>
                 </div>
             </div>
-        </div>
-        <div class="projects">
+
             <!---------------------------------------------Project 1 Automation Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="FANUC_Welding_Simulation.html" class="portfolio__item" target="_blank">
-                    <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    <img src="img/FANUC_Simulation.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="automation-header"><u class="automation-underline">FANUC Simulation</u></h2>
+                    <h2 class="header"><u class="underline">FANUC Simulation</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 2 Automation Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="UR_Pick_And_Place.html" class="portfolio__item" target="_blank">
-                    <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    <img src="img/UR Robot.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="automation-header"><u class="automation-underline">UR Robot Pick and Place</u></h2>
+                    <h2 class="header"><u class="underline">UR Robot Pick and Place</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 3 Automation Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="PLC_Garage_Door_System.html" class="portfolio__item" target="_blank">
-                    <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    <img src="img/System_Graphic.jpg" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="automation-header"><u class="automation-underline">Automated Garage Door System</u></h2>
+                    <h2 class="header"><u class="underline">Automated Garage Door System</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 4 Automation Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="Morning_Meeting_Dashboard.html" class="portfolio__item" target="_blank">
-                    <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    <img src="img/Ignition.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="automation-header"><u class="automation-underline">Morning Meeting Dashboarg</u></h2>
+                    <h2 class="header"><u class="underline">Morning Meeting Dashboarg</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 5 Automation Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="ABB_Robot_Stacking_simulation.html" class="portfolio__item" target="_blank">
-                    <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    <img src="img/ABB Sim.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="automation-header"><u class="automation-underline">ABB Robot</u></h2>
+                    <h2 class="header"><u class="underline">ABB Robot</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 6 Automation Done-------------------------------------------------------------------->
             <div class="container">
                 <a href="PLC_Conveyor_Sorter.html" class="portfolio__item" target="_blank">
-                    <img src="img/automation_Background.png" alt="" class="portfolio__img">
+                    <img src="img/Feeder.png" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="automation-header"><u class="automation-underline">Conveyor Sorter</u></h2>
+                    <h2 class="header"><u class="underline">Conveyor Sorter</u></h2>
                 </div>
             </div>
-        </div>
-        <div class="projects">
+
             <!---------------------------------------------Project 1 Design-------------------------------------------------------------------->
             <div class="container">
                 <a href="Rivet_Gripper.html" class="portfolio__item" target="_blank">
-                    <img src="img/Design_background.png" alt="" class="portfolio__img">
+                    <img src="img/RIvetPickHead.jpg" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="design-header"><u class="design-underline">Rivet Gripper</u></h2>
+                    <h2 class="header"><u class="underline">Rivet Gripper</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 2 Design-------------------------------------------------------------------->
             <div class="container">
                 <a href="OS1_Gripper.html" class="portfolio__item" target="_blank">
-                    <img src="img/Design_background.png" alt="" class="portfolio__img">
+                    <img src="img/OS1 PickHead.jpg" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="design-header"><u class="design-underline">OS1 Gripper</u></h2>
+                    <h2 class="header"><u class="underline">OS1 Gripper</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 3 Design-------------------------------------------------------------------->
             <div class="container">
                 <a href="Sound_Box.html" class="portfolio__item" target="_blank">
-                    <img src="img/Design_background.png" alt="" class="portfolio__img">
+                    <img src="img/SoundRemote.jpg" alt="" class="portfolio__img">
                 </a>
                 <div class="centered">
-                    <h2 class="design-header"><u class="design-underline">Sound Box</u></h2>
+                    <h2 class="header"><u class="underline">Sound Box</u></h2>
                 </div>
             </div>
             <!---------------------------------------------Project 4 Design---------------------------------------------------------------->
@@ -307,11 +255,11 @@
         <a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a>
         <ul id="social-list">
             <li class="socialListItem">
-                <a class="socialListLink" target="_blank" href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
+                <a class="socialListLink" target="_blank"
+                    href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
             </li>
             <li class="socialListItem">
-                <a class="socialListLink" target="_blank"
-                    href="https://www.linkedin.com/in/danielladonn/">
+                <a class="socialListLink" target="_blank" href="https://www.linkedin.com/in/danielladonn/">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </li>

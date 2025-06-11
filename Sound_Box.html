@@ -12,7 +12,8 @@
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <!--makes website looks the same in all browsers and gets fonts-->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ProjectStyle.css">
+
 </head>
 
 <!--Building of site-->
@@ -24,7 +25,7 @@
             <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
             <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
         </nav>
-        <hr style="width:75%">
+        <hr style="width:90%; margin: 0 auto;">
     </header>
 
     <!--Project -->
@@ -57,15 +58,79 @@
 
         <div id="projectInformation">
             <ul id="objective" class="content">
-
+                <li>Build a standalone sound remote to play sound effects during a podcast.</li>
+                <li>Trigger different sound effects using buttons, with corresponding LEDs lighting up during playback.
+                </li>
+                <li>Keep the design battery-powered, portable, and self-contained without needing a computer.</li>
             </ul>
 
             <ul id="process" class="content">
+                <li>
+                    <strong>Planning and Prototyping:</strong>
+                    <ul>
+                        <li>Sketched out a schematic of the circuit before building.</li>
+                        <li>Used Elegoo MEGA 2560, DFPlayer Mini, speaker, 6 buttons, 6 LEDs, 1k resistor, 1000µF
+                            capacitor, and 4-AA battery pack.</li>
+                        <li>Prototyped with 2 buttons and 2 LEDs to test functionality.</li>
+                        <li>Programmed the Arduino in the Arduino IDE and tested via USB.</li>
+                    </ul>
+                </li>
 
+                <li>
+                    <strong>Mechanical Design:</strong>
+                    <ul>
+                        <li>Designed in SolidWorks with 4 main printed parts:
+                            <ul>
+                                <li>Main controller box (holds internal components)</li>
+                                <li>Back cover</li>
+                                <li>Button/LED holder plate</li>
+                                <li>Top casing with logo and access holes</li>
+                            </ul>
+                        </li>
+                        <li>Included 6 custom-printed button tops.</li>
+                        <li>Used screws and heat-set inserts for secure assembly.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Assembly:</strong>
+                    <ul>
+                        <li>Tested the circuit with batteries before full assembly.</li>
+                        <li>Soldered all wiring and mounted components inside the enclosure.</li>
+                        <li>Closed and secured the case after confirming functionality.</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Power Management Issue:</strong>
+                    <ul>
+                        <li>DFPlayer Mini draws 200–300mA and is always on, draining batteries quickly.</li>
+                        <li>Elegoo board also constantly draws power, further shortening lifespan.</li>
+                        <li>Added a 1000µF capacitor to stabilize voltage and extend life.</li>
+                        <li>Implemented button rewiring to interrupt-compatible pins so Arduino can sleep until needed.
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Future Plans:</strong>
+                    <ul>
+                        <li>Design a custom PCB to:
+                            <ul>
+                                <li>Reduce wiring and overall size of the device</li>
+                                <li>Improve battery efficiency and lifespan</li>
+                                <li>Make the unit more compact and power-optimized</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
 
             <ul id="result" class="content">
-
+                <li>Device functions as intended — sound plays and LEDs light when buttons are pressed.</li>
+                <li>All electronics and 3D-printed parts were integrated successfully.</li>
+                <li>Battery drain is still a challenge but is being actively addressed.</li>
+                <li>Project is still in progress, with improvements being added over time.</li>
             </ul>
         </div>
     </div>
