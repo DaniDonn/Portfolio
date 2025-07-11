@@ -6,8 +6,6 @@ const navLinks = document.querySelectorAll('.nav__link');
 
 const nextProjectButton = document.querySelector("#nextProject");
 const previousProjectButton = document.querySelector("#previousProject");
-const nextProjectText = document.querySelector("#nextProjectText");
-const previousProjectText = document.querySelector("#previousProjectText");
 const htmlLinkObjects = document.querySelectorAll('.hiddenLink');
 
 let currentPageString = '';

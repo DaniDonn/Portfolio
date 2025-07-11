@@ -67,21 +67,29 @@ section {
 }
 
 /* About Me */
-.About-Me {
-  background-color: var(--section-bg);
+.About-Me__content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 7rem;
+  flex-wrap: wrap;
+  padding-left: 15rem; /* pushes everything to the right */
+  padding-right: 2rem; /* optional, balance */
+  
 }
 
 .About-me__body {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: left;
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  margin-left: 2rem; /* shift it right */
+  line-height: 1.6;
 }
 
 .About-Me__img {
-  width: 180px;
-  border-radius: 6px;
-  margin: 20px auto;
-  display: block;
+  max-width: 200px;
+  height: 300px;
+  border-radius: 10px; /* optional for style */
 }
 
 

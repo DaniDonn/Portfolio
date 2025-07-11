@@ -21,7 +21,7 @@
         <nav id="navMenu">
             <a href="index.html">Home</a>
             <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
-            <a href="Resume Stuff/Resume Stuff/Daniella Donn Manufacturing Resume.pdf">Resume</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Resume.pdf">Resume</a>
         </nav>
         <hr style="width:90%; margin: 0 auto;">
     </header>
@@ -29,7 +29,7 @@
     <!--Project -->
     <div id="infoContainer">
         <div id="projectTitle">
-            <h2 class="automation-header">
+            <h2 class="ProjectTitle-header">
                 <u class="automation-underline">Disk Launcher</u>
             </h2>
         </div>
@@ -52,9 +52,10 @@
 
         <div id="projectBody">
             <h3 class="infoToggle">OBJECTIVE:</h3>
-            <h3 class="infoToggle">MY CONTRIBUTION:</h3>
             <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">MY CONTRIBUTION:</h3>
             <h3 class="infoToggle">RESULT:</h3>
+            <h3 class="infoToggle">IMAGES:</h3>
         </div>
 
         <div id="projectInformation">
@@ -66,15 +67,93 @@
                     mechanism.</li>
             </ul>
 
+            <ul id="process" class="content">
+                <li>Applied the Lean Six Sigma DMADV methodology (Define, Measure, Analyze, Design, Verify) to guide all
+                    phases of the Launch Master project:</li>
+
+                <ul>
+                    <li><strong>Define:</strong>
+                        <ul>
+                            <li>Conducted extensive background research on commercial and DIY frisbee launchers,
+                                identifying key limitations in the market.</li>
+                            <li>Captured the Voice of the Customer (VOC) through informal interviews and user scenarios,
+                                defining critical product expectations such as mobility, terrain adaptability, variable
+                                launch styles, and user safety.</li>
+                            <li>Created a detailed Project Charter outlining scope, goals, constraints, team
+                                responsibilities, and a project timeline.</li>
+                            <li>Mapped out customer needs and translated them into Critical to Quality (CTQ)
+                                requirements, forming the foundation of our design criteria.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Measure:</strong>
+                        <ul>
+                            <li>Constructed a House of Quality (HOQ) to prioritize engineering responses to VOC and CTQ
+                                inputs. Weight, motor power, wheel durability, and launch consistency were flagged as
+                                top priorities.</li>
+                            <li>Built a Product Specification Document (PSD) with detailed and evolving engineering
+                                specs throughout the project’s development.</li>
+                            <li>Defined safety standards and documented industry compliance (e.g., IEEE standards for
+                                electrical components).</li>
+                            <li>Planned sensor usage for automated disc loading, including preliminary layouts for limit
+                                switches and vision-based detection systems.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Analyze:</strong>
+                        <ul>
+                            <li>Generated and compared multiple design concepts using a Pugh Matrix, with a human throw
+                                used as the reference datum.</li>
+                            <li>Analyzed trade-offs between treads and wheels, flywheels and catapults, and ramp vs.
+                                hook loading systems.</li>
+                            <li>Performed in-depth mechanical and motor analysis to evaluate flywheel design, friction
+                                loads, and torque requirements.</li>
+                            <li>Documented all engineering decisions and rationales to maintain traceability for future
+                                design iterations.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Design:</strong>
+                        <ul>
+                            <li>Developed 3D models in SolidWorks for the entire mechanism, including internal and
+                                external disc cassettes, launch roller, pickup ramp, and frame.</li>
+                            <li>Conducted a Design Failure Mode and Effects Analysis (DFMEA) to proactively assess risks
+                                related to launch stability, loading failures, and structural weaknesses.</li>
+                            <li>Created a comprehensive system block diagram showing relationships between mechanical
+                                and electrical subsystems.</li>
+                            <li>Planned and implemented control logic using Arduino and Bluetooth components, with
+                                documentation of wiring and code in Appendix C.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Verify:</strong>
+                        <ul>
+                            <li>Built and tested a full working prototype capable of movement, frisbee storage, and
+                                semi-consistent launches.</li>
+                            <li>Developed a formal test plan outlining test actions, responsibilities, measurement
+                                methods, and pass/fail criteria.</li>
+                            <li>Documented limitations during testing (e.g., torque shortfalls, inconsistent tensioning,
+                                structural instability) and proposed future redesigns for performance improvement.</li>
+                            <li>Reflected on outcomes and recommended changes in team planning, prototyping timelines,
+                                and component selection to improve future cycles.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <li>This project served as the case study for my Lean Six Sigma Green Belt certification. It
+                    demonstrated my ability to apply structured DMAIC/DMADV tools in a real-world engineering context,
+                    combining mechanical design, system integration, quality planning, and performance analysis over the
+                    course of a full academic year.</li>
+
+            </ul>
+
             <ul id="my_contribution" class="content">
                 <li>Performed all RPM and torque calculations for the launch mechanism.</li>
                 <li>Researched and selected realistic values for friction coefficients and spring constants.</li>
                 <li>Determined the relationships between disk weight, system geometry, and launch requirements.</li>
                 <li>Developed an analytical model to ensure the disk would not slip and would launch correctly.</li>
                 <li>Verified final results and documented calculations in a professional engineering format.</li>
-            </ul>
 
-            <ul id="process" class="content">
                 <li>Designed a disk launch mechanism where a motor spins continuously at high RPM to launch the
                     frisbee when triggered.</li>
                 <li>Calculated required RPM using:
@@ -86,8 +165,7 @@
                 </li>
                 <li>Calculated required torque using:
                     <ul>
-                        <li>Equation: <code>Torque = 0.5 * Roller_Diameter * (Total_Friction + μ * W * g)</code>
-                        </li>
+                        <li>Equation: <code>Torque = 0.5 * Roller_Diameter * (Total_Friction + μ * W * g)</code></li>
                         <li>Estimated coefficient of static friction (acrylic-rubber): 0.6</li>
                         <li>Calculated three friction values based on material interactions and spring compression
                             force (F = k * x)</li>
@@ -95,6 +173,8 @@
                     </ul>
                 </li>
                 <li>Final required torque: 10.54 lb·in</li>
+                <img src="img/Motor_calcs.jpg" alt="" class="portfolio__img">
+                <img src="img/Motor_sol.jpg" alt="" class="portfolio__img">
             </ul>
 
             <ul id="result" class="content">
@@ -108,6 +188,13 @@
                 <li>
                     <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a>
                 </li>
+            </ul>
+            <ul id="Images of Code" class="content">
+                <img src="img/HouseOfQuality.png" alt="" class="portfolio__img">
+                <img src="img/FinalPughMatrix.png" alt="" class="portfolio__img">
+                <img src="img/DFMEA.png" alt="" class="portfolio__img">
+                <img src="img/DiagramDiskLauncher.png" alt="" class="portfolio__img">
+                <img src="img/Disk_Launcher.png" alt="" class="portfolio__img">
             </ul>
         </div>
     </div>
