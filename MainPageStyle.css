@@ -68,21 +68,20 @@ section {
 
 /* About Me */
 .About-Me__content {
+  max-width: 70%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  gap: 7rem;
-  flex-wrap: wrap;
+  gap: 12rem;
   padding-left: 15rem; /* pushes everything to the right */
   padding-right: 2rem; /* optional, balance */
-  
 }
 
 .About-me__body {
   flex: 1;
   min-width: 300px;
   max-width: 600px;
-  margin-left: 2rem; /* shift it right */
+  margin-left: 4rem; /* shift it right */
   line-height: 1.6;
 }
 
