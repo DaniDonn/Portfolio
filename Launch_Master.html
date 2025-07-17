@@ -1,0 +1,230 @@
+<!DOCTYPE html> <!--comment-->
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/bbd73cab7b.js" crossorigin="anonymous"></script> <!--For icons at footer-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--functions well on small devices as well as larger ones-->
+    <title>Daniella Donn Portfolio Website</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+        integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+    <!--makes website looks the same in all browsers and gets fonts-->
+    <link rel="stylesheet" href="ProjectStyle.css">
+
+</head>
+
+<!--Building of site-->
+
+<body>
+    <header id="topBarEveryPage">
+        <nav id="navMenu">
+            <a href="index.html">Home</a>
+            <a href="https://www.linkedin.com/in/danielladonn/">LinkedIn</a>
+            <a href="Resume Stuff/Resume Stuff/Daniella Donn Resume.pdf">Resume</a>
+        </nav>
+        <hr style="width:90%; margin: 0 auto;">
+    </header>
+
+    <!--Project -->
+    <div id="infoContainer">
+        <div id="projectTitle">
+            <h2 class="ProjectTitle-header">
+                <u class="automation-underline">Launch Master</u>
+            </h2>
+        </div>
+
+        <div id="projectMedia">
+            <a id="previousProject">
+                <i class="fas fa-arrow-left fa-2xl"></i>
+            </a>
+            <video width="900" controls>
+                <source src="Videos/Disk_Launcher.mp4" type="video/mp4">
+            </video>
+            <a id="nextProject">
+                <i class="fas fa-arrow-right fa-2xl"></i>
+            </a>
+        </div>
+
+        <div id="projectDirection">
+            <h2 class="section__subtitle section__subtitle--Project">Click any of the following to learn more:</h2>
+        </div>
+
+        <div id="projectBody">
+            <h3 class="infoToggle">OBJECTIVE:</h3>
+            <h3 class="infoToggle">PROCESS:</h3>
+            <h3 class="infoToggle">MY CONTRIBUTION:</h3>
+            <h3 class="infoToggle">RESULT:</h3>
+            <h3 class="infoToggle">IMAGES:</h3>
+            <h3 class="infoToggle">REPORT:</h3>
+        </div>
+
+        <div id="projectInformation">
+            <ul id="objective" class="content">
+                <li>Design and build an automated frisbee-launching system as a team of four during the 2022 spring
+                    semester at RIT.</li>
+                <li>Understand and apply the D.M.A.D.V. process (Define, Measure, Analyze, Design, Verify).</li>
+                <li>Accurately launch a 5-inch diameter disk to a designated target using an electric-powered
+                    mechanism.</li>
+            </ul>
+
+            <ul id="process" class="content">
+                <li>Applied the Lean Six Sigma DMADV methodology (Define, Measure, Analyze, Design, Verify) to guide all
+                    phases of the Launch Master project:</li>
+
+                <ul>
+                    <li><strong>Define:</strong>
+                        <ul>
+                            <li>Conducted extensive background research on commercial and DIY frisbee launchers,
+                                identifying key limitations in the market.</li>
+                            <li>Captured the Voice of the Customer (VOC) through informal interviews and user scenarios,
+                                defining critical product expectations such as mobility, terrain adaptability, variable
+                                launch styles, and user safety.</li>
+                            <li>Created a detailed Project Charter outlining scope, goals, constraints, team
+                                responsibilities, and a project timeline.</li>
+                            <li>Mapped out customer needs and translated them into Critical to Quality (CTQ)
+                                requirements, forming the foundation of our design criteria.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Measure:</strong>
+                        <ul>
+                            <li>Constructed a House of Quality (HOQ) to prioritize engineering responses to VOC and CTQ
+                                inputs. Weight, motor power, wheel durability, and launch consistency were flagged as
+                                top priorities.</li>
+                            <li>Built a Product Specification Document (PSD) with detailed and evolving engineering
+                                specs throughout the project’s development.</li>
+                            <li>Defined safety standards and documented industry compliance (e.g., IEEE standards for
+                                electrical components).</li>
+                            <li>Planned sensor usage for automated disc loading, including preliminary layouts for limit
+                                switches and vision-based detection systems.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Analyze:</strong>
+                        <ul>
+                            <li>Generated and compared multiple design concepts using a Pugh Matrix, with a human throw
+                                used as the reference datum.</li>
+                            <li>Analyzed trade-offs between treads and wheels, flywheels and catapults, and ramp vs.
+                                hook loading systems.</li>
+                            <li>Performed in-depth mechanical and motor analysis to evaluate flywheel design, friction
+                                loads, and torque requirements.</li>
+                            <li>Documented all engineering decisions and rationales to maintain traceability for future
+                                design iterations.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Design:</strong>
+                        <ul>
+                            <li>Developed 3D models in SolidWorks for the entire mechanism, including internal and
+                                external disc cassettes, launch roller, pickup ramp, and frame.</li>
+                            <li>Conducted a Design Failure Mode and Effects Analysis (DFMEA) to proactively assess risks
+                                related to launch stability, loading failures, and structural weaknesses.</li>
+                            <li>Created a comprehensive system block diagram showing relationships between mechanical
+                                and electrical subsystems.</li>
+                            <li>Planned and implemented control logic using Arduino and Bluetooth components, with
+                                documentation of wiring and code in Appendix C.</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Verify:</strong>
+                        <ul>
+                            <li>Built and tested a full working prototype capable of movement, frisbee storage, and
+                                semi-consistent launches.</li>
+                            <li>Developed a formal test plan outlining test actions, responsibilities, measurement
+                                methods, and pass/fail criteria.</li>
+                            <li>Documented limitations during testing (e.g., torque shortfalls, inconsistent tensioning,
+                                structural instability) and proposed future redesigns for performance improvement.</li>
+                            <li>Reflected on outcomes and recommended changes in team planning, prototyping timelines,
+                                and component selection to improve future cycles.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <li>This project served as the case study for my Lean Six Sigma Green Belt certification. It
+                    demonstrated my ability to apply structured DMAIC/DMADV tools in a real-world engineering context,
+                    combining mechanical design, system integration, quality planning, and performance analysis over the
+                    course of a full academic year.</li>
+
+            </ul>
+
+            <ul id="my_contribution" class="content">
+                <li>Performed all RPM and torque calculations for the launch mechanism.</li>
+                <li>Researched and selected realistic values for friction coefficients and spring constants.</li>
+                <li>Determined the relationships between disk weight, system geometry, and launch requirements.</li>
+                <li>Developed an analytical model to ensure the disk would not slip and would launch correctly.</li>
+                <li>Verified final results and documented calculations in a professional engineering format.</li>
+
+                <li>Designed a disk launch mechanism where a motor spins continuously at high RPM to launch the
+                    frisbee when triggered.</li>
+                <li>Calculated required RPM using:
+                    <ul>
+                        <li>Assumed launch velocity of 14.1 m/s</li>
+                        <li>Radius of the disk: 2.5 inches</li>
+                        <li>Converted to RPM using rotational velocity formulas, arriving at 2124 RPM</li>
+                    </ul>
+                </li>
+                <li>Calculated required torque using:
+                    <ul>
+                        <li>Equation: <code>Torque = 0.5 * Roller_Diameter * (Total_Friction + μ * W * g)</code></li>
+                        <li>Estimated coefficient of static friction (acrylic-rubber): 0.6</li>
+                        <li>Calculated three friction values based on material interactions and spring compression
+                            force (F = k * x)</li>
+                        <li>Total friction calculated to be 11.41</li>
+                    </ul>
+                </li>
+                <li>Final required torque: 10.54 lb·in</li>
+                <img src="img/Motor_calcs.jpg" alt="" class="portfolio__img">
+                <img src="img/Motor_sol.jpg" alt="" class="portfolio__img">
+            </ul>
+
+            <ul id="result" class="content">
+                <li>Prototype successfully launched disks, but underperformed in distance due to insufficient motor
+                    torque.</li>
+                <li>Motor used had 3500 RPM (more than required) but lacked the needed torque, limiting launch to ~1
+                    foot.</li>
+                <li>Provided hands-on experience with real-world design trade-offs and the importance of torque in
+                    motion systems.</li>
+                <li>Project documentation available for more technical details:</li>
+                <li>
+                    <a href="Reports/Launch_Master_Report.pdf">Launch Master Final Report</a>
+                </li>
+            </ul>
+            <ul id="Images of Code" class="content">
+                <img src="img/HouseOfQuality.png" alt="" class="portfolio__img">
+                <img src="img/FinalPughMatrix.png" alt="" class="portfolio__img">
+                <img src="img/DFMEA.png" alt="" class="portfolio__img">
+                <img src="img/DiagramDiskLauncher.png" alt="" class="portfolio__img">
+                <img src="img/Disk_Launcher.png" alt="" class="portfolio__img">
+            </ul>
+           
+            <ul id="full_report" class = "content">
+                <embed src="Reports/Launch_Master_Report.pdf" type="application/pdf" style="width: 100%; height:800px; border-radius: 8px;"/>
+            </ul>
+        </div>
+    </div>
+
+    <!------------------------------------------------------ Footer------------------------------------------------------------------------------>
+    <footer id="footer">
+        <p>Contact:<br><a href="mailto:DaniellaDonn@gmail.com" id="footerLink">danielladonn@gmail.com</a></p>
+    </footer>
+
+    <a class="hiddenLink" href="ABB_Robot_Stacking_simulation.html"></a>
+    <a class="hiddenLink" href="Excel_Machine_Map.html"></a>
+    <a class="hiddenLink" href="FANUC_Welding_Simulation.html"></a>
+    <a class="hiddenLink" href="Launch_Master.html"></a>
+    <a class="hiddenLink" href="Morning_Meeting_Dashboard.html"></a>
+    <a class="hiddenLink" href="OS1_Gripper.html"></a>
+    <a class="hiddenLink" href="PLC_Conveyor_Sorter.html"></a>
+    <a class="hiddenLink" href="PLC_Garage_Door_System.html"></a>
+    <a class="hiddenLink" href="Rivet_Gripper.html"></a>
+    <a class="hiddenLink" href="SOS_Button.html"></a>
+    <a class="hiddenLink" href="Sound_Box.html"></a>
+    <a class="hiddenLink" href="Tab_Detection.html"></a>
+    <a class="hiddenLink" href="UR_Pick_And_Place.html"></a>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>

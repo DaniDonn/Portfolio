@@ -68,7 +68,7 @@ section {
 
 /* About Me */
 .About-Me__content {
-  max-width: 70%;
+  max-width: 90%;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -80,7 +80,7 @@ section {
 .About-me__body {
   flex: 1;
   min-width: 300px;
-  max-width: 600px;
+  max-width: 900px;
   margin-left: 4rem; /* shift it right */
   line-height: 1.6;
 }

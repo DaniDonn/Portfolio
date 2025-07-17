@@ -163,6 +163,43 @@ a:hover {
 #projectInformation li ul {
   margin-left: 20px;
 }
+/*Code Images Section*/
+#Code {
+  display: none; /* Remains hidden until toggled */
+  list-style: none;
+  margin: 20px auto;
+  padding: 0;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 1000px;
+}
+
+.imgwithtext {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Images inside the Code section */
+#Code .project-img {
+  width: 45%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+
+/* First image zoom effect */
+#Code .project-img.zoom:hover {
+  transform: scale(2);
+  z-index: 2;
+  cursor: zoom-in;
+}
+
+
 
 /* Footer */
 #footer {
