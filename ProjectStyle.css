@@ -352,6 +352,22 @@ a:hover {
   margin: 0;
   text-align: center;
 }
+/*Still Launch Page But For Images Under "My Contributions"*/
+#MotorCalcs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#MotorCalcs li{
+  list-style: none;
+}
+.Equations img{
+  width: 100%; /* You can adjust this size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
 
 
 /* Footer */
