@@ -92,7 +92,7 @@
                     <ul>
                         <li>Used Allen Bradley Compact GuardLogix 5380 PLC (5069-L306ERMS2) with 16-point I/O modules.
                         </li>
-                        <li>Inputs:
+                        <li><strong>Inputs:</strong>
                             <ul>
                                 <li>Push buttons for open, close, stop</li>
                                 <li>Selector switch</li>
@@ -100,7 +100,7 @@
                                 <li>Photoelectric sensor simulated using a push button</li>
                             </ul>
                         </li>
-                        <li>Outputs:
+                        <li><strong>Outputs:</strong>
                             <ul>
                                 <li>LEDs to indicate system states (open, close, fault, maintenance)</li>
                                 <li>Stack/tower lights</li>
@@ -112,31 +112,64 @@
 
                 <li><strong>Ladder Logic Programming</strong>
                     <ul>
-                        <li><strong>Programming Environment:</strong> Developed using Studio 5000 with modular ladder
-                            logic blocks. Controlled motor states, safety conditions, and lockout behaviors.</li>
-                        <li><strong>Motor Control Simulation:</strong> Open/close buttons used with seal-in logic to
-                            simulate motor activation. Interlocks prevented the system from executing both commands at
-                            once. Motors remained off after power loss until reset manually.</li>
-                        <li><strong>Cycle Counter Logic:</strong> One full open-close sequence = one cycle. After 8
-                            cycles:
+                        <li><strong>Programming Environment:</strong>
                             <ul>
-                                <li>Disables simulated motor output</li>
-                                <li>Red light indicates maintenance required</li>
-                                <li>System can only be re-enabled via a manual reset override</li>
+                                <li>Developed using Studio 5000 with modular ladder
+                            logic blocks. Controlled motor states, safety conditions, and lockout behaviors.
+                                </li>
                             </ul>
                         </li>
-                        <li><strong>Emergency Stop Logic:</strong> Three emergency stop buttons wired in: two on
-                            simulated keypads, one on the remote FOB. Immediately cuts motor output and locks system
-                            until reset.</li>
-                        <li><strong>Obstruction Detection Simulation:</strong> Simulated photoelectric sensor using a
-                            push button. When pressed during “closing,” motor logic reversed to simulate the door
-                            reopening. Yellow light activated to indicate object detection.</li>
-                        <li><strong>Manual Override Switch:</strong> Overrides lockout state to allow emergency opening
-                            even after cycle limit is reached. Adds a fail-safe in case the system needs to be bypassed.
+                        <li><strong>Motor Control Simulation:</strong> 
+                            <ul>
+                                <li>Open/close buttons used with seal-in logic to
+                            simulate motor activation. Interlocks prevented the system from executing both commands at
+                            once. Motors remained off after power loss until reset manually.
+                                </li>
+                            </ul>
                         </li>
-                        <li><strong>Failsafe Behavior:</strong> Seal-in logic ensures the system doesn't auto-restart
+                        <li><strong>Cycle Counter Logic:</strong> 
+                                <ul>
+                                    <li>
+                                        One full open-close sequence = one cycle. After 8 cycles:
+                                    </li>
+                                <ul>
+                                    <li>Disables simulated motor output</li>
+                                    <li>Red light indicates maintenance required</li>
+                                    <li>System can only be re-enabled via a manual reset override</li>
+                                </ul>
+                            </ul>
+                        </li>
+                        <li><strong>Emergency Stop Logic:</strong> 
+                            <ul>
+                                <li>Three emergency stop buttons wired in: two on
+                            simulated keypads, one on the remote FOB. Immediately cuts motor output and locks system
+                            until reset.
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Obstruction Detection Simulation:</strong> 
+                            <ul>
+                                <li>Simulated photoelectric sensor using a
+                            push button. When pressed during “closing,” motor logic reversed to simulate the door
+                            reopening. Yellow light activated to indicate object detection.
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Manual Override Switch:</strong> 
+                            <ul>
+                                <li>Overrides lockout state to allow emergency opening
+                            even after cycle limit is reached. Adds a fail-safe in case the system needs to be bypassed.
+                                </li>
+                            </ul>
+                        </li>
+                        <li><strong>Failsafe Behavior:</strong> 
+                            <ul>
+                                <li>Seal-in logic ensures the system doesn't auto-restart
                             after power restoration. System state (cycle count, lockout) is preserved until manually
-                            reset.</li>
+                            reset.
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
