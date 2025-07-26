@@ -200,6 +200,160 @@ a:hover {
   max-width: 100%;
 }
 
+/*For Fanuc Project Page*/
+#code .project-img3 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2.5/3;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.imgWithText3 {
+  display: inline-block;
+  width: 30%;
+}
+#code .project-img3.zoom:hover {
+  transform: scale(1.75);
+  z-index: 2;
+  cursor: zoom-in;
+}
+/*For Launch Master Page*/
+#code .project-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.imgWithText4 {
+  display: flex;
+  direction: column;
+  width: 40%;
+}
+
+/*FOR PLC PAGES*/
+#Flowchart {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#Flowchart li{
+  list-style: none;
+}
+
+#PLCcode {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#PLCcode li{
+  list-style: none;
+}
+
+.imageWithText5 {
+  margin-bottom: 2rem;
+}
+
+.imageWithText5 img {
+  width: 100%; /* You can adjust this size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/*FOR EXCEL PAGE*/
+#ExcelCode {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+#ExcelCode li{
+  list-style: none;
+}
+
+.imgWithTextExcel {
+  margin-bottom: 2rem;
+
+  img.square{
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.imgWithTextExcel img {
+  width: 100%; /* You can adjust this size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+#ExcelCode .project-img3Excel.zoom:hover {
+  transition: transform 0.3s ease;
+  transform: scale(1.25);
+  z-index: 2;
+  cursor: zoom-in;
+}
+/*FOR SOUND BOX PAGE*/
+#SoundBoxCode {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#SoundBoxCode li{
+  list-style: none;
+}
+.SoundBox img{
+  width: 100%; /* You can adjust this size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+#WireDiagram {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#WireDiagram li{
+  list-style: none;
+}
+.WireDiagramSchematic img{
+  width: 100%; /* You can adjust this size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/*FOR LAUNCH MASTER PAGE*/
+#Launch {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#Launch li{
+  list-style: none;
+}
+.LaunchImages img{
+  width: 100%; /* You can adjust this size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+#WireDiagram {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+
 /* Footer */
 #footer {
   margin-top: 50px;
